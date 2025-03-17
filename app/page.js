@@ -15,12 +15,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 relative">
-      <Link
+      {/* <Link
         href="/admin"
         className="absolute top-4 right-4 bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-500 transition z-50"
-      >
-        Admin
-      </Link>
+      > */}
+        {/* Admin
+      </Link> */}
 
       <section className="relative py-20 text-white text-center bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.6),_rgba(109,40,217,0.6))]">
         <div className="max-w-3xl mx-auto">
