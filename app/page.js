@@ -5,11 +5,10 @@ import PortfolioContext from "./Context/PortfolioContext";
 import Link from "next/link";
 
 export default function Home() {
-  // const { projects, techSkills } = useContext(PortfolioContext);
   const context = useContext(PortfolioContext);
 
   if (!context) {
-    return <p>Loading...</p>; // O maneja el error de otra forma
+    return <p>Loading...</p>;
   }
 
   const { projects, techSkills } = context;
