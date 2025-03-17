@@ -71,7 +71,7 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <img
-                  className="h-100 w-100 p-4"
+                  className="h-75 w-350 p-4"
                   src={project.image}
                   alt={project.alt}
                 />
