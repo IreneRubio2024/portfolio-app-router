@@ -11,7 +11,7 @@ export const PortfolioProvider = ({ children }) => {
       name: "Media DB",
       description: "Your Ultimate Movie & Series Guide!",
       image: "hollywood-historia.jpg",
-      url: "https://chas-amazon-news-site-main-3.vercel.app/",
+      url: "https://chas-amazon-news-site-main-5.vercel.app/movie",
     },
     {
       id: 2,
