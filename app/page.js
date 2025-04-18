@@ -15,13 +15,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 relative">
-      {/* <Link
-        href="/admin"
-        className="absolute top-4 right-4 bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-500 transition z-50"
-      > */}
-        {/* Admin
-      </Link> */}
-
       <section className="relative py-20 text-white text-center bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.6),_rgba(109,40,217,0.6))]">
         <div className="max-w-3xl mx-auto">
           <img
@@ -36,8 +29,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-200">
-        <h2 className="text-2xl font-bold text-center"> My Tech Stack</h2>
+      <section className="py-20 bg-white">
+        <h2 className="text-4xl font-bold text-center"> My Tech Stack</h2>
         <div className="flex justify-center gap-6 mt-6 flex-wrap">
           {techSkills.map((skill, index) => {
             return (
@@ -53,14 +46,15 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-gray-100 min-h-screen py-10">
-        <h2 className="text-slate-800 text-2xl text-center font-bold">
+        <h2 className="text-slate-800 text-4xl text-center font-bold">
           My Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 px-6">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white p-4 rounded shadow-md hover:shadow-lg transition-shadow flex flex-col items-center"
+              className="bg-white p-4 rounded shadow-md hover:shadow-lg transition-shadow flex flex-col items-center bg-[radial-gradient(circle_at_center,_white_0%,_#111_110%,_black_20%)]
+              "
             >
               <h2 className="text-whitetext-xl font-bold">{project.name}</h2>
               <p className="text-gray-700">{project.description}</p>
@@ -71,7 +65,8 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <img
-                  className="h-75 w-350 p-4"
+                  // className="h-75 w-350 p-4"
+                  className="w-full h-64 object-cover rounded-lg "
                   src={project.image}
                   alt={project.alt}
                 />
