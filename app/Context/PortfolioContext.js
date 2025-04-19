@@ -34,13 +34,6 @@ export const PortfolioProvider = ({ children }) => {
       image: "Sveriges-Radio.jpg",
       url: "https://radioplayer-inky.vercel.app/",
     },
-    // {
-    //   id: 5,
-    //   name: "Zoom re-design",
-    //   description: "Here is my suggestion to re-design Zoom page!",
-    //   image: "Zoom-Logo.png",
-    //   // url: "https://radioplayer-inky.vercel.app/",
-    // },
   ]);
 
   const [techSkills, setTechSkills] = useState([
@@ -53,6 +46,8 @@ export const PortfolioProvider = ({ children }) => {
     { name: "Linux", src: "/image.png" },
     { name: "Express", src: "/express-logo.png" },
     { name: "TS", src: "/typesc.webp" },
+    { name: "Docker", src: "/docker-mark-white.svg" },
+    { name: "MySQL", src: "/mysql.gif" },
   ]);
 
   // const [newProject, setNewProject] = useState({
