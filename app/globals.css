@@ -1,5 +1,4 @@
 @import "tailwindcss";
-/* @import "tw-animate-css"; */
 
 :root {
   --background: #ffffff;
@@ -37,4 +36,12 @@ body {
 
 .medium-rotation {
   animation: medium-spin 3.5s linear infinite;
+}
+@font-face {
+  font-family: 'Mattone';
+  src: url('/fonts/Mattone-Regular.otf') format('opentype');
+}
+
+body {
+  font-family: 'Mattone', sans-serif;
 }
