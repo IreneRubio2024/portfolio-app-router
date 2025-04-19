@@ -1,35 +1,30 @@
 "use client";
 import { useState } from "react";
 
-function ImageRotating() {
-  const [girando, setGirando] = useState(true);
+function ImageLevitating() {
   const [mostrarCV, setMostrarCV] = useState(false);
 
-  const toggleRotacion = () => {
-    setGirando(!girando);
+  const toggleCV = () => {
     setMostrarCV(!mostrarCV);
   };
 
   const cerrarCV = () => {
     setMostrarCV(false);
-    setGirando(true);
   };
 
   return (
     <div className="relative z-10 flex flex-col items-center">
-      <div className="relative flex items-center gap-4 cursor-pointer" onClick={toggleRotacion}>
-       
-        {/* Imagen */}
+      <div
+        className="relative flex items-center gap-4 cursor-pointer"
+        onClick={toggleCV}
+      >
         <img
-          src="/MeraBild1.png"
-          alt="Imagen rotando"
-          className={`w-48 transition-all duration-300 ${
-            girando ? "medium-rotation" : ""
-          }`}
+          src="/MyCV2.png"
+          alt="Imagen levitando"
+          className="w-48 animate-levitate"
         />
       </div>
 
-      {/* Ventana flotante del CV */}
       {mostrarCV && (
         <div
           onClick={cerrarCV}
@@ -60,4 +55,4 @@ function ImageRotating() {
   );
 }
 
-export default ImageRotating;
+export default ImageLevitating;
