@@ -25,7 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes medium-spin {
+/* @keyframes medium-spin {
   from {
     transform: rotate(0deg);
   }
@@ -35,7 +35,32 @@ body {
 }
 
 .medium-rotation {
+  animation: medium-spin 3.5s linear infinite; */
+/* } */
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.medium-rotation {
   animation: medium-spin 3.5s linear infinite;
+}
+.animate-levitate {
+  animation: levitate 3s ease-in-out infinite;
 }
 @font-face {
   font-family: 'Mattone';

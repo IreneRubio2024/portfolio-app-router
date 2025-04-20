@@ -17,12 +17,9 @@ function ImageLevitating() {
       <div
         className="relative flex items-center gap-4 cursor-pointer"
         onClick={toggleCV}
+        style={{ marginTop: '2rem', marginLeft: '2rem' }}
       >
-        <img
-          src="/MyCV2.png"
-          alt="Imagen levitando"
-          className="w-48 animate-levitate"
-        />
+        <img src="/CVwings2.png" alt="Imagen levitando" className="w-26 h-22 animate-levitate" />
       </div>
 
       {mostrarCV && (

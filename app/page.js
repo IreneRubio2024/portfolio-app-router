@@ -3,12 +3,10 @@
 import { useContext, useState } from "react";
 import PortfolioContext from "./Context/PortfolioContext";
 import Link from "next/link";
-import ImageRotating from "@/components/ImageRotating";
-
+import ImageLevitating from "@/components/ImageLevitating";
 
 export default function Home() {
   const context = useContext(PortfolioContext);
- 
 
   if (!context) {
     return <p>Loading...</p>;
@@ -17,8 +15,8 @@ export default function Home() {
   const { projects, techSkills } = context;
 
   return (
-    <div className="px-4 py-2 rounded-md">
-      <section className="relative py-20 text-white text-center bg-[radial-gradient(circle_at_center,_#0f172a,_#1e3a8a,_#312e81,_#0b1120)]">
+    <div>
+      {/* <section className="relative py-20 text-white text-center bg-[radial-gradient(circle_at_center,_#0f172a,_#1e3a8a,_#312e81,_#0b1120)]">
         <div className="max-w-3xl mx-auto flex flex-col items-center relative">
           <img
             src="/Irene.jpg"
@@ -36,7 +34,31 @@ export default function Home() {
           </p>
         </div>
        
-      </section>
+      </section> */}
+      <div>
+        <section className="relative py-20 text-white text-center bg-[radial-gradient(circle_at_center,_#0f172a,_#1e3a8a,_#312e81,_#0b1120)]">
+          {/* Posiciona el componente en la esquina superior izquierda */}
+          <div className="absolute top-0 left-0 z-10">
+            <ImageLevitating />
+          </div>
+
+          <div className="max-w-3xl mx-auto flex flex-col items-center relative">
+            <img
+              src="/Irene.jpg"
+              alt="Irene's Profile"
+              className="w-40 h-40 mx-auto rounded-full border-4 border-white object-cover aspect-square"
+            />
+
+            <h1 className="text-4xl font-extrabold tracking-tight mt-6 text-white drop-shadow-lg">
+              ¡Hello, I am Irene!
+            </h1>
+
+            <p className="text-xl mt-3 text-slate-200 drop-shadow">
+              Creative Frontend Developer with Backend and UX/UI skills
+            </p>
+          </div>
+        </section>
+      </div>
 
       <section className="py-15 bg-gradient-to-b from-[#1e293b] to-[#312e81]">
         <h2 className="text-4xl text-white font-bold text-center py-4">
@@ -53,10 +75,6 @@ export default function Home() {
               {skill.name}
             </div>
           ))}
-        </div>
-
-        <div className="flex items-center justify-center py-20">
-          <ImageRotating />
         </div>
       </section>
 
