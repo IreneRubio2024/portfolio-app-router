@@ -101,12 +101,12 @@ export default function Home() {
               <p className="text-gray-700">{project.description}</p>
               <a
                 href={project.url}
-                className="text-blue-500 mt-2 inline-block"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="mt-2 text-blue-500 hover:underline"
               >
                 <img
-                  className="w-full h-64 object-cover rounded-lg "
+                  className="w-full h-auto object-cover rounded-lg shadow-lg"
                   src={project.image}
                   alt={project.alt}
                 />
