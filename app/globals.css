@@ -25,18 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* @keyframes medium-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.medium-rotation {
-  animation: medium-spin 3.5s linear infinite; */
-/* } */
 
 @keyframes levitate {
   0% {
@@ -66,6 +55,11 @@ body {
   font-family: 'Mattone';
   src: url('/fonts/Mattone-Regular.otf') format('opentype');
 }
+@font-face {
+  font-family: 'Aujournuit-Regular'; 
+  src: url('/fonts/Aujournuit-Regular.otf') format('opentype'); 
+}
+
 
 body {
   font-family: 'Mattone', sans-serif;
