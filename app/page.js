@@ -1,10 +1,9 @@
 "use client";
 
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import PortfolioContext from "./Context/PortfolioContext";
-import Link from "next/link";
 import ImageLevitating from "@/components/ImageLevitating";
-import ProjectsAccordion from "@/components/ProjectAccordion";
+import ProjectsCarousel from "@/components/ProjectsCarousel";
 import TechStackAccordion from "@/components/TechStackAccordion";
 
 export default function Home() {
@@ -17,68 +16,80 @@ export default function Home() {
   const { projects, techSkills } = context;
 
   return (
-    <div>
-      {/* <section className="relative py-20 text-white text-center bg-[radial-gradient(circle_at_center,_#0f172a,_#1e3a8a,_#312e81,_#0b1120)]">
-        <div className="max-w-3xl mx-auto flex flex-col items-center relative">
-          <img
-            src="/Irene.jpg"
-            alt="Irene's Profile"
-            className="w-40 h-40 mx-auto rounded-full border-4 border-white object-cover aspect-square"
-          />
-         
-
-          <h1 className="text-4xl font-extrabold tracking-tight mt-6 text-white drop-shadow-lg">
-            ¡Hello, I am Irene!
-          </h1>
-
-          <p className="text-xl mt-3 text-slate-200 drop-shadow">
-            Frontend Developer with Backend and UX/UI skills
-          </p>
+    <>
+      {/* HERO SECTION */}
+      <section className="relative min-h-screen text-white text-center flex flex-col justify-center items-center px-4">
+        {/* Círculo centrado */}
+        <div className="flex items-center justify-center">
+          <div
+            className="
+              relative flex items-center justify-center
+              w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]
+              bg-[#070707] rounded-full
+              transition-all duration-300
+              hover:bg-[#ffffff] hover:text-gray-800
+              shadow-[0_0_40px_10px_rgba(255,102,0,0.4)]
+              border-2 sm:border-4 border-[#e7e7e7f0]
+              p-4 sm:p-6
+            "
+          >
+            <div className="text-center">
+              <h1
+                className="
+                  font-extrabold mb-3 sm:mb-4 leading-tight transition-all duration-300 hover:text-gray-800
+                  text-xl sm:text-3xl md:text-5xl lg:text-6xl
+                "
+              >
+                Hello, I am{" "}
+                <span style={{ fontFamily: "Aujournuit-Regular" }}>Irene!</span>
+              </h1>
+              <p
+                style={{ fontFamily: "Aujournuit-Regular" }}
+                className="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-200 transition-all duration-300 hover:text-gray-800"
+              >
+                Creative Frontend Developer <br className="hidden sm:block" />{" "}
+                with Backend and UX/UI skills
+              </p>
+            </div>
+          </div>
         </div>
-       
-      </section> */}
-      <div>
-        {/* <section className="relative h-screen text-white text-center bg-gray-950">
 
-          <div className="absolute top-0 left-0 z-10">
-            <ImageLevitating />
+        {/* Imagen levitando */}
+        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8">
+          <div className="relative group cursor-pointer">
+            <div className="relative z-1 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20">
+              <ImageLevitating />
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="h-screen flex flex-col items-center justify-center text-center">
-           <h1 style={{fontFamily: "Aujournuit-Regular"}}className="text-6xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg">
-              Hello, I am Irene!
-            </h1>
+      {/* PROJECTS & STACK */}
+      <div className="px-2 sm:px-4 md:px-8">
+        <div className="my-8">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-center mb-4">
+            Projects
+          </h2>
+          <ProjectsCarousel
+            responsive={{
+              superLargeDesktop: {
+                breakpoint: { max: 4000, min: 1280 },
+                items: 3,
+              },
+              desktop: { breakpoint: { max: 1280, min: 1024 }, items: 2 },
+              tablet: { breakpoint: { max: 1024, min: 640 }, items: 1 },
+              mobile: { breakpoint: { max: 640, min: 0 }, items: 1 },
+            }}
+          />
+        </div>
 
-            <p style={{fontFamily: "Aujournuit-Regular"}}className="text-xl mt-3 text-slate-200 drop-shadow">
-              Creative Frontend Developer with Backend and UX/UI skills
-            </p>
-          </div>
-        </section> */}
-       <section
-  className="relative h-screen text-white text-center"
->
-  <div className="h-screen flex items-center justify-center">
-    <div className="relative flex items-center justify-center w-[500px] h-[500px] bg-[#070707] rounded-full transition-all duration-300 hover:bg-[#ffffff] hover:text-gray-800 shadow-[0_0_40px_10px_rgba(255,102,0,0.4)] border-4 border-[#e7e7e7f0]">
-      <div className="text-center px-8">
-        <h1
-          className="text-6xl font-extrabold mb-6 leading-tight transition-all duration-300 hover:text-gray-800"
-        >
-          Hello, I am <span style={{ fontFamily: "Aujournuit-Regular" }}>Irene!</span>
-        </h1>
-        <p
-          style={{ fontFamily: "Aujournuit-Regular" }}
-          className="text-2xl text-slate-200 transition-all duration-300 hover:text-gray-800"
-        >
-          Creative Frontend Developer with Backend and UX/UI skills
-        </p>
+        <div className="my-8">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-center mb-4">
+            Tech Stack
+          </h2>
+          <TechStackAccordion />
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-      </div>
-      
-      <ProjectsAccordion></ProjectsAccordion>
-      <TechStackAccordion></TechStackAccordion>
-    </div>
+    </>
   );
 }

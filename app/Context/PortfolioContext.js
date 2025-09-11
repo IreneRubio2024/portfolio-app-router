@@ -23,15 +23,15 @@ export const PortfolioProvider = ({ children }) => {
     {
       id: 3,
       name: "Gemini AI app",
-      description: "Try Gemini AI with our App!",
-      image: "Gemini2.jpg",
-      url: "https://gemini-project-rho.vercel.app/",
+      description: "Try my AI recipe generator!!",
+      image: "Foody-Goody.png",
+      url: "https://workshop-ai-website-theta.vercel.app/",
     },
     {
       id: 4,
       name: "Radio Player",
       description: "Listen to the Swedish Radio in my app!",
-      image: "Sveriges-Radio.jpg",
+      image: "Sverige-Radio.jpg",
       url: "https://radioplayer-inky.vercel.app/",
     },
   ]);
@@ -46,7 +46,7 @@ export const PortfolioProvider = ({ children }) => {
     { name: "Linux", src: "/image.png" },
     { name: "Express", src: "/express-logo.png" },
     { name: "TS", src: "/typesc.webp" },
-    { name: "Docker", src: "/docker-mark-white.svg" },
+    { name: "Docker", src: "/docker-mark-blue.png" },
     { name: "MySQL", src: "/mysql.gif" },
   ]);
 
