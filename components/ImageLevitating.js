@@ -54,7 +54,7 @@ function ImageLevitating() {
             </button>
 
             <embed
-              src="/Irene Rubio CV25- english (1).pdf"
+              src="Irene Rubio CV2026.pdf"
               type="application/pdf"
               width="100%"
               height="100%"
