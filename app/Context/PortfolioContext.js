@@ -48,6 +48,7 @@ export const PortfolioProvider = ({ children }) => {
     { name: "TS", src: "/typesc.webp" },
     { name: "Docker", src: "/docker-mark-blue.png" },
     { name: "MySQL", src: "/mysql.gif" },
+    { name: "Tanstack", src: "/tanstack.png" },
   ]);
 
   // const [newProject, setNewProject] = useState({
