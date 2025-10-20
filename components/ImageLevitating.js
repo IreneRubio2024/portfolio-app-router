@@ -23,7 +23,7 @@ function ImageLevitating() {
     "
         >
           <img
-            src="/imagen Irene.png"
+            src="/imagen irene.png"
             alt="Imagen levitando"
             className="
         w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-48 lg:h-48
