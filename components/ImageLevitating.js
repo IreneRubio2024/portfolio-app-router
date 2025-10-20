@@ -16,6 +16,7 @@ function ImageLevitating() {
   "
         onClick={toggleCV}
       >
+        Click to see my CV
         <div
           className="
       flex items-center justify-center
@@ -23,8 +24,8 @@ function ImageLevitating() {
     "
         >
           <img
-            src="/imagen irene.png"
-            alt="Imagen levitando"
+            src="/irene.png"
+            alt="imagen"
             className="
         w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-48 lg:h-48
         object-cover rounded-full
