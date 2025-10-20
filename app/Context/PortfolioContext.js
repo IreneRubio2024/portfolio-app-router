@@ -47,7 +47,7 @@ export const PortfolioProvider = ({ children }) => {
     { name: "Express", src: "/express-logo.png" },
     { name: "TS", src: "/typesc.webp" },
     { name: "Docker", src: "/docker-mark-blue.png" },
-    { name: "MySQL", src: "/mysql.gif" },
+    { name: "MySQL", src: "/Mysql-png.png" },
     { name: "Tanstack", src: "/tanstack.png" },
   ]);
 
