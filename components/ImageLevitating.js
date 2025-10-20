@@ -8,30 +8,44 @@ function ImageLevitating() {
   const cerrarCV = () => setMostrarCV(false);
 
   return (
-    <div className="relative z-10 flex flex-col items-center">
+    <div className="relative z-10 flex flex-col items-center justify-center w-full">
       <div
         className="
-    relative flex items-center gap-6 cursor-pointer
-    ml-4 sm:ml-8 md:ml-12 lg:ml-20
-  "
+        relative flex flex-col items-center cursor-pointer group
+        transition-transform duration-300
+      "
         onClick={toggleCV}
       >
-        Click to see my CV
+        {/* Imagen centrada y flotante */}
         <div
           className="
-      flex items-center justify-center
-      w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-52 lg:h-52
-    "
+          flex items-center justify-center
+          w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-42 lg:h-42
+          rounded-full shadow-xl overflow-hidden
+          transition-transform duration-500 ease-in-out
+          hover:-translate-y-2 hover:scale-105 ml-10 
+        "
         >
           <img
             src="/irene.png"
-            alt="imagen"
+            alt="Irene portrait"
             className="
-        w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-48 lg:h-48
-        object-cover rounded-full
-      "
+            w-full h-full object-cover rounded-full
+            transition-transform duration-500 ease-in-out
+          "
           />
         </div>
+
+        {/* Texto flotante permanente */}
+        <span
+          className="
+          mt-4 text-sm sm:text-base md:text-lg
+          text-black font-semibold tracking-wide
+          animate-bounce-slow ml-10
+        "
+        >
+          My CV
+        </span>
       </div>
 
       {mostrarCV && (

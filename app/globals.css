@@ -25,8 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
 @keyframes levitate {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -52,15 +50,28 @@ body {
   animation: levitate 3s ease-in-out infinite;
 }
 @font-face {
-  font-family: 'Mattone';
-  src: url('/fonts/Mattone-Regular.otf') format('opentype');
+  font-family: "Mattone";
+  src: url("/fonts/Mattone-Regular.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Aujournuit-Regular'; 
-  src: url('/fonts/Aujournuit-Regular.otf') format('opentype'); 
+  font-family: "Aujournuit-Regular";
+  src: url("/fonts/Aujournuit-Regular.otf") format("opentype");
 }
 
-
 body {
-  font-family: 'Mattone', sans-serif;
+  font-family: "Mattone", sans-serif;
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
 }

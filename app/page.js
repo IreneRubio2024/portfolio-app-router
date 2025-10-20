@@ -24,7 +24,7 @@ export default function Home() {
           <div
             className="
               relative flex items-center justify-center
-              w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]
+              w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px]
               bg-[#070707] rounded-full
               transition-all duration-300
               hover:bg-[#ffffff] hover:text-gray-800
@@ -47,7 +47,11 @@ export default function Home() {
                 style={{ fontFamily: "Aujournuit-Regular" }}
                 className="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-200 transition-all duration-300 hover:text-gray-800"
               >
-                Creative Frontend Developer <br className="hidden sm:block" />{" "}
+                Creative Frontend Developer{" "}
+                <br
+                  className="hidden sm:block
+                 text-slate-200 transition-all duration-300 hover:text-gray-800"
+                />{" "}
                 with Backend and UX/UI skills
               </p>
             </div>
@@ -55,7 +59,7 @@ export default function Home() {
         </div>
 
         {/* Imagen levitando */}
-        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8">
+        <div className="absolute top-4 left-6 sm:top-6 sm:left-6 md:top-8 md:left-8">
           <div className="relative group cursor-pointer">
             <div className="relative z-1 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20">
               <ImageLevitating />
