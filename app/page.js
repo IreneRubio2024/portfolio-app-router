@@ -1,10 +1,12 @@
 "use client";
 
 import { useContext } from "react";
+import { ArrowRight, Github, Mail, MapPin } from "lucide-react";
 import PortfolioContext from "./Context/PortfolioContext";
 import ImageLevitating from "@/components/ImageLevitating";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import TechStackAccordion from "@/components/TechStackAccordion";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const context = useContext(PortfolioContext);
@@ -16,84 +18,130 @@ export default function Home() {
   const { projects, techSkills } = context;
 
   return (
-    <>
-      {/* HERO SECTION */}
-      <section className="relative min-h-screen text-white text-center flex flex-col justify-center items-center px-4">
-        {/* Círculo centrado */}
-        <div className="flex items-center justify-center">
-          <div
-            className="
-              relative flex items-center justify-center
-              w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px]
-              bg-[#070707] rounded-full
-              transition-all duration-300
-              hover:bg-[#ffffff] hover:text-gray-800
-              shadow-[0_0_40px_10px_rgba(255,102,0,0.4)]
-              border-2 sm:border-4 border-[#e7e7e7f0]
-              p-4 sm:p-6
-            "
-          >
-            <div className="text-center">
-              <h1
-                className="
-                  font-extrabold mb-3 sm:mb-4 leading-tight transition-all duration-300 hover:text-gray-800
-                  text-xl sm:text-3xl md:text-5xl lg:text-6xl
-                "
-              >
-                Hello, I am{" "}
-                <span style={{ fontFamily: "Aujournuit-Regular" }}>Irene!</span>
-              </h1>
-              <p
-                style={{ fontFamily: "Aujournuit-Regular" }}
-                className="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-200 transition-all duration-300 hover:text-gray-800"
-              >
-                Creative Frontend Developer{" "}
-                <br
-                  className="hidden sm:block
-                 text-slate-200 transition-all duration-300 hover:text-gray-800"
-                />{" "}
-                with Backend and UX/UI skills
-              </p>
-            </div>
+    <main className="min-h-screen bg-[#F5FBF9] text-[#171717]">
+      <nav className="fixed left-0 right-0 top-0 z-30 border-b border-black/10 bg-[#fbfaf7]/86 px-4 backdrop-blur sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-end">
+          <div className="hidden items-center gap-6 text-sm text-[#171717]/68 sm:flex">
+            <a className="transition hover:text-[#171717]" href="#projects">
+              Projects
+            </a>
+            <a className="transition hover:text-[#171717]" href="#stack">
+              Stack
+            </a>
+            <a className="transition hover:text-[#171717]" href="#contact">
+              Contact
+            </a>
           </div>
         </div>
+      </nav>
 
-        {/* Imagen levitando */}
-        <div className="absolute top-4 left-6 sm:top-6 sm:left-6 md:top-8 md:left-8">
-          <div className="relative group cursor-pointer">
-            <div className="relative z-1 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20">
-              <ImageLevitating />
+      <section
+        id="top"
+        className="relative flex min-h-screen items-center bg-[#fbfaf7] px-4 pb-14 pt-24 sm:px-6 lg:px-8"
+      >
+        <div className="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <div className="mb-6 inline-flex items-center gap-2 border border-black/10 bg-white/60 px-4 py-2 text-sm text-[#171717]/68">
+              <MapPin className="h-4 w-4 text-[#c04825]" />
+              Frontend Developer based in Sweden
             </div>
+            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] sm:text-6xl lg:text-7xl">
+              <span className="font-signature block text-6xl font-semibold leading-none text-[#171717] sm:text-7xl lg:text-8xl">
+                Irene Rubio
+              </span>
+              <span className="mt-3 block text-2xl font-medium leading-tight text-[#171717]/76 sm:text-3xl lg:text-4xl">
+                expressive web experiences
+              </span>
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#34302b]/76 sm:text-lg">
+              Frontend Developer with a background in film and visual
+              storytelling. I work on the visible side of digital experiences,
+              where design, structure, and testing shape how things looks, feels
+              and works.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button
+                asChild
+                className="h-11 bg-[#171717] px-5 text-white hover:bg-[#34302b]"
+              >
+                <a href="#projects">
+                  View projects <ArrowRight className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="h-11 border-black/20 bg-transparent px-5 text-[#171717] hover:bg-[#171717] hover:text-white"
+              >
+                <a href="mailto:rubio.hernandez.irene@gmail.com">
+                  Contact me <Mail className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+            <div className="mt-10 flex max-w-2xl flex-wrap items-center gap-4 text-sm text-[#171717]/68">
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-semibold text-[#171717]">
+                  {projects.length}+
+                </span>
+                <span className="uppercase tracking-[0.18em]">Projects</span>
+              </div>
+              <span className="hidden h-4 w-px bg-black/10 sm:block" />
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-semibold text-[#171717]">
+                  {techSkills.length}
+                </span>
+                <span className="uppercase tracking-[0.18em]">Tools</span>
+              </div>
+              <span className="hidden h-4 w-px bg-black/10 sm:block" />
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-semibold text-[#171717]">
+                  UX
+                </span>
+                <span className="uppercase tracking-[0.18em]">Focus</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-lg lg:max-w-2xl">
+            <ImageLevitating className="relative animate-levitate" />
           </div>
         </div>
       </section>
 
-      {/* PROJECTS & STACK */}
-      <div className="px-2 sm:px-4 md:px-8">
-        <div className="my-8">
-          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-center mb-4">
-            Projects
-          </h2>
-          <ProjectsCarousel
-            responsive={{
-              superLargeDesktop: {
-                breakpoint: { max: 4000, min: 1280 },
-                items: 3,
-              },
-              desktop: { breakpoint: { max: 1280, min: 1024 }, items: 2 },
-              tablet: { breakpoint: { max: 1024, min: 640 }, items: 1 },
-              mobile: { breakpoint: { max: 640, min: 0 }, items: 1 },
-            }}
-          />
-        </div>
+      <ProjectsCarousel />
+      <TechStackAccordion />
 
-        <div className="my-8">
-          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-center mb-4">
-            Tech Stack
-          </h2>
-          <TechStackAccordion />
+      <section
+        id="contact"
+        className="bg-[#f7f3ec] px-4 py-16 text-[#171717] sm:px-6 lg:px-8"
+      >
+        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm md:flex-row md:items-center md:p-8">
+          <div>
+            <p className="text-sm uppercase tracking-[0.28em] text-[#c04825]">
+              Available for opportunities
+            </p>
+            <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
+              Let&apos;s build something useful.
+            </h2>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Button asChild className="bg-black text-white hover:bg-[#2b2b2b]">
+              <a href="mailto:rubio.hernandez.irene@gmail.com">
+                <Mail className="h-4 w-4" /> Email
+              </a>
+            </Button>
+            <Button asChild variant="outline" className="border-black">
+              <a
+                href="https://github.com/IreneRubio2024"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github className="h-4 w-4" /> GitHub
+              </a>
+            </Button>
+          </div>
         </div>
-      </div>
-    </>
+      </section>
+    </main>
   );
 }

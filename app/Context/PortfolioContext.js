@@ -9,28 +9,32 @@ export const PortfolioProvider = ({ children }) => {
     {
       id: 1,
       name: "Media DB",
-      description: "Your Ultimate Movie & Series Guide!",
+      description:
+        "Movie and series discovery app with dynamic browsing, detail views, and a polished entertainment UI.",
       image: "hollywood-historia.jpg",
       url: "https://chas-amazon-news-site-main-5.vercel.app/movie",
     },
     {
       id: 2,
       name: "Oscar's 2025 Quiz",
-      description: " Try your knowledge about the Oscar's 2025!",
+      description:
+        "Interactive quiz experience built around the 2025 Academy Awards with instant feedback and responsive layouts.",
       image: "Oscars.webp",
       url: "https://quiz-seven-omega-89.vercel.app/",
     },
     {
       id: 3,
       name: "Gemini AI app",
-      description: "Try my AI recipe generator!!",
+      description:
+        "AI recipe generator that turns user prompts into practical cooking ideas through a clean React interface.",
       image: "Foody-Goody.png",
       url: "https://workshop-ai-website-theta.vercel.app/",
     },
     {
       id: 4,
       name: "Radio Player",
-      description: "Listen to the Swedish Radio in my app!",
+      description:
+        "Swedish radio player focused on fast station browsing, simple playback controls, and accessible UI states.",
       image: "Sverige-Radio.jpg",
       url: "https://radioplayer-inky.vercel.app/",
     },
@@ -46,9 +50,15 @@ export const PortfolioProvider = ({ children }) => {
     { name: "Linux", src: "/image.png" },
     { name: "Express", src: "/express-logo.png" },
     { name: "TS", src: "/typesc.webp" },
+    { name: "Next.js", src: "/Next.js.svg" },
     { name: "Docker", src: "/docker-mark-blue.png" },
     { name: "MySQL", src: "/Mysql-png.png" },
+    { name: "Strapi", src: "/strapi.svg" },
     { name: "Tanstack", src: "/tanstack.png" },
+    { name: "Angular", src: "/angular.svg" },
+    { name: "Playwright", src: "/playwright.svg" },
+    { name: "Claude", src: "/claude.svg" },
+    { name: "Codex", src: "/codex.svg" },
   ]);
 
   // const [newProject, setNewProject] = useState({
