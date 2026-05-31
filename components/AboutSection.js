@@ -39,28 +39,29 @@ export default function AboutSection() {
 
       <section
         id="about"
-        className="bg-[#f7f3ec] px-4 py-24 text-[#171717] sm:px-6 lg:px-8"
+        className="bg-[#363333] px-4 py-24 text-[#FFFEF6] sm:px-6 lg:px-8"
       >
         <div className="mx-auto max-w-6xl">
           {/* Section label */}
           <div className="mb-16 flex items-center gap-4">
-            <h2 className="font-display text-xs uppercase tracking-[0.28em] text-[#171717]/40">
+            <h2 className="font-display text-sm uppercase tracking-[0.28em] text-[#FFFEF6]/70">
               About
             </h2>
-            <div className="h-px flex-1 bg-black/8" />
-          </div>
 
+            <div className="h-px flex-1 bg-white/10" />
+          </div>
           {/* Top — photos left, text right */}
-          <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8 items-start mb-0">
-            {/* Left — photo collage grid */}
+          <div className="mb-0 grid items-start gap-8 lg:grid-cols-[1fr_1.2fr]">
+            {/* LEFT — photo collage */}
             <div
-              className="grid"
+              className="grid overflow-hidden rounded-[28px]"
               style={{
                 gridTemplateColumns: "1fr 1fr",
                 gridTemplateRows: "300px 300px 280px",
                 gap: "0px",
               }}
             >
+              {/* Image 1 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "1", gridRow: "1" }}
@@ -75,6 +76,7 @@ export default function AboutSection() {
                 />
               </div>
 
+              {/* Image 2 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "2", gridRow: "1 / 3" }}
@@ -89,6 +91,7 @@ export default function AboutSection() {
                 />
               </div>
 
+              {/* Image 3 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "1", gridRow: "2" }}
@@ -103,6 +106,7 @@ export default function AboutSection() {
                 />
               </div>
 
+              {/* Image 4 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "1", gridRow: "3" }}
@@ -110,10 +114,13 @@ export default function AboutSection() {
                 <img
                   src="/cordelia 5.jpg"
                   alt="Cordelia Vintage"
-                  style={{ filter: "grayscale(30%)" }}
+                  style={{
+                    filter: "grayscale(30%)",
+                  }}
                 />
               </div>
 
+              {/* Image 5 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "2", gridRow: "3" }}
@@ -129,18 +136,17 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* Right — text + reel */}
+            {/* RIGHT — text + reel */}
             <div className="flex flex-col gap-10 lg:sticky lg:top-24">
+              {/* Text */}
               <div className="space-y-6">
-                <h2 className="font-display text-4xl font-semibold leading-tight text-[#171717] sm:text-5xl">
+                <h2 className="font-display text-4xl font-semibold leading-tight text-[#FFFEF6] sm:text-5xl">
                   Before the code,
                   <br />
-                  <span className="text-[#095859]/40">
-                    there was the stage.
-                  </span>
+                  <span className="text-[#FFF4CE]">there was the stage.</span>
                 </h2>
 
-                <p className="font-body text-base leading-8 text-[#34302b]/70">
+                <p className="font-body text-base leading-8 text-white/70">
                   I spent over two decades in the creative industries — acting,
                   directing costume and casting for theatre and film, building a
                   fashion brand from scratch, Cordelia. I learned how to tell
@@ -148,7 +154,7 @@ export default function AboutSection() {
                   fast to very different roles, environments and people.
                 </p>
 
-                <p className="font-body text-base leading-8 text-[#34302b]/70">
+                <p className="font-body text-base leading-8 text-white/70">
                   When I moved into tech, I didn&apos;t leave that behind. I
                   brought it with me. Today I build interfaces the same way I
                   used to direct a shoot — with intention, clear communication,
@@ -156,6 +162,7 @@ export default function AboutSection() {
                   something that works and something that feels right.
                 </p>
 
+                {/* Tags */}
                 <div className="flex flex-wrap gap-3 pt-2">
                   {[
                     "Film & Theatre acting",
@@ -163,19 +170,23 @@ export default function AboutSection() {
                     "Brand Building",
                     "Visual Storytelling",
                   ].map((tag) => (
-                    <span key={tag} className="about-tag">
+                    <span
+                      key={tag}
+                      className="border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.15em] text-white/55"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
 
-              {/* YouTube reel */}
-              <div className="space-y-1 mt-auto">
-                <p className="font-body text-xs uppercase tracking-[0.25em] text-[#171717]/40">
+              {/* Reel */}
+              <div className="mt-auto space-y-1">
+                <p className="font-body text-xs uppercase tracking-[0.25em] text-white/40">
                   Cordelia — reel
                 </p>
-                <div className="overflow-hidden rounded-sm shadow-lg">
+
+                <div className="overflow-hidden rounded-[20px] shadow-2xl">
                   <div
                     className="relative w-full"
                     style={{ paddingBottom: "56.25%" }}
@@ -192,16 +203,16 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-
           {/* Bottom row */}
           <div
-            className="grid mt-10"
+            className="mt-10 grid overflow-hidden rounded-[28px]"
             style={{
               gridTemplateColumns: "1fr 1fr 1fr",
               height: "500px",
               gap: "0px",
             }}
           >
+            {/* Bottom image 1 */}
             <div className="photo-item">
               <img
                 src="/maggieyyo.png"
@@ -212,6 +223,8 @@ export default function AboutSection() {
                 }}
               />
             </div>
+
+            {/* Bottom image 2 */}
             <div className="photo-item">
               <img
                 src="/cordelia 8.jpg"
@@ -222,6 +235,8 @@ export default function AboutSection() {
                 }}
               />
             </div>
+
+            {/* Bottom image 3 */}
             <div className="photo-item">
               <img
                 src="/Ireneyyo.png"

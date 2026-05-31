@@ -126,13 +126,13 @@ export default function Home() {
         id="contact"
         className="bg-[#FFFEF6] px-4 py-16 text-[#171717] sm:px-6 lg:px-8"
       >
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm md:flex-row md:items-center md:p-8">
+        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-3xl border border-black/10 bg-white p-6 shadow-sm md:flex-row md:items-center md:p-8 md:gap-0">
           <div>
-            <p className="font-body text-sm uppercase tracking-[0.28em] text-[#c04825]">
+            <p className="font-body text-sm uppercase tracking-[0.28em] text-[#095859]">
               Available for opportunities
             </p>
             <h2 className="font-display mt-2 text-3xl font-bold sm:text-4xl">
-              Let&apos;s build something useful.
+              Let's do something good together
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">

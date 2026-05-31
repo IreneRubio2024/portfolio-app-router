@@ -14,7 +14,6 @@ const ProjectsCarousel = () => {
     >
       {" "}
       <div className="mx-auto max-w-6xl">
-        ```
         {/* Header */}
         <div className="mb-10 flex flex-col gap-2">
           <p className="font-body text-sm uppercase tracking-[0.28em] text-[#3686A0]">
