@@ -25,17 +25,6 @@ export default function AboutSection() {
           filter: grayscale(100%) !important;
           transform: scale(1.05);
         }
-        .photo-label {
-          position: absolute;
-          bottom: 8px;
-          left: 10px;
-          font-size: 8px;
-          letter-spacing: 0.28em;
-          text-transform: uppercase;
-          color: rgba(251,250,247,0.7);
-          font-family: monospace;
-          pointer-events: none;
-        }
         .about-tag {
           border: 1px solid rgba(23,23,23,0.12);
           background: rgba(255,255,255,0.6);
@@ -44,6 +33,7 @@ export default function AboutSection() {
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: rgba(23,23,23,0.55);
+          font-family: "Roundo", Arial, sans-serif;
         }
       `}</style>
 
@@ -54,9 +44,9 @@ export default function AboutSection() {
         <div className="mx-auto max-w-6xl">
           {/* Section label */}
           <div className="mb-16 flex items-center gap-4">
-            <h1 className="text-xs uppercase tracking-[0.28em] text-[#171717]/40 font-mono">
+            <h2 className="font-display text-xs uppercase tracking-[0.28em] text-[#171717]/40">
               About
-            </h1>
+            </h2>
             <div className="h-px flex-1 bg-black/8" />
           </div>
 
@@ -71,14 +61,12 @@ export default function AboutSection() {
                 gap: "0px",
               }}
             >
-              {/* Row 1 left — actriz B&W */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "1", gridRow: "1" }}
               >
                 <img
-                  src="/actriz 4.png
-                  "
+                  src="/actriz 4.png"
                   alt="Irene Rubio"
                   style={{
                     filter: "grayscale(20%)",
@@ -87,7 +75,6 @@ export default function AboutSection() {
                 />
               </div>
 
-              {/* cordelia9 vertical — spans rows 1 and 2 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "2", gridRow: "1 / 3" }}
@@ -97,12 +84,11 @@ export default function AboutSection() {
                   alt="Theatre production"
                   style={{
                     filter: "grayscale(20%)",
-                    objectPosition: "center center, margin-top: 10px",
+                    objectPosition: "center center",
                   }}
                 />
               </div>
 
-              {/* Row 2 left — cordelia 6 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "1", gridRow: "2" }}
@@ -117,7 +103,6 @@ export default function AboutSection() {
                 />
               </div>
 
-              {/* Row 3 left — cordelia 5 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "1", gridRow: "3" }}
@@ -129,7 +114,6 @@ export default function AboutSection() {
                 />
               </div>
 
-              {/* Row 3 right — cordelia 8 */}
               <div
                 className="photo-item"
                 style={{ gridColumn: "2", gridRow: "3" }}
@@ -148,7 +132,7 @@ export default function AboutSection() {
             {/* Right — text + reel */}
             <div className="flex flex-col gap-10 lg:sticky lg:top-24">
               <div className="space-y-6">
-                <h2 className="text-4xl font-semibold leading-tight text-[#171717] sm:text-5xl">
+                <h2 className="font-display text-4xl font-semibold leading-tight text-[#171717] sm:text-5xl">
                   Before the code,
                   <br />
                   <span className="text-[#171717]/40">
@@ -156,19 +140,20 @@ export default function AboutSection() {
                   </span>
                 </h2>
 
-                <p className="text-base leading-8 text-[#34302b]/70">
-                  I spent over a decade in the creative industries — acting,
-                  directing costume for theatre and film, building a fashion
-                  brand from scratch. I learned how to tell stories visually,
-                  how to collaborate under pressure, and how to obsess over
-                  details that most people never notice.
+                <p className="font-body text-base leading-8 text-[#34302b]/70">
+                  I spent over two decades in the creative industries — acting,
+                  directing costume and casting for theatre and film, building a
+                  fashion brand from scratch, Cordelia. I learned how to tell
+                  stories visually, how to collaborate under pressure, and adapt
+                  fast to very different roles, environments and people.
                 </p>
 
-                <p className="text-base leading-8 text-[#34302b]/70">
+                <p className="font-body text-base leading-8 text-[#34302b]/70">
                   When I moved into tech, I didn&apos;t leave that behind. I
                   brought it with me. Today I build interfaces the same way I
-                  used to dress a stage — with intention, attention to the user,
-                  and a strong sense of what feels right.
+                  used to direct a shoot — with intention, clear communication,
+                  and an eye for the details that make the difference between
+                  something that works and something that feels right.
                 </p>
 
                 <div className="flex flex-wrap gap-3 pt-2">
@@ -187,7 +172,7 @@ export default function AboutSection() {
 
               {/* YouTube reel */}
               <div className="space-y-1 mt-auto">
-                <p className="text-xs uppercase tracking-[0.25em] text-[#171717]/40 font-mono">
+                <p className="font-body text-xs uppercase tracking-[0.25em] text-[#171717]/40">
                   Cordelia — reel
                 </p>
                 <div className="overflow-hidden rounded-sm shadow-lg">
@@ -208,7 +193,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Bottom row — 3 photos full width, uniform height */}
+          {/* Bottom row */}
           <div
             className="grid mt-10"
             style={{
@@ -227,10 +212,9 @@ export default function AboutSection() {
                 }}
               />
             </div>
-
             <div className="photo-item">
               <img
-                src="cordelia 8.jpg"
+                src="/cordelia 8.jpg"
                 alt="Cordelia Vintage"
                 style={{
                   filter: "grayscale(20%)",
@@ -238,7 +222,6 @@ export default function AboutSection() {
                 }}
               />
             </div>
-
             <div className="photo-item">
               <img
                 src="/Ireneyyo.png"

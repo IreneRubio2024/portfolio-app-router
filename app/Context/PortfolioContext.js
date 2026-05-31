@@ -56,7 +56,7 @@ export const PortfolioProvider = ({ children }) => {
     { name: "Strapi", src: "/strapi.svg" },
     { name: "Tanstack", src: "/tanstack.png" },
     { name: "Angular", src: "/angular.svg" },
-    { name: "Playwright", src: "/playwright.svg" },
+    { name: "Playwright", src: "/play.png" },
     { name: "Claude", src: "/claude.svg" },
     { name: "Codex", src: "/codex.svg" },
   ]);
