@@ -84,3 +84,16 @@ body {
 .animate-bounce-slow {
   animation: bounce-slow 3s ease-in-out infinite;
 }
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("/fonts/ClashDisplay-Bold.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}

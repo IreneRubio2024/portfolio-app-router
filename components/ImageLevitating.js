@@ -10,6 +10,9 @@ function ImageLevitating({ className = "" }) {
           src="/pngtree-full-moon-isolated-on-transparent-background-png-image_21201561.png"
           alt="Moon"
           className="h-full w-full object-cover"
+          style={{
+            filter: "brightness(0.9) contrast(0.75) saturate(0.7) sepia(0.15)",
+          }}
         />
       </div>
     </div>

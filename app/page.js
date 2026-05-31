@@ -7,6 +7,7 @@ import ImageLevitating from "@/components/ImageLevitating";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import TechStackAccordion from "@/components/TechStackAccordion";
 import { Button } from "@/components/ui/button";
+import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
   const context = useContext(PortfolioContext);
@@ -28,6 +29,9 @@ export default function Home() {
             <a className="transition hover:text-[#171717]" href="#stack">
               Stack
             </a>
+            <a className="transition hover:text-[#171717]" href="#about">
+              About
+            </a>
             <a className="transition hover:text-[#171717]" href="#contact">
               Contact
             </a>
@@ -39,7 +43,7 @@ export default function Home() {
         id="top"
         className="relative flex min-h-screen items-center bg-[#fbfaf7] px-4 pb-14 pt-24 sm:px-6 lg:px-8"
       >
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1fr_1fr]">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 border border-black/10 bg-white/60 px-4 py-2 text-sm text-[#171717]/68">
               <MapPin className="h-4 w-4 text-[#c04825]" />
@@ -102,14 +106,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-lg lg:max-w-2xl">
-            <ImageLevitating className="relative animate-levitate" />
+          {/* Moon — pushed right */}
+          {/* Moon — pushed right */}
+          <div className="flex flex-col items-center gap-4 lg:translate-x-16">
+            <div className="relative w-full max-w-lg">
+              <ImageLevitating className="relative animate-levitate" />
+            </div>
+            <p className="text-xs uppercase tracking-[0.28em] text-[#506786]/50 font-mono text-center w-full">
+              the visible side of the unseen work
+            </p>
           </div>
         </div>
       </section>
 
       <ProjectsCarousel />
       <TechStackAccordion />
+      <AboutSection />
 
       <section
         id="contact"
