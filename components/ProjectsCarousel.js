@@ -12,25 +12,26 @@ const ProjectsCarousel = () => {
   return (
     <section
       id="projects"
-      className="w-full bg-[#171717] px-4 py-16 text-white sm:px-6 lg:px-8"
+      className="w-full bg-[#191E1E] px-4 py-16 text-[#FFFEF6] sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <p className="text-sm uppercase tracking-[0.28em] text-[#f2a65a]">
+            <p className="text-sm uppercase tracking-[0.28em] text-[#3686A0]">
               Selected work
             </p>
             <h2
-              className="mt-2 text-3xl font-bold sm:text-4xl"
-              style={{ fontFamily: "Aujournuit-Regular" }}
+              className="font-display mt-2 text-3xl font-bold sm:text-4xl"
+             
             >
               Projects with product thinking
             </h2>
-          </div>
-          <p className="max-w-xl text-sm leading-6 text-white/70 sm:text-base">
+            <p className="font-body max-w-xl text-sm leading-6 text-white/70 sm:text-base">
             A mix of frontend, API work, AI experiments, and media interfaces,
             built with attention to flow, responsiveness, and visual detail.
           </p>
+          </div>
+         
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">

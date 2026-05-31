@@ -135,7 +135,7 @@ export default function AboutSection() {
                 <h2 className="font-display text-4xl font-semibold leading-tight text-[#171717] sm:text-5xl">
                   Before the code,
                   <br />
-                  <span className="text-[#171717]/40">
+                  <span className="text-[#095859]/40">
                     there was the stage.
                   </span>
                 </h2>

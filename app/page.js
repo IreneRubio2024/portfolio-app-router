@@ -124,7 +124,7 @@ export default function Home() {
 
       <section
         id="contact"
-        className="bg-[#f7f3ec] px-4 py-16 text-[#171717] sm:px-6 lg:px-8"
+        className="bg-[#FFFEF6] px-4 py-16 text-[#171717] sm:px-6 lg:px-8"
       >
         <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm md:flex-row md:items-center md:p-8">
           <div>
