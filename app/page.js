@@ -8,6 +8,7 @@ import ProjectsCarousel from "@/components/ProjectsCarousel";
 import TechStackAccordion from "@/components/TechStackAccordion";
 import { Button } from "@/components/ui/button";
 import AboutSection from "@/components/AboutSection";
+import CustomCursor from "@/components/CustomCursor";
 
 export default function Home() {
   const context = useContext(PortfolioContext);
@@ -121,7 +122,7 @@ export default function Home() {
       <ProjectsCarousel />
       <TechStackAccordion />
       <AboutSection />
-
+      <CustomCursor />
       <section
         id="contact"
         className="bg-[#FFFEF6] px-4 py-16 text-[#171717] sm:px-6 lg:px-8"
