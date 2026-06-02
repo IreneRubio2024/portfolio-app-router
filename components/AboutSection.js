@@ -1,6 +1,9 @@
 "use client";
 
-export default function AboutSection() {
+import { useState } from "react";
+
+export default function AboutSection({ dark = false }) {
+  const [reelPlaying, setReelPlaying] = useState(false);
   return (
     <>
       <style>{`
@@ -12,18 +15,12 @@ export default function AboutSection() {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          filter: grayscale(100%);
           transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease;
         }
         .photo-item:hover img {
           transform: scale(1.05);
-          filter: grayscale(0%) !important;
-        }
-        .photo-item.always-bw img {
-          filter: grayscale(100%) !important;
-        }
-        .photo-item.always-bw:hover img {
-          filter: grayscale(100%) !important;
-          transform: scale(1.05);
+          filter: grayscale(0%);
         }
         .about-tag {
           border: 1px solid rgba(23,23,23,0.12);
@@ -33,22 +30,19 @@ export default function AboutSection() {
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: rgba(23,23,23,0.55);
-          font-family: "Roundo", Arial, sans-serif;
+          font-family: "Roundo-Variable"
         }
       `}</style>
 
       <section
         id="about"
-        className="bg-[#363333] px-4 py-24 text-[#FFFEF6] sm:px-6 lg:px-8"
+        className={`px-4 py-24 sm:px-6 lg:px-8 ${dark ? "bg-[#191E1E] text-[#FFFEF6]" : "bg-[#FFFEF6] text-[#171717]"}`}
       >
         <div className="mx-auto max-w-6xl">
-          {/* Section label */}
-          <div className="mb-16 flex items-center gap-4">
-            <h2 className="font-display text-sm uppercase tracking-[0.28em] text-[#FFFEF6]/70">
+          <div className="mb-16">
+            <h2 className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-white/60" : "text-[#171717]/60"}`}>
               About
             </h2>
-
-            <div className="h-px flex-1 bg-white/10" />
           </div>
           {/* Top — photos left, text right */}
           <div className="mb-0 grid items-start gap-8 lg:grid-cols-[1fr_1.2fr]">
@@ -69,10 +63,7 @@ export default function AboutSection() {
                 <img
                   src="/actriz 4.png"
                   alt="Irene Rubio"
-                  style={{
-                    filter: "grayscale(20%)",
-                    objectPosition: "center top",
-                  }}
+                  style={{ objectPosition: "center top" }}
                 />
               </div>
 
@@ -84,10 +75,7 @@ export default function AboutSection() {
                 <img
                   src="/cordelia9.jpg"
                   alt="Theatre production"
-                  style={{
-                    filter: "grayscale(20%)",
-                    objectPosition: "center center",
-                  }}
+                  style={{ objectPosition: "center center" }}
                 />
               </div>
 
@@ -99,10 +87,7 @@ export default function AboutSection() {
                 <img
                   src="/modelo.png"
                   alt="Cordelia Vintage"
-                  style={{
-                    filter: "grayscale(40%)",
-                    objectPosition: "center top",
-                  }}
+                  style={{ objectPosition: "center top" }}
                 />
               </div>
 
@@ -114,9 +99,6 @@ export default function AboutSection() {
                 <img
                   src="/cordelia 5.jpg"
                   alt="Cordelia Vintage"
-                  style={{
-                    filter: "grayscale(30%)",
-                  }}
                 />
               </div>
 
@@ -128,25 +110,21 @@ export default function AboutSection() {
                 <img
                   src="/Ana.png"
                   alt="Costume design"
-                  style={{
-                    filter: "grayscale(0%)",
-                    objectPosition: "center top",
-                  }}
+                  style={{ objectPosition: "center top" }}
                 />
               </div>
             </div>
 
-            {/* RIGHT — text + reel */}
+            {/* RIGHT — text only */}
             <div className="flex flex-col gap-10 lg:sticky lg:top-24">
-              {/* Text */}
               <div className="space-y-6">
-                <h2 className="font-display text-4xl font-semibold leading-tight text-[#FFFEF6] sm:text-5xl">
+                <h2 className={`font-display text-4xl font-semibold leading-tight sm:text-5xl ${dark ? "text-[#FFFEF6]" : "text-[#171717]"}`}>
                   Before the code,
                   <br />
-                  <span className="text-[#FFF4CE]">there was the stage.</span>
+                  <span className={dark ? "text-[#FFF4CE]" : "text-[#095859]"}>there was the stage.</span>
                 </h2>
 
-                <p className="font-body text-base leading-8 text-white/70">
+                <p className={`font-body text-base leading-8 ${dark ? "text-white/70" : "text-[#171717]/70"}`}>
                   I spent over two decades in the creative industries — acting,
                   directing costume and casting for theatre and film, building a
                   fashion brand from scratch, Cordelia. I learned how to tell
@@ -154,7 +132,7 @@ export default function AboutSection() {
                   fast to very different roles, environments and people.
                 </p>
 
-                <p className="font-body text-base leading-8 text-white/70">
+                <p className={`font-body text-base leading-8 ${dark ? "text-white/70" : "text-[#171717]/70"}`}>
                   When I moved into tech, I didn&apos;t leave that behind. I
                   brought it with me. Today I build interfaces the same way I
                   used to direct a shoot — with intention, clear communication,
@@ -172,33 +150,11 @@ export default function AboutSection() {
                   ].map((tag) => (
                     <span
                       key={tag}
-                      className="border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.15em] text-white/55"
+                      className={`border px-3 py-2 text-[11px] uppercase tracking-[0.15em] ${dark ? "border-white/10 bg-white/[0.03] text-white/55" : "border-black/10 bg-black/[0.03] text-[#171717]/55"}`}
                     >
                       {tag}
                     </span>
                   ))}
-                </div>
-              </div>
-
-              {/* Reel */}
-              <div className="mt-auto space-y-1">
-                <p className="font-body text-xs uppercase tracking-[0.25em] text-white/40">
-                  Cordelia — reel
-                </p>
-
-                <div className="overflow-hidden rounded-[20px] shadow-2xl">
-                  <div
-                    className="relative w-full"
-                    style={{ paddingBottom: "56.25%" }}
-                  >
-                    <iframe
-                      className="absolute inset-0 h-full w-full"
-                      src="https://www.youtube.com/embed/Ewn5TyA-QX4"
-                      title="Cordelia Reel"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -212,40 +168,64 @@ export default function AboutSection() {
               gap: "0px",
             }}
           >
-            {/* Bottom image 1 */}
             <div className="photo-item">
               <img
                 src="/maggieyyo.png"
                 alt="Cordelia Vintage"
-                style={{
-                  filter: "grayscale(100%)",
-                  objectPosition: "center top",
-                }}
+                style={{ objectPosition: "center top" }}
               />
             </div>
-
-            {/* Bottom image 2 */}
             <div className="photo-item">
               <img
                 src="/cordelia 8.jpg"
                 alt="Cordelia Vintage"
-                style={{
-                  filter: "grayscale(20%)",
-                  objectPosition: "center top",
-                }}
+                style={{ objectPosition: "center top" }}
               />
             </div>
-
-            {/* Bottom image 3 */}
             <div className="photo-item">
               <img
                 src="/Ireneyyo.png"
                 alt="Irene Rubio"
-                style={{
-                  filter: "grayscale(0%)",
-                  objectPosition: "center top",
-                }}
+                style={{ objectPosition: "center top" }}
               />
+            </div>
+          </div>
+
+          {/* Reel — full width below all photos */}
+          <div className="mt-16 space-y-3">
+            <p className={`font-body text-xs uppercase tracking-[0.25em] ${dark ? "text-white/40" : "text-[#171717]/40"}`}>
+              Cordelia — reel
+            </p>
+            <div className="relative w-full shadow-2xl" style={{ paddingBottom: "56.25%" }}>
+              {reelPlaying ? (
+                <iframe
+                  className="absolute inset-0 h-full w-full rounded-[20px]"
+                  src="https://www.youtube.com/embed/Ewn5TyA-QX4?autoplay=1"
+                  title="Cordelia Reel"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <button
+                  onClick={() => setReelPlaying(true)}
+                  className="absolute inset-0 w-full h-full group"
+                  aria-label="Play Cordelia Reel"
+                >
+                  <img
+                    src={`https://img.youtube.com/vi/Ewn5TyA-QX4/maxresdefault.jpg`}
+                    alt="Cordelia Reel"
+                    className="h-full w-full object-cover rounded-[20px]"
+                  />
+                  {/* Play button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition group-hover:bg-white/30 group-hover:scale-110">
+                      <svg className="h-6 w-6 translate-x-0.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              )}
             </div>
           </div>
         </div>
