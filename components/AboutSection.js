@@ -40,7 +40,9 @@ export default function AboutSection({ dark = false }) {
       >
         <div className="mx-auto max-w-6xl">
           <div className="mb-16">
-            <h2 className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-white/60" : "text-[#171717]/60"}`}>
+            <h2
+              className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-white/60" : "text-[#171717]/60"}`}
+            >
               About
             </h2>
           </div>
@@ -96,10 +98,7 @@ export default function AboutSection({ dark = false }) {
                 className="photo-item"
                 style={{ gridColumn: "1", gridRow: "3" }}
               >
-                <img
-                  src="/cordelia 5.jpg"
-                  alt="Cordelia Vintage"
-                />
+                <img src="/cordelia 5.jpg" alt="Cordelia Vintage" />
               </div>
 
               {/* Image 5 */}
@@ -118,13 +117,19 @@ export default function AboutSection({ dark = false }) {
             {/* RIGHT — text only */}
             <div className="flex flex-col gap-10 lg:sticky lg:top-24">
               <div className="space-y-6">
-                <h2 className={`font-display text-4xl font-semibold leading-tight sm:text-5xl ${dark ? "text-[#FFFEF6]" : "text-[#171717]"}`}>
+                <h2
+                  className={`font-display text-4xl font-semibold leading-tight sm:text-5xl ${dark ? "text-[#FFFEF6]" : "text-[#171717]"}`}
+                >
                   Before the code,
                   <br />
-                  <span className={dark ? "text-[#FFF4CE]" : "text-[#095859]"}>there was the stage.</span>
+                  <span className={dark ? "text-[#FFF4CE]" : "text-[#095859]"}>
+                    there was the stage.
+                  </span>
                 </h2>
 
-                <p className={`font-body text-base leading-8 ${dark ? "text-white/70" : "text-[#171717]/70"}`}>
+                <p
+                  className={`font-body text-lg leading-9 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
+                >
                   I spent over two decades in the creative industries — acting,
                   directing costume and casting for theatre and film, building a
                   fashion brand from scratch, Cordelia. I learned how to tell
@@ -132,7 +137,9 @@ export default function AboutSection({ dark = false }) {
                   fast to very different roles, environments and people.
                 </p>
 
-                <p className={`font-body text-base leading-8 ${dark ? "text-white/70" : "text-[#171717]/70"}`}>
+                <p
+                  className={`font-body text-lg leading-9 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
+                >
                   When I moved into tech, I didn&apos;t leave that behind. I
                   brought it with me. Today I build interfaces the same way I
                   used to direct a shoot — with intention, clear communication,
@@ -150,7 +157,7 @@ export default function AboutSection({ dark = false }) {
                   ].map((tag) => (
                     <span
                       key={tag}
-                      className={`border px-3 py-2 text-[11px] uppercase tracking-[0.15em] ${dark ? "border-white/10 bg-white/[0.03] text-white/55" : "border-black/10 bg-black/[0.03] text-[#171717]/55"}`}
+                      className={`border px-3 py-2 text-sm uppercase tracking-[0.15em] ${dark ? "border-white/10 bg-white/[0.03] text-white/55" : "border-black/10 bg-black/[0.03] text-[#171717]/55"}`}
                     >
                       {tag}
                     </span>
@@ -170,7 +177,7 @@ export default function AboutSection({ dark = false }) {
           >
             <div className="photo-item">
               <img
-                src="/maggieyyo.png"
+                src="/maggieyyo2.png"
                 alt="Cordelia Vintage"
                 style={{ objectPosition: "center top" }}
               />
@@ -193,10 +200,15 @@ export default function AboutSection({ dark = false }) {
 
           {/* Reel — full width below all photos */}
           <div className="mt-16 space-y-3">
-            <p className={`font-body text-xs uppercase tracking-[0.25em] ${dark ? "text-white/40" : "text-[#171717]/40"}`}>
+            <p
+              className={`font-body text-sm uppercase tracking-[0.25em] ${dark ? "text-white/40" : "text-[#171717]/40"}`}
+            >
               Cordelia — reel
             </p>
-            <div className="relative w-full shadow-2xl" style={{ paddingBottom: "56.25%" }}>
+            <div
+              className="relative w-full shadow-2xl"
+              style={{ paddingBottom: "56.25%" }}
+            >
               {reelPlaying ? (
                 <iframe
                   className="absolute inset-0 h-full w-full rounded-[20px]"
@@ -219,7 +231,11 @@ export default function AboutSection({ dark = false }) {
                   {/* Play button */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition group-hover:bg-white/30 group-hover:scale-110">
-                      <svg className="h-6 w-6 translate-x-0.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="h-6 w-6 translate-x-0.5 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path d="M8 5v14l11-7z" />
                       </svg>
                     </div>
