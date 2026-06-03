@@ -36,12 +36,12 @@ export default function AboutSection({ dark = false }) {
 
       <section
         id="about"
-        className={`px-4 py-24 sm:px-6 lg:px-8 ${dark ? "bg-[#191E1E] text-[#FFFEF6]" : "bg-[#FFFEF6] text-[#171717]"}`}
+        className={`px-4 py-24 sm:px-6 lg:px-8 ${dark ? "bg-[#fffef6] text-[#171717]" : "bg-[#FAFAF8] text-[#171717]"}`}
       >
         <div className="mx-auto max-w-6xl">
           <div className="mb-16">
             <h2
-              className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-white/75" : "text-[#171717]/75"}`}
+              className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-[#263247]/75" : "text-[#171717]/75"}`}
             >
               About
             </h2>
@@ -118,17 +118,15 @@ export default function AboutSection({ dark = false }) {
             <div className="flex flex-col gap-10 lg:sticky lg:top-24">
               <div className="space-y-6">
                 <h3
-                  className={`font-display text-3xl font-semibold leading-tight sm:text-4xl ${dark ? "text-[#FFFEF6]" : "text-[#171717]"}`}
+                  className={`font-display text-3xl font-semibold leading-tight sm:text-4xl ${dark ? "text-[#263247]" : "text-[#171717]"}`}
                 >
                   Before the code,
                   <br />
-                  <span className={dark ? "text-[#FFF4CE]" : "text-[#095859]"}>
-                    there was the stage.
-                  </span>
+                  <span className="text-[#095859]">there was the stage.</span>
                 </h3>
 
                 <p
-                  className={`font-body text-lg leading-9 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
+                  className={`font-body text-lg leading-9 ${dark ? "text-[#263247]/78" : "text-[#171717]/70"}`}
                 >
                   I spent over two decades in the creative industries — acting,
                   directing costume and casting for theatre and film, building a
@@ -138,7 +136,7 @@ export default function AboutSection({ dark = false }) {
                 </p>
 
                 <p
-                  className={`font-body text-lg leading-9 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
+                  className={`font-body text-lg leading-9 ${dark ? "text-[#263247]/78" : "text-[#171717]/70"}`}
                 >
                   When I moved into tech, I didn&apos;t leave that behind. I
                   brought it with me. Today I build interfaces the same way I
@@ -157,7 +155,7 @@ export default function AboutSection({ dark = false }) {
                   ].map((tag) => (
                     <span
                       key={tag}
-                      className={`border px-3 py-2 text-sm uppercase tracking-[0.15em] ${dark ? "border-white/10 bg-white/[0.03] text-white/75" : "border-black/10 bg-black/[0.03] text-[#171717]/75"}`}
+                      className={`border px-3 py-2 text-sm uppercase tracking-[0.15em] ${dark ? "border-[#263247]/14 bg-[#263247]/[0.03] text-[#263247]/80" : "border-black/10 bg-black/[0.03] text-[#171717]/75"}`}
                     >
                       {tag}
                     </span>
@@ -201,7 +199,7 @@ export default function AboutSection({ dark = false }) {
           {/* Reel — full width below all photos */}
           <div className="mt-16 space-y-3">
             <p
-              className={`font-body text-sm uppercase tracking-[0.25em] ${dark ? "text-white/65" : "text-[#171717]/65"}`}
+              className={`font-body text-sm uppercase tracking-[0.25em] ${dark ? "text-[#263247]/65" : "text-[#171717]/65"}`}
             >
               Cordelia — reel
             </p>

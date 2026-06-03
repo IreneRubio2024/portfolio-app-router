@@ -11,12 +11,12 @@ const ProjectsCarousel = ({ dark = false }) => {
   return (
     <section
       id="projects"
-      className={`w-full px-4 py-24 sm:px-6 lg:px-8 ${dark ? "bg-[#191E1E] text-[#FFFEF6]" : "bg-[#FFFEF6] text-[#171717]"}`}
+      className={`w-full px-4 py-24 sm:px-6 lg:px-8 ${dark ? "bg-[#fffef6] text-[#263247]" : "bg-[#FAFAF8] text-[#171717]"}`}
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16">
           <h2
-            className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-white/75" : "text-[#171717]/75"}`}
+            className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-[#263247]/75" : "text-[#171717]/75"}`}
           >
             Projects
           </h2>
@@ -25,7 +25,7 @@ const ProjectsCarousel = ({ dark = false }) => {
           {projects.map((project) => (
             <article
               key={project.id}
-              className={`group overflow-hidden border shadow-sm transition duration-300 hover:shadow-md ${dark ? "bg-[#1e2424] border-white/8 hover:bg-[#252c2c]" : "bg-white border-black/8 hover:bg-[#f5f5f0]"}`}
+              className={`group overflow-hidden border shadow-sm transition duration-300 hover:shadow-md ${dark ? "bg-[#fbfcf8] border-[#263247]/12 hover:bg-[#f5f6f2]" : "bg-white border-black/8 hover:bg-[#f5f5f0]"}`}
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
@@ -43,15 +43,15 @@ const ProjectsCarousel = ({ dark = false }) => {
                 />
               </div>
               <div
-                className={`flex min-h-[220px] flex-col border-t p-8 ${dark ? "border-white/5" : "border-black/10"}`}
+                className={`flex min-h-[220px] flex-col border-t p-8 ${dark ? "border-[#263247]/10" : "border-black/10"}`}
               >
                 <h3
-                  className={`font-display text-xl font-semibold ${dark ? "text-white/90" : "text-[#171717]"}`}
+                  className={`font-display text-xl font-semibold ${dark ? "text-[#263247]" : "text-[#171717]"}`}
                 >
                   {project.name}
                 </h3>
                 <p
-                  className={`font-body mt-4 flex-1 text-lg leading-9 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
+                  className={`font-body mt-4 flex-1 text-lg leading-9 ${dark ? "text-[#263247]/78" : "text-[#171717]/70"}`}
                 >
                   {project.description}
                 </p>
@@ -61,7 +61,7 @@ const ProjectsCarousel = ({ dark = false }) => {
                       {project.stack.map((tech) => (
                         <span
                           key={tech}
-                          className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-white/10 text-white/70" : "border-black/10 text-[#171717]/70"}`}
+                          className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-[#263247]/18 text-[#263247]/80" : "border-black/10 text-[#171717]/70"}`}
                         >
                           {tech}
                         </span>
@@ -72,7 +72,7 @@ const ProjectsCarousel = ({ dark = false }) => {
                     type="button"
                     variant="outline"
                     size="default"
-                    className={`font-body bg-transparent gap-2 transition-colors ${dark ? "border-white/30 text-white/85 hover:bg-white hover:text-[#171717] hover:border-white" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white hover:border-[#171717]"}`}
+                    className={`font-body bg-transparent gap-2 transition-colors ${dark ? "border-[#263247]/28 text-[#263247]/85 hover:bg-[#263247] hover:text-white hover:border-[#263247]" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white hover:border-[#171717]"}`}
                     onClick={() =>
                       window.open(project.url, "_blank", "noopener,noreferrer")
                     }

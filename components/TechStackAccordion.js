@@ -69,7 +69,7 @@ export default function TechStackAccordion({ dark = false }) {
   return (
     <section
       id="stack"
-      className={`px-4 pt-14 pb-24 sm:px-6 lg:px-8 ${dark ? "bg-[#191E1E] text-[#FFFEF6]" : "bg-[#FFFEF6] text-[#171717]"}`}
+      className={`px-4 pt-14 pb-24 sm:px-6 lg:px-8 ${dark ? "bg-[#191b1e] text-[#F5F7FC]" : "bg-[#F2F4FA] text-[#171717]"}`}
     >
       <style>{`
         @keyframes marquee {
@@ -93,7 +93,7 @@ export default function TechStackAccordion({ dark = false }) {
       </div>
 
       <div
-        className={`border-y py-6 ${dark ? "border-white/8" : "border-black/8"}`}
+        className={`border-y py-6 ${dark ? "border-white/10" : "border-black/8"}`}
       >
         <ul className="sr-only">
           {techSkills.map((skill) => (
@@ -131,7 +131,7 @@ export default function TechStackAccordion({ dark = false }) {
           <div className="mx-auto mt-5 flex max-w-6xl justify-end px-1">
             <button
               type="button"
-              className={`rounded-sm border px-3 py-1 text-xs uppercase tracking-[0.16em] transition ${dark ? "border-white/25 text-white/80 hover:bg-white hover:text-[#171717]" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white"}`}
+              className={`rounded-sm border px-3 py-1 text-xs uppercase tracking-[0.16em] transition ${dark ? "border-white/22 text-white/82 hover:bg-white hover:text-[#171717]" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white"}`}
               onClick={() => setIsPaused((current) => !current)}
               aria-pressed={isPaused}
             >
