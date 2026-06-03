@@ -53,7 +53,10 @@ h6 {
 
 html {
   scroll-behavior: smooth;
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='7' fill='%23171717'/%3E%3C/svg%3E") 10 10, auto;
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='7' fill='%23171717'/%3E%3C/svg%3E")
+      10 10,
+    auto;
 }
 
 @keyframes levitate {
@@ -127,4 +130,91 @@ html {
     width 0.3s ease,
     height 0.3s ease,
     border-color 0.3s ease;
+}
+
+.mode-transition,
+.mode-transition * {
+  transition-property:
+    color, background-color, border-color, box-shadow, fill, stroke, filter;
+  transition-duration: 620ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mode-switching {
+  animation: modeSwitchFade 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mode-wipe {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0;
+  transform: scaleY(0.92);
+  transform-origin: center;
+  animation: modeWipe 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mode-wipe-dark {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 18, 18, 0.06) 0%,
+    rgba(16, 18, 18, 0.38) 45%,
+    rgba(16, 18, 18, 0.06) 100%
+  );
+}
+
+.mode-wipe-light {
+  background: linear-gradient(
+    180deg,
+    rgba(250, 245, 232, 0.05) 0%,
+    rgba(250, 245, 232, 0.34) 45%,
+    rgba(250, 245, 232, 0.05) 100%
+  );
+}
+
+@keyframes modeSwitchFade {
+  0% {
+    opacity: 0.88;
+    filter: saturate(0.85) blur(1px);
+  }
+  100% {
+    opacity: 1;
+    filter: saturate(1) blur(0);
+  }
+}
+
+@keyframes modeWipe {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.92);
+  }
+  35% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    cursor: auto;
+  }
+
+  .mode-transition,
+  .mode-transition * {
+    transition-duration: 0ms !important;
+  }
+
+  .mode-switching {
+    animation: none;
+  }
+
+  .mode-wipe {
+    animation: none;
+  }
 }
