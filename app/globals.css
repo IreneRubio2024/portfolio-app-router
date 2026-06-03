@@ -53,6 +53,7 @@ h6 {
 
 html {
   scroll-behavior: smooth;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='7' fill='%23171717'/%3E%3C/svg%3E") 10 10, auto;
 }
 
 @keyframes levitate {
@@ -89,9 +90,6 @@ html {
 
 .animate-bounce-slow {
   animation: bounce-slow 3s ease-in-out infinite;
-}
-* {
-  cursor: none;
 }
 
 .cursor-dot {
