@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import PortfolioContext from "@/app/Context/PortfolioContext";
 
 const ProjectsCarousel = ({ dark = false }) => {
@@ -35,34 +36,37 @@ const ProjectsCarousel = ({ dark = false }) => {
                 />
               </div>
               <div className={`flex min-h-[220px] flex-col border-t p-8 ${dark ? "border-white/5" : "border-black/10"}`}>
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className={`font-display text-xl font-semibold ${dark ? "text-white/90" : "text-[#171717]"}`}>
-                    {project.name}
-                  </h3>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`shrink-0 transition hover:text-[#3686A0] ${dark ? "text-white/30" : "text-[#171717]/30"}`}
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                </div>
-                <p className={`font-body mt-4 flex-1 text-sm leading-8 ${dark ? "text-white/45" : "text-[#171717]/55"}`}>
+                <h3 className={`font-display text-xl font-semibold ${dark ? "text-white/90" : "text-[#171717]"}`}>
+                  {project.name}
+                </h3>
+                <p className={`font-body mt-4 flex-1 text-lg leading-9 ${dark ? "text-white/45" : "text-[#171717]/55"}`}>
                   {project.description}
                 </p>
-                {project.stack && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className={`font-body border px-2 py-0.5 text-xs uppercase tracking-[0.12em] ${dark ? "border-white/10 text-white/35" : "border-black/10 text-[#171717]/45"}`}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <div className="mt-6 flex flex-wrap items-end justify-between gap-4">
+                  {project.stack && (
+                    <div className="flex flex-wrap gap-2">
+                      {project.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-white/10 text-white/35" : "border-black/10 text-[#171717]/45"}`}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="default"
+                    className={`font-body bg-transparent gap-2 transition-colors ${dark ? "border-white/20 text-white/70 hover:bg-white hover:text-[#171717] hover:border-white" : "border-black/15 text-[#171717]/60 hover:bg-[#171717] hover:text-white hover:border-[#171717]"}`}
+                  >
+                    <a href={project.url} target="_blank" rel="noreferrer" aria-label={`See ${project.name}`}>
+                      See {project.name}
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </article>
           ))}
