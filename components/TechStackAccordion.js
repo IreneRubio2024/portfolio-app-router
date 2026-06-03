@@ -42,7 +42,7 @@ function SkillItem({ skill, dark }) {
         </span>
       )}
       <span
-        className={`font-display text-xl font-medium whitespace-nowrap ${dark ? "text-white/75" : "text-[#171717]/75"}`}
+        className={`font-body text-xl font-medium whitespace-nowrap ${dark ? "text-white/75" : "text-[#171717]/75"}`}
       >
         {skill.name}
       </span>
