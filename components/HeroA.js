@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { MapPin } from "lucide-react";
 
 export default function HeroA() {
   return (
@@ -14,14 +15,14 @@ export default function HeroA() {
           src="/actriz 4.png"
           alt="Irene Rubio"
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ objectPosition: "center -8%" }}
+          style={{ objectPosition: "center top" }}
         />
       </div>
 
       {/* Text content — right side, nav included */}
       <div className="flex flex-col px-8 pb-14 pt-8 lg:px-14 xl:px-20">
         <nav className="flex justify-end">
-          <div className="flex items-center gap-6 text-sm tracking-[0.12em] text-[#171717]/68">
+          <div className="flex items-center gap-6 text-base tracking-[0.12em] text-[#171717]/68">
             <a className="transition hover:text-[#171717]" href="#projects">Projects</a>
             <a className="transition hover:text-[#171717]" href="#stack">Stack</a>
             <a className="transition hover:text-[#171717]" href="#about">About</a>
@@ -38,7 +39,7 @@ export default function HeroA() {
                 Expressive web experiences
               </span>
             </h1>
-            <p className="mt-10 max-w-md text-base leading-10 text-[#34302b]/76 sm:text-lg">
+            <p className="mt-10 max-w-md text-lg leading-10 text-[#34302b]/76 sm:text-xl">
               Frontend Developer with a background in film and visual
               storytelling. I work on the visible side of digital experiences,
               where design, structure, and testing shape how things look, feel
@@ -59,6 +60,10 @@ export default function HeroA() {
               >
                 <a href="mailto:rubio.hernandez.irene@gmail.com">Contact me</a>
               </Button>
+            </div>
+            <div className="mt-8 flex items-center gap-2 text-sm tracking-[0.18em] text-[#171717]/45">
+              <MapPin className="h-3.5 w-3.5" />
+              Frontend Developer · Sweden
             </div>
           </div>
         </div>
