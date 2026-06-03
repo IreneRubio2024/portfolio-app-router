@@ -59,6 +59,8 @@ export const PortfolioProvider = ({ children }) => {
     { name: "Playwright", src: "/play.png" },
     { name: "Claude", src: "/claude.svg" },
     { name: "Codex", src: "/codex.svg" },
+    { name: "Bitbucket", src: "/bitbucket.jpeg" },
+    { name: "Jira", src: "/jira2.jpeg" },
   ]);
 
   // const [newProject, setNewProject] = useState({
