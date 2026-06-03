@@ -1,9 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { MapPin } from "lucide-react";
+import { Clapperboard, MapPin, PenLine } from "lucide-react";
 
-export default function HeroA() {
+export default function HeroA({ heroVersion = "A", onToggleVersion }) {
+  const isCinematic = heroVersion === "B";
+
   return (
     <section
       id="top"
@@ -22,11 +24,46 @@ export default function HeroA() {
       {/* Text content — right side, nav included */}
       <div className="flex flex-col px-8 pb-14 pt-8 lg:px-14 xl:px-20">
         <nav className="flex justify-end">
-          <div className="flex items-center gap-6 text-base tracking-[0.12em] text-[#171717]/68">
-            <a className="transition hover:text-[#171717]" href="#projects">Projects</a>
-            <a className="transition hover:text-[#171717]" href="#stack">Stack</a>
-            <a className="transition hover:text-[#171717]" href="#about">About</a>
-            <a className="transition hover:text-[#171717]" href="#contact">Contact</a>
+          <div className="flex items-center gap-4 text-base tracking-[0.12em] text-[#171717]/68">
+            <a
+              className="rounded-sm transition hover:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2"
+              href="#projects"
+            >
+              Projects
+            </a>
+            <a
+              className="rounded-sm transition hover:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2"
+              href="#stack"
+            >
+              Stack
+            </a>
+            <a
+              className="rounded-sm transition hover:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2"
+              href="#about"
+            >
+              About
+            </a>
+            <a
+              className="rounded-sm transition hover:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2"
+              href="#contact"
+            >
+              Contact
+            </a>
+            <Button
+              variant="outline"
+              size="sm"
+              className="group h-9 border-[#171717]/30 bg-transparent px-3 text-[#171717]/80 hover:bg-[#171717] hover:text-white"
+              onClick={onToggleVersion}
+              aria-pressed={isCinematic}
+              aria-label={`Switch visual mode. Current mode: ${isCinematic ? "Cinematic" : "Editorial"}. Activate to switch to ${isCinematic ? "Editorial" : "Cinematic"}.`}
+            >
+              {heroVersion === "A" ? (
+                <Clapperboard className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-6" />
+              ) : (
+                <PenLine className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-6" />
+              )}
+              Switch mode
+            </Button>
           </div>
         </nav>
         <div className="flex flex-1 items-center">
@@ -61,7 +98,7 @@ export default function HeroA() {
                 <a href="mailto:rubio.hernandez.irene@gmail.com">Contact me</a>
               </Button>
             </div>
-            <div className="mt-8 flex items-center gap-2 text-sm tracking-[0.18em] text-[#171717]/45">
+            <div className="mt-8 flex items-center gap-2 text-sm tracking-[0.18em] text-[#171717]/65">
               <MapPin className="h-3.5 w-3.5" />
               Frontend Developer · Sweden
             </div>

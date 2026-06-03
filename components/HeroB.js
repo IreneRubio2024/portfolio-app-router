@@ -1,12 +1,16 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { MapPin } from "lucide-react";
+import { Clapperboard, MapPin, PenLine } from "lucide-react";
 
-export default function HeroB() {
+export default function HeroB({ heroVersion = "B", onToggleVersion }) {
+  const isCinematic = heroVersion === "B";
+
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden bg-black">
-
+    <section
+      id="top"
+      className="relative min-h-screen overflow-hidden bg-black"
+    >
       {/* Background photo */}
       <img
         src="/cine.jpg"
@@ -20,14 +24,48 @@ export default function HeroB() {
 
       {/* All content on top */}
       <div className="relative flex h-screen flex-col">
-
         {/* Nav — top right */}
         <nav className="flex justify-end px-8 pt-8 lg:px-14">
-          <div className="flex items-center gap-8 text-base tracking-[0.18em] text-white/75">
-            <a className="transition hover:text-white" href="#projects">Projects</a>
-            <a className="transition hover:text-white" href="#stack">Stack</a>
-            <a className="transition hover:text-white" href="#about">About</a>
-            <a className="transition hover:text-white" href="#contact">Contact</a>
+          <div className="flex items-center gap-4 text-base tracking-[0.18em] text-white/75">
+            <a
+              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              href="#projects"
+            >
+              Projects
+            </a>
+            <a
+              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              href="#stack"
+            >
+              Stack
+            </a>
+            <a
+              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              href="#about"
+            >
+              About
+            </a>
+            <a
+              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              href="#contact"
+            >
+              Contact
+            </a>
+            <Button
+              variant="outline"
+              size="sm"
+              className="group h-9 border-white/50 bg-transparent px-3 text-white hover:bg-white hover:text-[#171717]"
+              onClick={onToggleVersion}
+              aria-pressed={isCinematic}
+              aria-label={`Switch visual mode. Current mode: ${isCinematic ? "Cinematic" : "Editorial"}. Activate to switch to ${isCinematic ? "Editorial" : "Cinematic"}.`}
+            >
+              {heroVersion === "A" ? (
+                <Clapperboard className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-6" />
+              ) : (
+                <PenLine className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-6" />
+              )}
+              Switch mode
+            </Button>
           </div>
         </nav>
 
@@ -64,13 +102,12 @@ export default function HeroB() {
                 <a href="mailto:rubio.hernandez.irene@gmail.com">Contact me</a>
               </Button>
             </div>
-            <div className="mt-8 flex items-center gap-2 text-sm tracking-[0.18em] text-white/45">
+            <div className="mt-8 flex items-center gap-2 text-sm tracking-[0.18em] text-white/70">
               <MapPin className="h-3.5 w-3.5" />
               Frontend Developer · Sweden
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

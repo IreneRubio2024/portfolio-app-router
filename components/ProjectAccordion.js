@@ -14,13 +14,16 @@ const ProjectsAccordion = () => {
 
   return (
     <section className="py-10 bg-black text-gray-300 w-full relative">
-    
       <div className="max-w-xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-6"
-        style={{ fontFamily: "Aujournuit-Regular" }}>My Projects</h2>
-          <div className="absolute top-2 left-2">
-            <ImageLevitating />
-          </div>
+        <h2
+          className="text-4xl font-bold text-center mb-6"
+          style={{ fontFamily: "Aujournuit-Regular" }}
+        >
+          My Projects
+        </h2>
+        <div className="absolute top-2 left-2">
+          <ImageLevitating />
+        </div>
         <ul className="space-y-4">
           {projects.map((project) => (
             <li
@@ -36,8 +39,10 @@ const ProjectsAccordion = () => {
               </button>
               {activeProject === project.id && (
                 <div className="px-4 py-4 bg-white border-t border-gray-300">
-                  <p className="text-sm text-gray-800 mb-2"
-                  style={{ fontFamily: "Aujournuit-Regular" }}>
+                  <p
+                    className="text-sm text-gray-800 mb-2"
+                    style={{ fontFamily: "Aujournuit-Regular" }}
+                  >
                     {project.description}
                   </p>
                   <img
@@ -59,9 +64,6 @@ const ProjectsAccordion = () => {
           ))}
         </ul>
       </div>
-         {/* <div className="absolute top-0 left-0 z-10">
-            <ImageLevitating />
-          </div>     */}
     </section>
   );
 };
