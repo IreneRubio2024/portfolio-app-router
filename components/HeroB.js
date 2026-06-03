@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { MapPin } from "lucide-react";
 
 export default function HeroB() {
   return (
@@ -22,7 +23,7 @@ export default function HeroB() {
 
         {/* Nav — top right */}
         <nav className="flex justify-end px-8 pt-8 lg:px-14">
-          <div className="flex items-center gap-8 text-sm tracking-[0.18em] text-white/75">
+          <div className="flex items-center gap-8 text-base tracking-[0.18em] text-white/75">
             <a className="transition hover:text-white" href="#projects">Projects</a>
             <a className="transition hover:text-white" href="#stack">Stack</a>
             <a className="transition hover:text-white" href="#about">About</a>
@@ -41,7 +42,7 @@ export default function HeroB() {
                 Expressive web experiences
               </span>
             </h1>
-            <p className="mt-8 max-w-sm text-base leading-9 text-white/65">
+            <p className="mt-8 max-w-sm text-lg leading-9 text-white/65 sm:text-xl">
               Frontend Developer with a background in film and visual
               storytelling. I work on the visible side of digital experiences,
               where design, structure, and testing shape how things look, feel
@@ -62,6 +63,10 @@ export default function HeroB() {
               >
                 <a href="mailto:rubio.hernandez.irene@gmail.com">Contact me</a>
               </Button>
+            </div>
+            <div className="mt-8 flex items-center gap-2 text-sm tracking-[0.18em] text-white/45">
+              <MapPin className="h-3.5 w-3.5" />
+              Frontend Developer · Sweden
             </div>
           </div>
         </div>
