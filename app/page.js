@@ -70,7 +70,7 @@ export default function Home() {
         photoSrc={HERO_A_PHOTO_SRC}
       />
 
-      <ProjectsCarousel dark={!darkHero} />
+      <ProjectsCarousel dark={false} />
       <TechStackAccordion dark={true} />
       <AboutSection dark={!darkHero} />
       <section

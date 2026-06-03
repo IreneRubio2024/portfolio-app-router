@@ -115,7 +115,7 @@ const ProjectsCarousel = ({ dark = false }) => {
           </div>
         </article>
         <div className="grid gap-4 md:grid-cols-2">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <article
               key={project.id}
               className={`group overflow-hidden border shadow-sm transition duration-300 hover:shadow-md ${dark ? "bg-[#fbfcf8] border-[#263247]/12 hover:bg-[#f5f6f2]" : "bg-white border-black/8 hover:bg-[#f5f5f0]"}`}
@@ -129,18 +129,6 @@ const ProjectsCarousel = ({ dark = false }) => {
                 <div
                   className={`absolute inset-0 ${dark ? "bg-gradient-to-t from-black/75 via-black/35 to-black/10" : "bg-gradient-to-t from-[#1f1712]/55 via-[#33241a]/18 to-transparent"}`}
                 />
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
-                  <p
-                    className={`font-body text-xs uppercase tracking-[0.18em] ${dark ? "text-white/80" : "text-[#F8EFE6]/90"}`}
-                  >
-                    Selected Work
-                  </p>
-                  <p
-                    className={`font-display text-sm tracking-[0.18em] ${dark ? "text-white/90" : "text-[#F8EFE6]/95"}`}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                </div>
               </div>
               <div
                 className={`flex min-h-[220px] flex-col border-t p-8 ${dark ? "border-[#263247]/10" : "border-black/10"}`}
@@ -155,32 +143,67 @@ const ProjectsCarousel = ({ dark = false }) => {
                 >
                   {project.description}
                 </p>
-                <div className="mt-6 flex flex-wrap items-end justify-between gap-4">
-                  {project.stack && (
-                    <div className="flex flex-wrap gap-2">
-                      {project.stack.map((tech) => (
-                        <span
-                          key={tech}
-                          className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-[#263247]/18 text-[#263247]/80" : "border-black/10 text-[#171717]/70"}`}
+                {project.mobileOnly ? (
+                  <div className="mt-6">
+                    {project.stack && (
+                      <div className="flex flex-wrap gap-2">
+                        {project.stack.map((tech) => (
+                          <span
+                            key={tech}
+                            className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-[#263247]/18 text-[#263247]/80" : "border-black/10 text-[#171717]/70"}`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <div className="mt-5 flex items-center gap-4">
+                      <img
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=88x88&data=${encodeURIComponent(project.url)}&bgcolor=ffffff&color=000000&margin=2`}
+                        alt={`QR code to open ${project.name} on mobile`}
+                        className="h-[88px] w-[88px] flex-shrink-0"
+                      />
+                      <div>
+                        <p className={`font-body text-xs uppercase tracking-[0.16em] ${dark ? "text-[#263247]/65" : "text-[#171717]/60"}`}>
+                          Scan to view on mobile
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => window.open(project.url, "_blank", "noopener,noreferrer")}
+                          aria-label={`Open ${project.name} in a new tab`}
+                          className={`font-body mt-2 text-xs uppercase tracking-[0.12em] underline underline-offset-2 ${dark ? "text-[#263247]/45" : "text-[#171717]/40"}`}
                         >
-                          {tech}
-                        </span>
-                      ))}
+                          Open anyway
+                        </button>
+                      </div>
                     </div>
-                  )}
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="default"
-                    className={`font-body bg-transparent gap-2 transition-colors ${dark ? "border-[#263247]/28 text-[#263247]/85 hover:bg-[#263247] hover:text-white hover:border-[#263247]" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white hover:border-[#171717]"}`}
-                    onClick={() =>
-                      window.open(project.url, "_blank", "noopener,noreferrer")
-                    }
-                    aria-label={`Open ${project.name} in a new tab`}
-                  >
-                    Open project
-                  </Button>
-                </div>
+                  </div>
+                ) : (
+                  <div className="mt-6 flex flex-wrap items-end justify-between gap-4">
+                    {project.stack && (
+                      <div className="flex flex-wrap gap-2">
+                        {project.stack.map((tech) => (
+                          <span
+                            key={tech}
+                            className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-[#263247]/18 text-[#263247]/80" : "border-black/10 text-[#171717]/70"}`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="default"
+                      className={`font-body bg-transparent gap-2 transition-colors ${dark ? "border-[#263247]/28 text-[#263247]/85 hover:bg-[#263247] hover:text-white hover:border-[#263247]" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white hover:border-[#171717]"}`}
+                      onClick={() => window.open(project.url, "_blank", "noopener,noreferrer")}
+                      aria-label={`Open ${project.name} in a new tab`}
+                    >
+                      Open project
+                    </Button>
+                  </div>
+                )}
               </div>
             </article>
           ))}
