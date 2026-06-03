@@ -52,7 +52,7 @@ export default function HeroA({ heroVersion = "A", onToggleVersion }) {
             <Button
               variant="outline"
               size="sm"
-              className="group h-9 border-[#171717]/30 bg-transparent px-3 text-[#171717]/80 hover:bg-[#171717] hover:text-white"
+              className="group h-9 border-[#171717]/30 bg-transparent px-3 text-[#363333]/80 hover:bg-[#363333] hover:text-white"
               onClick={onToggleVersion}
               aria-pressed={isCinematic}
               aria-label={`Switch visual mode. Current mode: ${isCinematic ? "Cinematic" : "Editorial"}. Activate to switch to ${isCinematic ? "Editorial" : "Cinematic"}.`}
@@ -86,14 +86,14 @@ export default function HeroA({ heroVersion = "A", onToggleVersion }) {
               <Button
                 asChild
                 variant="outline"
-                className="h-11 border-[#171717] bg-transparent px-5 text-[#171717] hover:bg-[#171717] hover:text-white"
+                className="h-11 border-[#363333] bg-transparent px-5 text-[#363333] hover:bg-[#363333] hover:text-white"
               >
                 <a href="#projects">View projects</a>
               </Button>
               <Button
                 asChild
                 variant="outline"
-                className="h-11 border-[#171717] bg-transparent px-5 text-[#171717] hover:bg-[#171717] hover:text-white"
+                className="h-11 border-[#363333] bg-transparent px-5 text-[#363333] hover:bg-[#363333] hover:text-white"
               >
                 <a href="mailto:rubio.hernandez.irene@gmail.com">Contact me</a>
               </Button>
