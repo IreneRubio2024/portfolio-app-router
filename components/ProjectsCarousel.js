@@ -124,7 +124,7 @@ const ProjectsCarousel = ({ dark = false }) => {
                 <img
                   src={project.image}
                   alt={project.name}
-                  className={`h-full w-full object-cover grayscale transition duration-700 group-hover:scale-[1.02] ${dark ? "brightness-[0.8] contrast-125" : "brightness-[0.92] contrast-110"}`}
+                  className={`h-full w-full object-cover grayscale transition duration-700 group-hover:scale-[1.02] ${project.imagePosition === "top" ? "object-top" : "object-center"} ${dark ? "brightness-[0.8] contrast-125" : "brightness-[0.92] contrast-110"}`}
                 />
                 <div
                   className={`absolute inset-0 ${dark ? "bg-gradient-to-t from-black/75 via-black/35 to-black/10" : "bg-gradient-to-t from-[#1f1712]/55 via-[#33241a]/18 to-transparent"}`}

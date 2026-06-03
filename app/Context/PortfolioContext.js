@@ -50,6 +50,7 @@ export const PortfolioProvider = ({ children }) => {
       description:
         "Mobile marketplace for circular consumption: users offer items they no longer need, others browse, reserve, and arrange in-person pickup — built with React Native for a touch-native, mobile-only experience.",
       image: "take.png",
+      imagePosition: "top",
       url: "https://take-m-home-4k1eqbdt2-irenes-projects-21de3997.vercel.app",
       stack: ["React Native", "Mobile-first", "P2P"],
       mobileOnly: true,
