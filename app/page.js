@@ -10,6 +10,8 @@ import ProjectsCarousel from "@/components/ProjectsCarousel";
 import TechStackAccordion from "@/components/TechStackAccordion";
 import AboutSection from "@/components/AboutSection";
 
+const HERO_A_PHOTO_SRC = "/Erea2.png";
+
 export default function Home() {
   const context = useContext(PortfolioContext);
 
@@ -62,7 +64,11 @@ export default function Home() {
           aria-hidden="true"
         />
       )}
-      <Hero heroVersion={heroVersion} onToggleVersion={toggleHeroVersion} />
+      <Hero
+        heroVersion={heroVersion}
+        onToggleVersion={toggleHeroVersion}
+        photoSrc={HERO_A_PHOTO_SRC}
+      />
 
       <ProjectsCarousel dark={!darkHero} />
       <TechStackAccordion dark={darkHero} />
