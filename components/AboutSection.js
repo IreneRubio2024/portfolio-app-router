@@ -41,7 +41,7 @@ export default function AboutSection({ dark = false }) {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16">
             <h2
-              className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-white/60" : "text-[#171717]/60"}`}
+              className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-white/75" : "text-[#171717]/75"}`}
             >
               About
             </h2>
@@ -117,15 +117,15 @@ export default function AboutSection({ dark = false }) {
             {/* RIGHT — text only */}
             <div className="flex flex-col gap-10 lg:sticky lg:top-24">
               <div className="space-y-6">
-                <h2
-                  className={`font-display text-4xl font-semibold leading-tight sm:text-5xl ${dark ? "text-[#FFFEF6]" : "text-[#171717]"}`}
+                <h3
+                  className={`font-display text-3xl font-semibold leading-tight sm:text-4xl ${dark ? "text-[#FFFEF6]" : "text-[#171717]"}`}
                 >
                   Before the code,
                   <br />
                   <span className={dark ? "text-[#FFF4CE]" : "text-[#095859]"}>
                     there was the stage.
                   </span>
-                </h2>
+                </h3>
 
                 <p
                   className={`font-body text-lg leading-9 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
@@ -157,7 +157,7 @@ export default function AboutSection({ dark = false }) {
                   ].map((tag) => (
                     <span
                       key={tag}
-                      className={`border px-3 py-2 text-sm uppercase tracking-[0.15em] ${dark ? "border-white/10 bg-white/[0.03] text-white/55" : "border-black/10 bg-black/[0.03] text-[#171717]/55"}`}
+                      className={`border px-3 py-2 text-sm uppercase tracking-[0.15em] ${dark ? "border-white/10 bg-white/[0.03] text-white/75" : "border-black/10 bg-black/[0.03] text-[#171717]/75"}`}
                     >
                       {tag}
                     </span>
@@ -201,7 +201,7 @@ export default function AboutSection({ dark = false }) {
           {/* Reel — full width below all photos */}
           <div className="mt-16 space-y-3">
             <p
-              className={`font-body text-sm uppercase tracking-[0.25em] ${dark ? "text-white/40" : "text-[#171717]/40"}`}
+              className={`font-body text-sm uppercase tracking-[0.25em] ${dark ? "text-white/65" : "text-[#171717]/65"}`}
             >
               Cordelia — reel
             </p>
