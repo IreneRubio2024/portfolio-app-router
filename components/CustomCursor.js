@@ -7,14 +7,25 @@ export default function CustomCursor() {
   const ringRef = useRef(null);
 
   useEffect(() => {
+    const hasPointer = window.matchMedia("(pointer: fine)").matches;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const dot = dotRef.current;
     const ring = ringRef.current;
     if (!dot || !ring) return;
 
-    let mouseX = 0;
-    let mouseY = 0;
-    let ringX = 0;
-    let ringY = 0;
+    // Accessibility: don't activate on touch or when reduced motion is preferred
+    if (!hasPointer || reducedMotion) {
+      dot.style.display = "none";
+      ring.style.display = "none";
+      return;
+    }
+
+    document.documentElement.style.cursor = "none";
+
+    let mouseX = 0, mouseY = 0;
+    let ringX = 0, ringY = 0;
+    let rafId;
 
     const onMouseMove = (e) => {
       mouseX = e.clientX;
@@ -26,7 +37,7 @@ export default function CustomCursor() {
       ringX += (mouseX - ringX) * 0.12;
       ringY += (mouseY - ringY) * 0.12;
       ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
-      requestAnimationFrame(animate);
+      rafId = requestAnimationFrame(animate);
     };
 
     const onMouseEnterLink = () => ring.classList.add("cursor-grow");
@@ -38,17 +49,19 @@ export default function CustomCursor() {
       el.addEventListener("mouseleave", onMouseLeaveLink);
     });
 
-    animate();
+    rafId = requestAnimationFrame(animate);
 
     return () => {
       document.removeEventListener("mousemove", onMouseMove);
+      cancelAnimationFrame(rafId);
+      document.documentElement.style.cursor = "";
     };
   }, []);
 
   return (
     <>
-      <div ref={dotRef} className="cursor-dot" />
-      <div ref={ringRef} className="cursor-ring" />
+      <div ref={dotRef} className="cursor-dot" aria-hidden="true" />
+      <div ref={ringRef} className="cursor-ring" aria-hidden="true" />
     </>
   );
 }
