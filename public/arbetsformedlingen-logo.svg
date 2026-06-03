@@ -1,0 +1,7 @@
+<svg width="640" height="120" viewBox="0 0 640 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="120" fill="white"/>
+  <circle cx="28" cy="60" r="22" stroke="#76C043" stroke-width="12"/>
+  <path d="M60 12C86.5097 12 108 33.4903 108 60C108 86.5097 86.5097 108 60 108" stroke="#76C043" stroke-width="12"/>
+  <text x="138" y="53" fill="#161A72" font-family="Arial, Helvetica, sans-serif" font-size="38" letter-spacing="4">ARBETSFÖRMEDLINGEN</text>
+  <text x="138" y="94" fill="#161A72" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="3">SWEDISH PUBLIC EMPLOYMENT SERVICE</text>
+</svg>

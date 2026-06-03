@@ -18,14 +18,13 @@ export default function HeroA({
       <img
         src={photoSrc}
         alt="Irene Rubio"
-        className="absolute inset-0 h-full w-full object-cover"
-        style={{ objectPosition: "center center" }}
+        className="absolute inset-0 h-full w-full object-cover object-[38%_center] sm:object-[58%_center] lg:object-right"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#e8edf6]/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#e8edf6]/72 via-[#e8edf6]/30 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-[#e8edf6]/80" />
 
-      <div className="relative flex min-h-screen flex-col px-8 pb-14 pt-8 lg:px-14 xl:px-20">
+      <div className="relative flex min-h-screen flex-col px-4 pb-10 pt-5 sm:px-8 sm:pb-14 sm:pt-8 lg:px-14 xl:px-20">
         <nav className="flex justify-end">
-          <div className="flex items-center gap-4 text-base tracking-[0.12em] text-[#263247]/78">
+          <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] tracking-[0.1em] text-[#263247]/78 sm:gap-4 sm:text-base sm:tracking-[0.12em]">
             <a
               className="rounded-sm transition hover:text-[#263247] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#263247] focus-visible:ring-offset-2"
               href="#projects"
@@ -53,7 +52,7 @@ export default function HeroA({
             <Button
               variant="outline"
               size="sm"
-              className="group h-9 border-[#263247]/35 bg-transparent px-3 text-[#263247]/85 hover:bg-[#263247] hover:text-white"
+              className="group h-8 border-[#263247]/35 bg-transparent px-2.5 text-[11px] text-[#263247]/85 hover:bg-[#263247] hover:text-white sm:h-9 sm:px-3 sm:text-sm"
               onClick={onToggleVersion}
               aria-pressed={isCinematic}
               aria-label={`Switch visual mode. Current mode: ${isCinematic ? "Cinematic" : "Editorial"}. Activate to switch to ${isCinematic ? "Editorial" : "Cinematic"}.`}
@@ -69,32 +68,32 @@ export default function HeroA({
         </nav>
         <div className="flex flex-1 items-center justify-end">
           <div className="w-full max-w-[30rem]">
-            <h1 className="text-5xl leading-[0.98] sm:text-6xl lg:text-7xl">
-              <span className="font-display block font-bold text-5xl leading-none text-[#263247] sm:text-6xl lg:text-7xl">
+            <h1 className="text-4xl leading-[0.98] sm:text-6xl lg:text-7xl">
+              <span className="font-display block font-bold text-4xl leading-none text-[#263247] sm:text-6xl lg:text-7xl">
                 Irene Rubio
               </span>
-              <span className="font-display mt-6 block text-xl font-medium tracking-[0.18em] text-[#263247]/84 sm:text-2xl">
+              <span className="font-display mt-4 block text-base font-medium tracking-[0.14em] text-[#263247]/84 sm:mt-6 sm:text-2xl sm:tracking-[0.18em]">
                 Expressive web experiences
               </span>
             </h1>
-            <p className="mt-10 max-w-md text-lg leading-10 text-[#263247]/84 sm:text-xl">
+            <p className="mt-6 max-w-md text-base leading-8 text-[#263247]/84 sm:mt-10 sm:text-xl sm:leading-10">
               Frontend Developer with a background in film and visual
               storytelling. I work on the visible side of digital experiences,
               where design, structure, and testing shape how things look, feel
               and work.
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
               <Button
                 asChild
                 variant="outline"
-                className="h-11 border-[#263247] bg-transparent px-5 text-[#263247] hover:bg-[#263247] hover:text-white"
+                className="h-11 w-full border-[#263247] bg-transparent px-5 text-[#263247] hover:bg-[#263247] hover:text-white sm:w-auto"
               >
                 <a href="#projects">View projects</a>
               </Button>
               <Button
                 asChild
                 variant="outline"
-                className="h-11 border-[#263247] bg-transparent px-5 text-[#263247] hover:bg-[#263247] hover:text-white"
+                className="h-11 w-full border-[#263247] bg-transparent px-5 text-[#263247] hover:bg-[#263247] hover:text-white sm:w-auto"
               >
                 <a href="mailto:rubio.hernandez.irene@gmail.com">Contact me</a>
               </Button>

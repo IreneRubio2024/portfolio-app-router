@@ -7,6 +7,26 @@ import PortfolioContext from "@/app/Context/PortfolioContext";
 
 const ProjectsCarousel = ({ dark = false }) => {
   const { projects } = useContext(PortfolioContext);
+  const exjobbPreview = {
+    label: "Exjobb / Degree Project",
+    title: "Kompetensprofilen",
+    summary:
+      "Quality assurance and UX validation project completed during LIA at Arbetsformedlingen for Min kompetensprofil, a new Angular service for job seekers.",
+    sections: [
+      {
+        title: "Problem",
+        body: "The team needed reliable QA coverage for a critical transition from the legacy profile flow to Min kompetensprofil, with focus on real user journeys and release quality.",
+      },
+      {
+        title: "What I delivered",
+        body: "I designed and executed 100+ test cases, documented bugs and UX inconsistencies in Jira/Xray with clear reproduction steps, and implemented an initial Playwright E2E validation flow.",
+      },
+      {
+        title: "Outcome",
+        body: "I surfaced and communicated high-priority cases (PRPO-345, PRPO-263, PRPO-313, PRPO-268), enabling clearer prioritization and improving release confidence from a user perspective.",
+      },
+    ],
+  };
 
   return (
     <section
@@ -21,6 +41,79 @@ const ProjectsCarousel = ({ dark = false }) => {
             Projects
           </h2>
         </div>
+        <article
+          className={`mb-6 overflow-hidden border shadow-sm ${dark ? "border-[#263247]/12 bg-white" : "border-black/8 bg-[#fffdfa]"}`}
+        >
+          <div
+            className={`grid gap-8 p-8 lg:grid-cols-[1.15fr_0.85fr] lg:p-10 ${dark ? "text-[#263247]" : "text-[#171717]"}`}
+          >
+            <div>
+              <img
+                src="/ArbetsLogo.png"
+                alt="Arbetsformedlingen"
+                className="h-auto w-full max-w-[22rem]"
+              />
+              <p
+                className={`font-body mt-5 text-xs uppercase tracking-[0.2em] ${dark ? "text-[#263247]/62" : "text-[#171717]/55"}`}
+              >
+                {exjobbPreview.label}
+              </p>
+              <h3 className="font-display mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
+                {exjobbPreview.title}
+              </h3>
+              <p
+                className={`font-body mt-2 text-sm uppercase tracking-[0.16em] ${dark ? "text-[#263247]/62" : "text-[#171717]/58"}`}
+              >
+                Testing and evaluating the app experience
+              </p>
+              <p
+                className={`font-body mt-5 max-w-2xl text-lg leading-9 ${dark ? "text-[#263247]/78" : "text-[#171717]/72"}`}
+              >
+                {exjobbPreview.summary}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {[
+                  "Public service QA",
+                  "Angular frontend",
+                  "Playwright E2E",
+                  "Jira / Xray",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className={`font-body border px-3 py-1 text-xs uppercase tracking-[0.16em] ${dark ? "border-[#263247]/14 text-[#263247]/75" : "border-black/10 text-[#171717]/68"}`}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div
+              className={`border p-6 ${dark ? "border-[#263247]/10 bg-[#f7f8f4]" : "border-black/8 bg-white"}`}
+            >
+              <p
+                className={`font-display text-sm uppercase tracking-[0.18em] ${dark ? "text-[#263247]/65" : "text-[#171717]/55"}`}
+              >
+                Case study snapshot
+              </p>
+              <div className="mt-5 space-y-5">
+                {exjobbPreview.sections.map((item) => (
+                  <div key={item.title}>
+                    <p
+                      className={`font-display text-sm uppercase tracking-[0.14em] ${dark ? "text-[#263247]/72" : "text-[#171717]/62"}`}
+                    >
+                      {item.title}
+                    </p>
+                    <p
+                      className={`font-body mt-2 text-base leading-8 ${dark ? "text-[#263247]/78" : "text-[#171717]/72"}`}
+                    >
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
         <div className="grid gap-4 md:grid-cols-2">
           {projects.map((project, index) => (
             <article

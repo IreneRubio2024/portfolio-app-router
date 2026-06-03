@@ -12,33 +12,37 @@ export const PortfolioProvider = ({ children }) => {
       id: 1,
       name: "Media DB",
       description:
-        "Movie and series discovery app with dynamic browsing, detail views, and a polished entertainment UI.",
+        "Frontend app for movie and TV discovery with API-driven listings, route-based detail pages, reusable UI components, and responsive state handling for search and content browsing.",
       image: "hollywood-historia.jpg",
       url: "https://chas-amazon-news-site-main-5.vercel.app/movie",
+      stack: ["React", "Routing", "REST API", "Responsive UI"],
     },
     {
       id: 2,
       name: "Oscar's 2025 Quiz",
       description:
-        "Interactive quiz experience built around the 2025 Academy Awards with instant feedback and responsive layouts.",
+        "Quiz application with client-side scoring logic, progressive question flow, immediate answer feedback, and adaptive layouts focused on fast interaction and clear state transitions.",
       image: "Oscars.webp",
       url: "https://quiz-seven-omega-89.vercel.app/",
+      stack: ["React", "State Management", "UI Logic", "Responsive Design"],
     },
     {
       id: 3,
       name: "Gemini AI app",
       description:
-        "AI recipe generator that turns user prompts into practical cooking ideas through a clean React interface.",
+        "Prompt-based recipe generator integrating an AI API, with request lifecycle handling (loading/error/success), structured response rendering, and a streamlined React interaction model.",
       image: "Foody-Goody.png",
       url: "https://workshop-ai-website-theta.vercel.app/",
+      stack: ["React", "AI API", "Async Flows", "UX States"],
     },
     {
       id: 4,
       name: "Radio Player",
       description:
-        "Swedish radio player focused on fast station browsing, simple playback controls, and accessible UI states.",
+        "Streaming radio interface with station browsing and filtering, playback control states, and accessibility-oriented interaction patterns for keyboard and visual feedback.",
       image: "Sverige-Radio.jpg",
       url: "https://radioplayer-inky.vercel.app/",
+      stack: ["React", "Streaming UI", "Accessibility", "Interaction Design"],
     },
   ]);
 

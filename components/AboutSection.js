@@ -32,6 +32,68 @@ export default function AboutSection({ dark = false }) {
           color: rgba(23,23,23,0.55);
           font-family: "Roundo-Variable"
         }
+
+        .about-top-collage {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 300px 300px 280px;
+          gap: 0;
+        }
+
+        .top-item-1 { grid-column: 1; grid-row: 1; }
+        .top-item-2 { grid-column: 2; grid-row: 1 / 3; }
+        .top-item-3 { grid-column: 1; grid-row: 2; }
+        .top-item-4 { grid-column: 1; grid-row: 3; }
+        .top-item-5 { grid-column: 2; grid-row: 3; }
+
+        .about-bottom-collage {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 0;
+          height: 500px;
+        }
+
+        @media (max-width: 1023px) {
+          .about-top-collage {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 240px 240px 220px;
+            gap: 6px;
+            overflow: hidden !important;
+          }
+
+          .about-top-collage .photo-item img {
+            object-fit: cover !important;
+          }
+
+          .about-top-collage .top-item-1 img { object-position: center 18% !important; }
+          .about-top-collage .top-item-2 img { object-position: center 24% !important; }
+          .about-top-collage .top-item-3 img { object-position: center 18% !important; }
+          .about-top-collage .top-item-4 img { object-position: center 32% !important; }
+          .about-top-collage .top-item-5 img { object-position: center 16% !important; }
+
+          .about-bottom-collage {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 230px;
+            height: auto;
+            gap: 6px;
+            overflow: hidden !important;
+          }
+
+          .about-bottom-collage .bottom-item-1,
+          .about-bottom-collage .bottom-item-2,
+          .about-bottom-collage .bottom-item-3 {
+            grid-column: auto !important;
+            grid-row: auto !important;
+          }
+
+          .about-bottom-collage .photo-item img {
+            object-fit: cover !important;
+          }
+
+          .about-bottom-collage .bottom-item-1 img { object-position: center 16% !important; }
+          .about-bottom-collage .bottom-item-2 img { object-position: center 20% !important; }
+          .about-bottom-collage .bottom-item-3 img { object-position: center 18% !important; }
+        }
       `}</style>
 
       <section
@@ -49,19 +111,9 @@ export default function AboutSection({ dark = false }) {
           {/* Top — photos left, text right */}
           <div className="mb-0 grid items-start gap-8 lg:grid-cols-[1fr_1.2fr]">
             {/* LEFT — photo collage */}
-            <div
-              className="grid overflow-hidden rounded-[28px]"
-              style={{
-                gridTemplateColumns: "1fr 1fr",
-                gridTemplateRows: "300px 300px 280px",
-                gap: "0px",
-              }}
-            >
+            <div className="about-top-collage overflow-hidden rounded-[28px]">
               {/* Image 1 */}
-              <div
-                className="photo-item"
-                style={{ gridColumn: "1", gridRow: "1" }}
-              >
+              <div className="photo-item top-item top-item-1">
                 <img
                   src="/actriz 4.png"
                   alt="Irene Rubio"
@@ -70,10 +122,7 @@ export default function AboutSection({ dark = false }) {
               </div>
 
               {/* Image 2 */}
-              <div
-                className="photo-item"
-                style={{ gridColumn: "2", gridRow: "1 / 3" }}
-              >
+              <div className="photo-item top-item top-item-2">
                 <img
                   src="/cordelia9.jpg"
                   alt="Theatre production"
@@ -82,10 +131,7 @@ export default function AboutSection({ dark = false }) {
               </div>
 
               {/* Image 3 */}
-              <div
-                className="photo-item"
-                style={{ gridColumn: "1", gridRow: "2" }}
-              >
+              <div className="photo-item top-item top-item-3">
                 <img
                   src="/modelo.png"
                   alt="Cordelia Vintage"
@@ -94,18 +140,12 @@ export default function AboutSection({ dark = false }) {
               </div>
 
               {/* Image 4 */}
-              <div
-                className="photo-item"
-                style={{ gridColumn: "1", gridRow: "3" }}
-              >
+              <div className="photo-item top-item top-item-4">
                 <img src="/cordelia 5.jpg" alt="Cordelia Vintage" />
               </div>
 
               {/* Image 5 */}
-              <div
-                className="photo-item"
-                style={{ gridColumn: "2", gridRow: "3" }}
-              >
+              <div className="photo-item top-item top-item-5">
                 <img
                   src="/Ana.png"
                   alt="Costume design"
@@ -165,29 +205,22 @@ export default function AboutSection({ dark = false }) {
             </div>
           </div>
           {/* Bottom row */}
-          <div
-            className="mt-10 grid overflow-hidden rounded-[28px]"
-            style={{
-              gridTemplateColumns: "1fr 1fr 1fr",
-              height: "500px",
-              gap: "0px",
-            }}
-          >
-            <div className="photo-item">
+          <div className="about-bottom-collage mt-10 overflow-hidden rounded-[28px]">
+            <div className="photo-item bottom-item-1">
               <img
                 src="/maggieyyo2.png"
                 alt="Cordelia Vintage"
                 style={{ objectPosition: "center top" }}
               />
             </div>
-            <div className="photo-item">
+            <div className="photo-item bottom-item-2">
               <img
                 src="/cordelia 8.jpg"
                 alt="Cordelia Vintage"
                 style={{ objectPosition: "center top" }}
               />
             </div>
-            <div className="photo-item">
+            <div className="photo-item bottom-item-3">
               <img
                 src="/Ireneyyo.png"
                 alt="Irene Rubio"
