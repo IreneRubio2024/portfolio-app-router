@@ -5,6 +5,8 @@ import { createContext, useState, useEffect } from "react";
 const PortfolioContext = createContext();
 
 export const PortfolioProvider = ({ children }) => {
+  const [heroVersion, setHeroVersion] = useState("A");
+
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -99,6 +101,27 @@ export const PortfolioProvider = ({ children }) => {
   //   localStorage.setItem("techSkills", JSON.stringify(techSkills));
   // }, [techSkills]);
 
+  useEffect(() => {
+    const savedHeroVersion = localStorage.getItem("heroVersion");
+    if (savedHeroVersion === "A" || savedHeroVersion === "B") {
+      setHeroVersion(savedHeroVersion);
+      return;
+    }
+
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    setHeroVersion(prefersDark ? "B" : "A");
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("heroVersion", heroVersion);
+  }, [heroVersion]);
+
+  function toggleHeroVersion() {
+    setHeroVersion((current) => (current === "A" ? "B" : "A"));
+  }
+
   function addProject(newProject) {
     setProjects([...projects, { ...newProject, id: Date.now() }]);
   }
@@ -126,6 +149,9 @@ export const PortfolioProvider = ({ children }) => {
         addSkill,
         deleteProject,
         addProject,
+        heroVersion,
+        setHeroVersion,
+        toggleHeroVersion,
       }}
     >
       {children}
