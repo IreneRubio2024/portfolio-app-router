@@ -1,10 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Clapperboard, MapPin, PenLine } from "lucide-react";
+import { Clapperboard, Menu, PenLine, X } from "lucide-react";
 
 export default function HeroB({ heroVersion = "B", onToggleVersion }) {
   const isCinematic = heroVersion === "B";
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <section
@@ -30,8 +34,25 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
       {/* All content on top */}
       <div className="relative flex min-h-screen flex-col">
         {/* Nav — top right */}
-        <nav className="flex justify-end px-4 pt-5 sm:px-8 sm:pt-8 lg:px-14">
-          <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] tracking-[0.1em] text-[#171717]/75 sm:gap-4 sm:text-base sm:tracking-[0.18em]">
+        <nav className="relative z-20 flex items-center justify-end px-4 pt-5 sm:px-8 sm:pt-8 lg:px-14">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="h-9 border-[#191b1e]/35 bg-white/70 px-3 text-[#191b1e]/92 backdrop-blur-[2px] hover:bg-[#191b1e] hover:text-[#F5F7FC] lg:hidden"
+            onClick={() => setIsMenuOpen((current) => !current)}
+            aria-expanded={isMenuOpen}
+            aria-controls="hero-b-mobile-menu"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMenuOpen ? (
+              <X className="h-4 w-4" />
+            ) : (
+              <Menu className="h-4 w-4" />
+            )}
+          </Button>
+
+          <div className="hidden flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] tracking-[0.1em] text-[#171717]/75 lg:flex lg:gap-4 lg:text-base lg:tracking-[0.18em]">
             <a
               className="rounded-sm transition hover:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               href="#projects"
@@ -72,6 +93,62 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
               Switch mode
             </Button>
           </div>
+
+          {isMenuOpen && (
+            <div
+              id="hero-b-mobile-menu"
+              className="absolute right-4 top-16 w-52 rounded-xl border border-[#191b1e]/16 bg-[#f8f4ec]/95 p-3 shadow-lg backdrop-blur-[2px] lg:hidden"
+            >
+              <div className="flex flex-col gap-1 text-sm tracking-[0.1em] text-[#191b1e]/88">
+                <a
+                  className="rounded-md px-2 py-2 transition hover:bg-[#191b1e]/8"
+                  href="#projects"
+                  onClick={closeMenu}
+                >
+                  Projects
+                </a>
+                <a
+                  className="rounded-md px-2 py-2 transition hover:bg-[#191b1e]/8"
+                  href="#stack"
+                  onClick={closeMenu}
+                >
+                  Stack
+                </a>
+                <a
+                  className="rounded-md px-2 py-2 transition hover:bg-[#191b1e]/8"
+                  href="#about"
+                  onClick={closeMenu}
+                >
+                  About
+                </a>
+                <a
+                  className="rounded-md px-2 py-2 transition hover:bg-[#191b1e]/8"
+                  href="#contact"
+                  onClick={closeMenu}
+                >
+                  Contact
+                </a>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="mt-2 h-9 justify-start border-[#191b1e]/35 bg-transparent px-2.5 text-sm text-[#191b1e]/90 hover:bg-[#191b1e] hover:text-[#F5F7FC]"
+                  onClick={() => {
+                    onToggleVersion?.();
+                    closeMenu();
+                  }}
+                  aria-pressed={isCinematic}
+                  aria-label={`Switch visual mode. Current mode: ${isCinematic ? "Cinematic" : "Editorial"}. Activate to switch to ${isCinematic ? "Editorial" : "Cinematic"}.`}
+                >
+                  {heroVersion === "A" ? (
+                    <Clapperboard className="h-3.5 w-3.5" />
+                  ) : (
+                    <PenLine className="h-3.5 w-3.5" />
+                  )}
+                  Switch mode
+                </Button>
+              </div>
+            </div>
+          )}
         </nav>
 
         {/* Text — bottom left */}
@@ -106,10 +183,6 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
               >
                 <a href="mailto:rubio.hernandez.irene@gmail.com">Contact me</a>
               </Button>
-            </div>
-            <div className="mt-8 flex items-center gap-2 text-sm tracking-[0.18em] text-[#171717]/68">
-              <MapPin className="h-3.5 w-3.5" />
-              Frontend Developer · Sweden
             </div>
           </div>
         </div>
