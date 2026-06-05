@@ -13,7 +13,7 @@ export const PortfolioProvider = ({ children }) => {
       name: "Media DB",
       description:
         "Frontend app for movie and TV discovery with API-driven listings, route-based detail pages, reusable UI components, and responsive state handling for search and content browsing.",
-      image: "hollywood-historia.jpg",
+      image: "mediaDB.png",
       url: "https://chas-amazon-news-site-main-5.vercel.app/movie",
       stack: ["React", "Routing", "REST API", "Responsive UI"],
     },
@@ -37,12 +37,12 @@ export const PortfolioProvider = ({ children }) => {
     },
     {
       id: 4,
-      name: "Radio Player",
+      name: "E-commerce monorepo",
       description:
-        "Streaming radio interface with station browsing and filtering, playback control states, and accessibility-oriented interaction patterns for keyboard and visual feedback.",
-      image: "Sverige-Radio.jpg",
-      url: "https://radioplayer-inky.vercel.app/",
-      stack: ["React", "Streaming UI", "Accessibility", "Interaction Design"],
+        "Full-stack e-commerce platform structured as a monorepo, with a Strapi headless CMS handling the backend and a React frontend consuming its REST API — covering product catalogue, content management, and end-to-end data flow across a shared codebase.",
+      image: "e.comerce.png",
+      url: "https://e-commerce-monorepo-j4ysleskr-irenes-projects-21de3997.vercel.app/",
+      stack: ["React", "Strapi", "Monorepo", "REST API"],
     },
     {
       id: 5,
