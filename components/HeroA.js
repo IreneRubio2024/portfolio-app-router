@@ -128,14 +128,10 @@ export default function HeroA({
                     closeMenu();
                   }}
                   aria-pressed={isCinematic}
-                  aria-label={`Switch visual mode. Current mode: ${isCinematic ? "Cinematic" : "Editorial"}. Activate to switch to ${isCinematic ? "Editorial" : "Cinematic"}.`}
+                  aria-label="Switch to dark mode"
                 >
-                  {heroVersion === "A" ? (
-                    <Clapperboard className="h-3.5 w-3.5" />
-                  ) : (
-                    <PenLine className="h-3.5 w-3.5" />
-                  )}
-                  Switch mode
+                  <Moon className="h-3.5 w-3.5" />
+                  Dark mode
                 </Button>
               </div>
             </div>

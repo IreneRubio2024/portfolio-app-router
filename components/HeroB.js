@@ -91,32 +91,32 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
           {isMenuOpen && (
             <div
               id="hero-b-mobile-menu"
-              className="absolute right-4 top-16 w-52 rounded-xl border border-[#191b1e]/16 bg-[#f8f4ec]/95 p-3 shadow-lg backdrop-blur-[2px] lg:hidden"
+              className="absolute right-4 top-16 w-52 rounded-xl border border-white/12 bg-[#1e1e1e]/95 p-3 shadow-lg backdrop-blur-sm lg:hidden"
             >
-              <div className="flex flex-col gap-1 text-sm tracking-[0.1em] text-[#191b1e]/88">
+              <div className="flex flex-col gap-1 text-sm tracking-[0.1em] text-white/80">
                 <a
-                  className="rounded-md px-2 py-2 transition hover:bg-[#191b1e]/8"
+                  className="rounded-md px-2 py-2 transition hover:bg-white/8"
                   href="#projects"
                   onClick={closeMenu}
                 >
                   Projects
                 </a>
                 <a
-                  className="rounded-md px-2 py-2 transition hover:bg-[#191b1e]/8"
+                  className="rounded-md px-2 py-2 transition hover:bg-white/8"
                   href="#stack"
                   onClick={closeMenu}
                 >
                   Stack
                 </a>
                 <a
-                  className="rounded-md px-2 py-2 transition hover:bg-[#191b1e]/8"
+                  className="rounded-md px-2 py-2 transition hover:bg-white/8"
                   href="#about"
                   onClick={closeMenu}
                 >
                   About
                 </a>
                 <a
-                  className="rounded-md px-2 py-2 transition hover:bg-[#191b1e]/8"
+                  className="rounded-md px-2 py-2 transition hover:bg-white/8"
                   href="#contact"
                   onClick={closeMenu}
                 >
@@ -125,7 +125,7 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="mt-2 h-9 justify-start border-[#191b1e]/35 bg-transparent px-2.5 text-sm text-[#191b1e]/90 hover:bg-[#191b1e] hover:text-[#F5F7FC]"
+                  className="mt-2 h-9 justify-start border-white/30 bg-transparent px-2.5 text-sm text-white/85 hover:bg-white hover:text-[#191b1e]"
                   onClick={() => {
                     onToggleVersion?.();
                     closeMenu();
