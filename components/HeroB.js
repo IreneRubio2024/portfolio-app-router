@@ -13,16 +13,14 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
   return (
     <section
       id="top"
-      className="relative min-h-screen min-h-dvh overflow-hidden bg-black"
+      className="relative min-h-screen overflow-hidden bg-black"
     >
       {/* Background photo */}
       <img
         src="/cine2.png"
         alt="Irene Rubio"
         className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-center lg:object-right"
-        style={{
-          filter: "saturate(0) brightness(0.92) contrast(1.08)",
-        }}
+        style={{ filter: "saturate(0) brightness(0.92) contrast(1.08)" }}
       />
 
       {/* Bright veil for a lightly burned, high-key cinematic look */}
