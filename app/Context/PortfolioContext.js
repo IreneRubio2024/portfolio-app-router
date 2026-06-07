@@ -10,45 +10,54 @@ export const PortfolioProvider = ({ children }) => {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      name: "Media DB",
+      name: "Mera",
       description:
-        "Frontend app for movie and TV discovery with API-driven listings, route-based detail pages, reusable UI components, and responsive state handling for search and content browsing.",
-      image: "mediaDB.png",
-      url: "https://chas-amazon-news-site-main-5.vercel.app/movie",
-      stack: ["React", "Routing", "REST API", "Responsive UI"],
+        "Staff scheduling platform for small businesses — managers can build teams, assign shifts, and manage weekly employee schedules in one place.",
+      image: "mera.png",
+      url: "https://mera-5q2i-5ujktwvwu-irenes-projects-21de3997.vercel.app/",
+      stack: ["Next.js", "React", "Tailwind", "Docker", "AWS"],
     },
     {
       id: 2,
-      name: "Oscar's 2025 Quiz",
-      description:
-        "Quiz application with client-side scoring logic, progressive question flow, immediate answer feedback, and adaptive layouts focused on fast interaction and clear state transitions.",
-      image: "Oscars.webp",
-      url: "https://quiz-seven-omega-89.vercel.app/",
-      stack: ["React", "State Management", "UI Logic", "Responsive Design"],
-    },
-    {
-      id: 3,
-      name: "Gemini AI app",
-      description:
-        "Prompt-based recipe generator integrating an AI API, with request lifecycle handling (loading/error/success), structured response rendering, and a streamlined React interaction model.",
-      image: "Foody-Goody.png",
-      url: "https://workshop-ai-website-theta.vercel.app/",
-      stack: ["React", "AI API", "Async Flows", "UX States"],
-    },
-    {
-      id: 4,
       name: "E-commerce monorepo",
       description:
-        "Full-stack e-commerce platform structured as a monorepo, with a Strapi headless CMS handling the backend and a React frontend consuming its REST API — covering product catalogue, content management, and end-to-end data flow across a shared codebase.",
+        "Full-stack e-commerce platform covering product catalogue, content management, and end-to-end shopping flows across a shared codebase.",
       image: "e.comerce.png",
       url: "https://e-commerce-monorepo-j4ysleskr-irenes-projects-21de3997.vercel.app/",
       stack: ["React", "Strapi", "Monorepo", "REST API"],
     },
     {
+      id: 3,
+      name: "Media DB",
+      description:
+        "Movie and TV discovery app with searchable listings, detail pages, and a clean browsing experience.",
+      image: "mediaDB.png",
+      url: "https://chas-amazon-news-site-main-5.vercel.app/movie",
+      stack: ["React", "Routing", "REST API", "Responsive UI"],
+    },
+    {
+      id: 4,
+      name: "Oscar's 2025 Quiz",
+      description:
+        "Interactive quiz about the 2025 Oscar nominations — progressive questions, instant feedback, and score tracking.",
+      image: "Oscars.webp",
+      url: "https://quiz-seven-omega-89.vercel.app/",
+      stack: ["React", "State Management", "UI Logic", "Responsive Design"],
+    },
+    {
       id: 5,
+      name: "Gemini AI app",
+      description:
+        "AI-powered recipe generator — describe what you have and get tailored meal suggestions in seconds.",
+      image: "Foody-Goody.png",
+      url: "https://workshop-ai-website-theta.vercel.app/",
+      stack: ["React", "AI API", "Async Flows", "UX States"],
+    },
+    {
+      id: 6,
       name: "Take M Home",
       description:
-        "Mobile marketplace for circular consumption: users offer items they no longer need, others browse, reserve, and arrange in-person pickup — built with React Native for a touch-native, mobile-only experience.",
+        "Mobile marketplace for circular consumption — users offer items they no longer need, others browse, reserve, and arrange in-person pickup.",
       image: "take.png",
       imagePosition: "top",
       url: "https://take-m-home-4k1eqbdt2-irenes-projects-21de3997.vercel.app",
@@ -78,6 +87,7 @@ export const PortfolioProvider = ({ children }) => {
     { name: "Codex", src: "/codex.svg" },
     { name: "Bitbucket", src: "/bitbucket.jpeg" },
     { name: "Jira", src: "/jira2.jpeg" },
+    { name: "React Native", src: "/reactNative.png" },
   ]);
 
   // const [newProject, setNewProject] = useState({

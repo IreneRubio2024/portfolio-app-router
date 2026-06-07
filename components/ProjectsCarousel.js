@@ -31,21 +31,21 @@ const ProjectsCarousel = ({ dark = false }) => {
   return (
     <section
       id="projects"
-      className={`w-full px-4 py-24 sm:px-6 lg:px-8 ${dark ? "bg-[#fffef6] text-[#263247]" : "bg-[#FAFAF8] text-[#171717]"}`}
+      className={`w-full px-4 py-24 sm:px-6 lg:px-8 ${dark ? "bg-[#262626] text-[#F5F7FC]" : "bg-[#FAFAF8] text-[#171717]"}`}
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16">
           <h2
-            className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-[#263247]/75" : "text-[#171717]/75"}`}
+            className={`font-display text-xl font-semibold uppercase tracking-[0.28em] sm:text-2xl ${dark ? "text-white/70" : "text-[#171717]/75"}`}
           >
             Projects
           </h2>
         </div>
         <article
-          className={`mb-6 overflow-hidden border shadow-sm ${dark ? "border-[#263247]/12 bg-white" : "border-black/8 bg-[#fffdfa]"}`}
+          className={`mb-6 overflow-hidden border shadow-sm ${dark ? "border-white/10 bg-[#2e2e2e]" : "border-black/8 bg-[#fffdfa]"}`}
         >
           <div
-            className={`grid gap-8 p-8 lg:grid-cols-[1.15fr_0.85fr] lg:p-10 ${dark ? "text-[#263247]" : "text-[#171717]"}`}
+            className={`grid gap-8 p-8 lg:grid-cols-[1.15fr_0.85fr] lg:p-10 ${dark ? "text-[#F5F7FC]" : "text-[#171717]"}`}
           >
             <div>
               <img
@@ -54,7 +54,7 @@ const ProjectsCarousel = ({ dark = false }) => {
                 className="h-auto w-full max-w-[22rem]"
               />
               <p
-                className={`font-body mt-5 text-xs uppercase tracking-[0.2em] ${dark ? "text-[#263247]/62" : "text-[#171717]/55"}`}
+                className={`font-body mt-5 text-xs uppercase tracking-[0.2em] ${dark ? "text-white/55" : "text-[#171717]/55"}`}
               >
                 {exjobbPreview.label}
               </p>
@@ -62,12 +62,12 @@ const ProjectsCarousel = ({ dark = false }) => {
                 {exjobbPreview.title}
               </h3>
               <p
-                className={`font-body mt-2 text-sm uppercase tracking-[0.16em] ${dark ? "text-[#263247]/62" : "text-[#171717]/58"}`}
+                className={`font-body mt-2 text-sm uppercase tracking-[0.16em] ${dark ? "text-white/55" : "text-[#171717]/58"}`}
               >
                 Testing and evaluating the app experience
               </p>
               <p
-                className={`font-body mt-5 max-w-2xl text-lg leading-9 ${dark ? "text-[#263247]/78" : "text-[#171717]/72"}`}
+                className={`font-body mt-5 max-w-2xl text-lg leading-9 ${dark ? "text-white/72" : "text-[#171717]/72"}`}
               >
                 {exjobbPreview.summary}
               </p>
@@ -80,7 +80,7 @@ const ProjectsCarousel = ({ dark = false }) => {
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className={`font-body border px-3 py-1 text-xs uppercase tracking-[0.16em] ${dark ? "border-[#263247]/14 text-[#263247]/75" : "border-black/10 text-[#171717]/68"}`}
+                    className={`font-body border px-3 py-1 text-xs uppercase tracking-[0.16em] ${dark ? "border-white/12 text-white/65" : "border-black/10 text-[#171717]/68"}`}
                   >
                     {tag}
                   </span>
@@ -88,10 +88,10 @@ const ProjectsCarousel = ({ dark = false }) => {
               </div>
             </div>
             <div
-              className={`border p-6 ${dark ? "border-[#263247]/10 bg-[#f7f8f4]" : "border-black/8 bg-white"}`}
+              className={`border p-6 ${dark ? "border-white/10 bg-[#242424]" : "border-black/8 bg-white"}`}
             >
               <p
-                className={`font-display text-sm uppercase tracking-[0.18em] ${dark ? "text-[#263247]/65" : "text-[#171717]/55"}`}
+                className={`font-display text-sm uppercase tracking-[0.18em] ${dark ? "text-white/55" : "text-[#171717]/55"}`}
               >
                 Case study snapshot
               </p>
@@ -99,12 +99,12 @@ const ProjectsCarousel = ({ dark = false }) => {
                 {exjobbPreview.sections.map((item) => (
                   <div key={item.title}>
                     <p
-                      className={`font-display text-sm uppercase tracking-[0.14em] ${dark ? "text-[#263247]/72" : "text-[#171717]/62"}`}
+                      className={`font-display text-sm uppercase tracking-[0.14em] ${dark ? "text-white/65" : "text-[#171717]/62"}`}
                     >
                       {item.title}
                     </p>
                     <p
-                      className={`font-body mt-2 text-base leading-8 ${dark ? "text-[#263247]/78" : "text-[#171717]/72"}`}
+                      className={`font-body mt-2 text-base leading-8 ${dark ? "text-white/72" : "text-[#171717]/72"}`}
                     >
                       {item.body}
                     </p>
@@ -118,28 +118,28 @@ const ProjectsCarousel = ({ dark = false }) => {
           {projects.map((project) => (
             <article
               key={project.id}
-              className={`group overflow-hidden border shadow-sm transition duration-300 hover:shadow-md ${dark ? "bg-[#fbfcf8] border-[#263247]/12 hover:bg-[#f5f6f2]" : "bg-white border-black/8 hover:bg-[#f5f5f0]"}`}
+              className={`group overflow-hidden border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${dark ? "bg-[#2e2e2e] border-white/10 hover:border-white/22" : "bg-white border-black/8 hover:bg-[#f5f5f0] hover:border-black/18"}`}
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className={`h-full w-full object-cover grayscale transition duration-700 group-hover:scale-[1.02] ${project.imagePosition === "top" ? "object-top" : "object-center"} ${dark ? "brightness-[0.8] contrast-125" : "brightness-[0.92] contrast-110"}`}
+                  className={`h-full w-full object-cover transition duration-700 group-hover:scale-[1.02] group-hover:brightness-110 ${project.imagePosition === "top" ? "object-top" : "object-center"} ${dark ? "grayscale" : ""}`}
                 />
                 <div
-                  className={`absolute inset-0 ${dark ? "bg-gradient-to-t from-black/75 via-black/35 to-black/10" : "bg-gradient-to-t from-[#1f1712]/55 via-[#33241a]/18 to-transparent"}`}
+                  className={`absolute inset-0 ${dark ? "bg-gradient-to-t from-black/20 to-transparent" : "bg-gradient-to-t from-black/15 to-transparent"}`}
                 />
               </div>
               <div
-                className={`flex min-h-[220px] flex-col border-t p-8 ${dark ? "border-[#263247]/10" : "border-black/10"}`}
+                className={`flex flex-col border-t p-8 ${dark ? "border-white/8" : "border-black/10"}`}
               >
                 <h3
-                  className={`font-display text-xl font-semibold ${dark ? "text-[#263247]" : "text-[#171717]"}`}
+                  className={`font-display text-xl font-semibold ${dark ? "text-[#F5F7FC]" : "text-[#171717]"}`}
                 >
                   {project.name}
                 </h3>
                 <p
-                  className={`font-body mt-4 flex-1 text-lg leading-9 ${dark ? "text-[#263247]/78" : "text-[#171717]/70"}`}
+                  className={`font-body mt-4 flex-1 text-base leading-8 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
                 >
                   {project.description}
                 </p>
@@ -150,7 +150,7 @@ const ProjectsCarousel = ({ dark = false }) => {
                         {project.stack.map((tech) => (
                           <span
                             key={tech}
-                            className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-[#263247]/18 text-[#263247]/80" : "border-black/10 text-[#171717]/70"}`}
+                            className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-white/12 text-white/65" : "border-black/10 text-[#171717]/70"}`}
                           >
                             {tech}
                           </span>
@@ -164,14 +164,14 @@ const ProjectsCarousel = ({ dark = false }) => {
                         className="h-[88px] w-[88px] flex-shrink-0"
                       />
                       <div>
-                        <p className={`font-body text-xs uppercase tracking-[0.16em] ${dark ? "text-[#263247]/65" : "text-[#171717]/60"}`}>
+                        <p className={`font-body text-xs uppercase tracking-[0.16em] ${dark ? "text-white/55" : "text-[#171717]/60"}`}>
                           Scan to view on mobile
                         </p>
                         <button
                           type="button"
                           onClick={() => window.open(project.url, "_blank", "noopener,noreferrer")}
                           aria-label={`Open ${project.name} in a new tab`}
-                          className={`font-body mt-2 text-xs uppercase tracking-[0.12em] underline underline-offset-2 ${dark ? "text-[#263247]/45" : "text-[#171717]/40"}`}
+                          className={`font-body mt-2 text-xs uppercase tracking-[0.12em] underline underline-offset-2 ${dark ? "text-white/38" : "text-[#171717]/40"}`}
                         >
                           Open anyway
                         </button>
@@ -185,7 +185,7 @@ const ProjectsCarousel = ({ dark = false }) => {
                         {project.stack.map((tech) => (
                           <span
                             key={tech}
-                            className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-[#263247]/18 text-[#263247]/80" : "border-black/10 text-[#171717]/70"}`}
+                            className={`font-body border px-2 py-0.5 text-sm uppercase tracking-[0.12em] ${dark ? "border-white/12 text-white/65" : "border-black/10 text-[#171717]/70"}`}
                           >
                             {tech}
                           </span>
@@ -196,7 +196,7 @@ const ProjectsCarousel = ({ dark = false }) => {
                       type="button"
                       variant="outline"
                       size="default"
-                      className={`font-body bg-transparent gap-2 transition-colors ${dark ? "border-[#263247]/28 text-[#263247]/85 hover:bg-[#263247] hover:text-white hover:border-[#263247]" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white hover:border-[#171717]"}`}
+                      className={`font-body bg-transparent gap-2 transition-colors ${dark ? "border-white/25 text-white/80 hover:bg-white hover:text-[#191b1e] hover:border-white" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white hover:border-[#171717]"}`}
                       onClick={() => window.open(project.url, "_blank", "noopener,noreferrer")}
                       aria-label={`Open ${project.name} in a new tab`}
                     >

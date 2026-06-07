@@ -47,6 +47,8 @@ function SkillItem({ skill, dark }) {
         {skill.name}
       </span>
     </div>
+
+
   );
 }
 
@@ -69,7 +71,7 @@ export default function TechStackAccordion({ dark = false }) {
   return (
     <section
       id="stack"
-      className={`px-4 pt-14 pb-24 sm:px-6 lg:px-8 ${dark ? "bg-[#191b1e] text-[#F5F7FC]" : "bg-[#F2F4FA] text-[#171717]"}`}
+      className={`mx-4 my-6 rounded-2xl border px-4 pt-14 pb-24 sm:mx-6 sm:my-8 sm:px-6 lg:mx-8 lg:px-8 ${dark ? "border-white/10 bg-[#282828] text-[#F5F7FC]" : "border-black/8 bg-[#fffef6] text-[#171717]"}`}
     >
       <style>{`
         @keyframes marquee {
@@ -143,3 +145,5 @@ export default function TechStackAccordion({ dark = false }) {
     </section>
   );
 }
+
+

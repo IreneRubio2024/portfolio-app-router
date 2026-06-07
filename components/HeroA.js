@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Clapperboard, Menu, PenLine, X } from "lucide-react";
+import { Moon, Menu, X } from "lucide-react";
 
 export default function HeroA({
   heroVersion = "A",
@@ -26,6 +26,7 @@ export default function HeroA({
       />
       <div className="absolute inset-0 backdrop-blur-[2.5px] sm:backdrop-blur-0" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#e8edf6]/78 via-[#e8edf6]/38 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-[#e8edf6]/80" />
+      <div className="absolute inset-y-0 right-0 hidden w-[46%] bg-white/50 backdrop-blur-[4px] lg:block" />
 
       <div className="relative flex min-h-screen flex-col px-4 pb-10 pt-5 sm:px-8 sm:pb-14 sm:pt-8 lg:px-14 xl:px-20">
         <nav className="relative z-20 flex items-center justify-end">
@@ -77,14 +78,10 @@ export default function HeroA({
               className="group h-8 border-[#263247]/35 bg-transparent px-2.5 text-[11px] text-[#263247]/85 hover:bg-[#263247] hover:text-white sm:h-9 sm:px-3 sm:text-sm"
               onClick={onToggleVersion}
               aria-pressed={isCinematic}
-              aria-label={`Switch visual mode. Current mode: ${isCinematic ? "Cinematic" : "Editorial"}. Activate to switch to ${isCinematic ? "Editorial" : "Cinematic"}.`}
+              aria-label="Switch to dark mode"
             >
-              {heroVersion === "A" ? (
-                <Clapperboard className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-6" />
-              ) : (
-                <PenLine className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-6" />
-              )}
-              Switch mode
+              <Moon className="h-3.5 w-3.5" />
+              Dark mode
             </Button>
           </div>
 

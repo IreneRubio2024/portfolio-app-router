@@ -53,7 +53,7 @@ export default function Home() {
 
   return (
     <main
-      className={`mode-transition min-h-screen bg-[#F5FBF9] text-[#171717] font-body ${isSwitching ? "mode-switching" : ""}`}
+      className={`mode-transition min-h-screen ${darkHero ? "bg-[#1e1e1e]" : "bg-[#F5FBF9]"} text-[#171717] font-body ${isSwitching ? "mode-switching" : ""}`}
     >
       <p className="sr-only" aria-live="polite" aria-atomic="true">
         {liveAnnouncement}
@@ -70,14 +70,14 @@ export default function Home() {
         photoSrc={HERO_A_PHOTO_SRC}
       />
 
-      <ProjectsCarousel dark={false} />
-      <TechStackAccordion dark={true} />
-      <AboutSection dark={!darkHero} />
+      <ProjectsCarousel dark={darkHero} />
+      <TechStackAccordion dark={darkHero} />
+      <AboutSection dark={darkHero} />
       <section
         id="contact"
-        className="px-4 py-24 sm:px-6 lg:px-8 bg-[#191b1e] text-[#F5F7FC]"
+        className={`px-4 py-24 sm:px-6 lg:px-8 ${darkHero ? "bg-[#1e1e1e] text-[#F5F7FC]" : "bg-[#e8ecf4] text-[#171717]"}`}
       >
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-3xl border border-[#263247]/12 bg-[#fffef6] p-6 text-[#263247] shadow-sm md:flex-row md:items-end md:p-8 md:gap-0">
+        <div className={`mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-3xl border p-6 shadow-sm md:flex-row md:items-end md:p-8 md:gap-0 ${darkHero ? "border-[#263247]/12 bg-[#fffef6] text-[#263247]" : "border-black/8 bg-[#fffef6] text-[#263247]"}`}>
           <div>
             <p className="font-body text-lg uppercase tracking-[0.28em] text-[#263247]/70">
               Available for opportunities
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-3">
             <Button
               asChild
-              className="font-body bg-[#191b1e] text-[#F5F7FC] hover:bg-[#15171d]"
+              className={`font-body ${darkHero ? "bg-[#191b1e] text-[#F5F7FC] hover:bg-[#15171d]" : "bg-[#263247] text-[#F5F7FC] hover:bg-[#1a2035]"}`}
             >
               <a href="mailto:rubio.hernandez.irene@gmail.com">
                 <Mail className="h-4 w-4" /> Email
@@ -98,7 +98,7 @@ export default function Home() {
             <Button
               asChild
               variant="outline"
-              className="font-body bg-transparent border-[#191b1e]/38 text-[#191b1e]/88 hover:bg-[#191b1e] hover:text-[#F5F7FC]"
+              className={`font-body bg-transparent ${darkHero ? "border-[#191b1e]/38 text-[#191b1e]/88 hover:bg-[#191b1e] hover:text-[#F5F7FC]" : "border-[#263247]/35 text-[#263247]/85 hover:bg-[#263247] hover:text-white"}`}
             >
               <a
                 href="https://github.com/IreneRubio2024"
