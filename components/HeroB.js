@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Sun, Menu, X } from "lucide-react";
+import { Sun, Menu, X, FileText } from "lucide-react";
+import CVModal from "@/components/CVModal";
 
 export default function HeroB({ heroVersion = "B", onToggleVersion }) {
   const isCinematic = heroVersion === "B";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cvOpen, setCvOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
+    <>
     <section
       id="top"
       className="relative min-h-screen overflow-hidden bg-black"
@@ -76,6 +79,16 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
               variant="outline"
               size="sm"
               className="group h-8 border-white/40 bg-transparent px-2.5 text-[11px] text-white/88 hover:bg-white hover:text-[#191b1e] sm:h-9 sm:px-3 sm:text-sm"
+              onClick={() => setCvOpen(true)}
+              aria-label="View CV"
+            >
+              <FileText className="h-3.5 w-3.5" />
+              CV
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="group h-8 border-white/40 bg-transparent px-2.5 text-[11px] text-white/88 hover:bg-white hover:text-[#191b1e] sm:h-9 sm:px-3 sm:text-sm"
               onClick={onToggleVersion}
               aria-pressed={isCinematic}
               aria-label="Switch to light mode"
@@ -123,6 +136,19 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
                   variant="outline"
                   size="sm"
                   className="mt-2 h-9 justify-start border-white/30 bg-transparent px-2.5 text-sm text-white/85 hover:bg-white hover:text-[#191b1e]"
+                  onClick={() => {
+                    setCvOpen(true);
+                    closeMenu();
+                  }}
+                  aria-label="View CV"
+                >
+                  <FileText className="h-3.5 w-3.5" />
+                  CV
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-9 justify-start border-white/30 bg-transparent px-2.5 text-sm text-white/85 hover:bg-white hover:text-[#191b1e]"
                   onClick={() => {
                     onToggleVersion?.();
                     closeMenu();
@@ -175,5 +201,7 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
         </div>
       </div>
     </section>
+    {cvOpen && <CVModal onClose={() => setCvOpen(false)} />}
+    </>
   );
 }

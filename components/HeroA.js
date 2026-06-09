@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Menu, X } from "lucide-react";
+import { Moon, Menu, X, FileText } from "lucide-react";
+import CVModal from "@/components/CVModal";
 
 export default function HeroA({
   heroVersion = "A",
@@ -11,10 +12,12 @@ export default function HeroA({
 }) {
   const isCinematic = heroVersion === "B";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cvOpen, setCvOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
+    <>
     <section
       id="top"
       className="relative min-h-screen overflow-hidden bg-[#f2eee8]"
@@ -76,6 +79,16 @@ export default function HeroA({
               variant="outline"
               size="sm"
               className="group h-8 border-[#263247]/35 bg-transparent px-2.5 text-[11px] text-[#263247]/85 hover:bg-[#263247] hover:text-white sm:h-9 sm:px-3 sm:text-sm"
+              onClick={() => setCvOpen(true)}
+              aria-label="View CV"
+            >
+              <FileText className="h-3.5 w-3.5" />
+              CV
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="group h-8 border-[#263247]/35 bg-transparent px-2.5 text-[11px] text-[#263247]/85 hover:bg-[#263247] hover:text-white sm:h-9 sm:px-3 sm:text-sm"
               onClick={onToggleVersion}
               aria-pressed={isCinematic}
               aria-label="Switch to dark mode"
@@ -123,6 +136,19 @@ export default function HeroA({
                   variant="outline"
                   size="sm"
                   className="mt-2 h-9 justify-start border-[#263247]/35 bg-transparent px-2.5 text-sm text-[#263247]/90 hover:bg-[#263247] hover:text-white"
+                  onClick={() => {
+                    setCvOpen(true);
+                    closeMenu();
+                  }}
+                  aria-label="View CV"
+                >
+                  <FileText className="h-3.5 w-3.5" />
+                  CV
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-9 justify-start border-[#263247]/35 bg-transparent px-2.5 text-sm text-[#263247]/90 hover:bg-[#263247] hover:text-white"
                   onClick={() => {
                     onToggleVersion?.();
                     closeMenu();
@@ -173,5 +199,7 @@ export default function HeroA({
         </div>
       </div>
     </section>
+    {cvOpen && <CVModal onClose={() => setCvOpen(false)} />}
+    </>
   );
 }
