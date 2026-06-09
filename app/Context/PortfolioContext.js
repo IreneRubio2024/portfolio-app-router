@@ -127,20 +127,15 @@ export const PortfolioProvider = ({ children }) => {
   // }, [techSkills]);
 
   useEffect(() => {
-    const savedHeroVersion = localStorage.getItem("heroVersion");
-    if (savedHeroVersion === "A" || savedHeroVersion === "B") {
-      setHeroVersion(savedHeroVersion);
-      return;
+    const saved = localStorage.getItem("heroVersionV2");
+    if (saved === "A" || saved === "B") {
+      setHeroVersion(saved);
     }
-
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    setHeroVersion(prefersDark ? "B" : "A");
+    // default is "A" (light) — no system preference fallback
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("heroVersion", heroVersion);
+    localStorage.setItem("heroVersionV2", heroVersion);
   }, [heroVersion]);
 
   function toggleHeroVersion() {
