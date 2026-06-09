@@ -178,6 +178,17 @@ export default function AboutSection({ dark = false }) {
                 <p
                   className={`font-body text-lg leading-9 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
                 >
+                  Art history was part of that formation too. Studying how
+                  images carry meaning, how objects hold memory, and how
+                  institutions decide what gets preserved and how it gets seen
+                  gave me a framework I still use every day — for thinking about
+                  context, intention, and what it means to make something
+                  genuinely accessible.
+                </p>
+
+                <p
+                  className={`font-body text-lg leading-9 ${dark ? "text-white/70" : "text-[#171717]/70"}`}
+                >
                   When I moved into tech, I didn&apos;t leave that behind. I
                   brought it with me. Today I build interfaces the same way I
                   used to direct a shoot — with intention, clear communication,
