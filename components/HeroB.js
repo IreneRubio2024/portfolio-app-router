@@ -20,7 +20,7 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
     >
       {/* Background photo */}
       <img
-        src="/cine2.png"
+        src="/Irene_117.jpg"
         alt="Irene Rubio"
         className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-center lg:object-right"
         style={{ filter: "saturate(0) brightness(0.92) contrast(1.08)" }}

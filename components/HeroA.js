@@ -22,14 +22,15 @@ export default function HeroA({
       id="top"
       className="relative min-h-screen overflow-hidden bg-[#f2eee8]"
     >
-      <img
-        src={photoSrc}
-        alt="Irene Rubio"
-        className="absolute inset-0 h-full w-full object-cover object-[38%_center] sm:object-[58%_center] lg:object-right"
-      />
-      <div className="absolute inset-0 backdrop-blur-[2.5px] sm:backdrop-blur-0" />
+      <div style={{ position: "absolute", top: 0, left: 0, height: "100%", width: "55%", overflow: "hidden" }}>
+        <img
+          src={photoSrc}
+          alt="Irene Rubio"
+          style={{ height: "100%", width: "100%", objectFit: "cover", objectPosition: "center top", display: "block", transform: "scale(1.55)", transformOrigin: "top center" }}
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#e8edf6]/78 via-[#e8edf6]/38 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-[#e8edf6]/80" />
-      <div className="absolute inset-y-0 right-0 hidden w-[46%] bg-white/50 backdrop-blur-[4px] lg:block" />
+      <div className="absolute inset-y-0 right-0 hidden w-[46%] bg-white/50 backdrop-blur-[2px] lg:block" />
 
       <div className="relative flex min-h-screen flex-col px-4 pb-10 pt-5 sm:px-8 sm:pb-14 sm:pt-8 lg:px-14 xl:px-20">
         <nav className="relative z-20 flex items-center justify-end">
