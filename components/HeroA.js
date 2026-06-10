@@ -22,7 +22,7 @@ export default function HeroA({
       id="top"
       className="relative min-h-screen overflow-hidden bg-[#f2eee8]"
     >
-      <div style={{ position: "absolute", top: 0, left: 0, height: "100%", width: "55%", overflow: "hidden" }}>
+      <div className="absolute inset-y-0 left-0 w-full lg:w-[55%] overflow-hidden">
         <img
           src={photoSrc}
           alt="Irene Rubio"

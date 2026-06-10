@@ -22,7 +22,7 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
       <img
         src="/Irene_117.jpg"
         alt="Irene Rubio"
-        className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-center lg:object-right"
+        className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-[center_20%] lg:object-[center_20%]"
         style={{ filter: "saturate(0) brightness(0.92) contrast(1.08)" }}
       />
 
