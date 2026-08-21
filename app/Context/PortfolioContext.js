@@ -23,7 +23,7 @@ export const PortfolioProvider = ({ children }) => {
       description:
         "Full-stack e-commerce platform covering product catalogue, content management, and end-to-end shopping flows across a shared codebase.",
       image: "e.comerce.png",
-      url: "https://e-commerce-monorepo-j4ysleskr-irenes-projects-21de3997.vercel.app/",
+      url: "https://e-commerce-monorepo-web.vercel.app/",
       stack: ["React", "Strapi", "Monorepo", "REST API"],
     },
     {
