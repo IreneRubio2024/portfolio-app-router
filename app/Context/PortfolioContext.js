@@ -14,7 +14,7 @@ export const PortfolioProvider = ({ children }) => {
       description:
         "Staff scheduling platform for small businesses — managers can build teams, assign shifts, and manage weekly employee schedules in one place.",
       image: "mera.png",
-      url: "https://mera-5q2i-5ujktwvwu-irenes-projects-21de3997.vercel.app/",
+      url: "https://mera-5q2i.vercel.app/",
       stack: ["Next.js", "React", "Tailwind", "Docker", "AWS"],
     },
     {
@@ -60,7 +60,7 @@ export const PortfolioProvider = ({ children }) => {
         "Mobile marketplace for circular consumption — users offer items they no longer need, others browse, reserve, and arrange in-person pickup.",
       image: "take.png",
       imagePosition: "top",
-      url: "https://take-m-home-4k1eqbdt2-irenes-projects-21de3997.vercel.app",
+      url: "https://take-m-home.vercel.app",
       stack: ["React Native", "Mobile-first", "P2P"],
       mobileOnly: true,
     },

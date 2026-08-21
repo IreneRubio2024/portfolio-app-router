@@ -170,11 +170,11 @@ export default function HeroA({
               <span className="font-display block font-bold text-4xl leading-none text-[#263247] sm:text-6xl lg:text-7xl">
                 Irene Rubio
               </span>
-              <span className="font-display mt-4 block text-[0.9rem] font-medium tracking-[0.1em] text-[#263247]/84 sm:mt-6 sm:text-[1.35rem] sm:tracking-[0.14em]">
+              <span className="font-display mt-4 block text-base font-medium tracking-[0.1em] text-[#263247]/84 sm:mt-6 sm:text-[1.35rem] sm:tracking-[0.14em]">
                 Expressive Frontend Developer
               </span>
             </h1>
-            <p className="mt-6 max-w-md text-base leading-8 text-[#263247]/84 sm:mt-10 sm:text-xl sm:leading-10">
+            <p className="mt-6 max-w-md text-lg leading-9 text-[#263247]/84 sm:mt-10 sm:text-xl sm:leading-10">
               Developer with a background in visual storytelling. I build
               accessible digital products across frontend and full-stack
               environments, with strong attention to architecture, testing, and

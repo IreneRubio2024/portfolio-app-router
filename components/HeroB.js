@@ -175,7 +175,7 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
                 Expressive web experiences
               </span>
             </h1>
-            <p className="mt-6 max-w-sm text-base leading-8 text-white/68 sm:mt-8 sm:text-xl sm:leading-9">
+            <p className="mt-6 max-w-sm text-lg leading-9 text-white/68 sm:mt-8 sm:text-xl sm:leading-9">
               Frontend Developer with a background in film and visual
               storytelling. I work on the visible side of digital experiences,
               where design, structure, and testing shape how things look, feel
