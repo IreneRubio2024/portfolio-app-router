@@ -191,9 +191,6 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
             <p className="mt-6 text-sm font-medium tracking-[0.08em] text-white/88 sm:text-base">
               React · TypeScript · Angular · Next.js · JavaScript
             </p>
-            <p className="mt-2 text-sm tracking-[0.04em] text-white/75 sm:text-base">
-              Currently exploring: Python · AI / LLMs · C#
-            </p>
             <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
               <Button
                 asChild
