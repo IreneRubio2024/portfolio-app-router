@@ -167,19 +167,29 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
         {/* Text — bottom left */}
         <div className="flex flex-1 items-end px-4 pb-10 sm:px-8 sm:pb-16 lg:px-14 lg:pb-20">
           <div className="max-w-lg">
-            <h1>
+            <p className="font-body text-xs font-semibold uppercase tracking-[0.22em] text-white/60 sm:text-sm">
+              Frontend Developer · UX · Accessibility
+            </p>
+            <h1 className="mt-2">
               <span className="font-display block font-bold tracking-[0.04em] text-4xl leading-none text-white sm:text-6xl lg:text-7xl">
                 Irene Rubio
               </span>
-              <span className="font-display mt-4 block text-base font-medium tracking-[0.14em] text-white/72 sm:mt-5 sm:text-xl sm:tracking-[0.22em]">
-                Expressive web experiences
-              </span>
             </h1>
-            <p className="mt-6 max-w-sm text-lg leading-9 text-white/68 sm:mt-8 sm:text-xl sm:leading-9">
-              Frontend Developer with a background in film and visual
-              storytelling. I work on the visible side of digital experiences,
-              where design, structure, and testing shape how things look, feel
-              and work.
+            <p className="font-display mt-5 max-w-sm text-2xl font-medium leading-tight text-white sm:mt-6 sm:text-3xl">
+              I build digital experiences that make complex things feel
+              simple.
+            </p>
+            <p className="mt-5 max-w-sm text-lg leading-9 text-white/68 sm:mt-6 sm:text-xl sm:leading-9">
+              I&apos;m a frontend developer with a background in creative
+              production, UX and accessibility, combining technical thinking
+              with a strong understanding of people and how they use digital
+              products.
+            </p>
+            <p className="mt-6 text-sm font-medium tracking-[0.08em] text-white/70 sm:text-base">
+              React · TypeScript · Angular · Next.js · JavaScript
+            </p>
+            <p className="mt-2 text-xs tracking-[0.06em] text-white/50 sm:text-sm">
+              Currently exploring: Python · AI / LLMs
             </p>
             <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
               <Button

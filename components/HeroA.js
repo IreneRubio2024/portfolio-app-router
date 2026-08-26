@@ -166,19 +166,29 @@ export default function HeroA({
         </nav>
         <div className="flex flex-1 items-center justify-end">
           <div className="w-full max-w-[30rem] rounded-2xl border border-white/45 bg-[#fffaf2]/42 p-4 shadow-[0_8px_20px_rgba(20,27,38,0.1)] backdrop-blur-[2.5px] lg:border-none lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-0">
-            <h1 className="text-4xl leading-[0.98] sm:text-6xl lg:text-7xl">
+            <p className="font-body text-xs font-semibold uppercase tracking-[0.22em] text-[#263247]/60 sm:text-sm">
+              Frontend Developer · UX · Accessibility
+            </p>
+            <h1 className="mt-2 text-4xl leading-[0.98] sm:text-6xl lg:text-7xl">
               <span className="font-display block font-bold text-4xl leading-none text-[#263247] sm:text-6xl lg:text-7xl">
                 Irene Rubio
               </span>
-              <span className="font-display mt-4 block text-base font-medium tracking-[0.1em] text-[#263247]/84 sm:mt-6 sm:text-[1.35rem] sm:tracking-[0.14em]">
-                Expressive Frontend Developer
-              </span>
             </h1>
-            <p className="mt-6 max-w-md text-lg leading-9 text-[#263247]/84 sm:mt-10 sm:text-xl sm:leading-10">
-              Developer with a background in visual storytelling. I build
-              accessible digital products across frontend and full-stack
-              environments, with strong attention to architecture, testing, and
-              performance.
+            <p className="font-display mt-5 max-w-md text-2xl font-medium leading-tight text-[#263247] sm:mt-6 sm:text-3xl">
+              I build digital experiences that make complex things feel
+              simple.
+            </p>
+            <p className="mt-5 max-w-md text-lg leading-9 text-[#263247]/84 sm:mt-6 sm:text-xl sm:leading-10">
+              I&apos;m a frontend developer with a background in creative
+              production, UX and accessibility, combining technical thinking
+              with a strong understanding of people and how they use digital
+              products.
+            </p>
+            <p className="mt-6 text-sm font-medium tracking-[0.08em] text-[#263247]/70 sm:text-base">
+              React · TypeScript · Angular · Next.js · JavaScript
+            </p>
+            <p className="mt-2 text-xs tracking-[0.06em] text-[#263247]/55 sm:text-sm">
+              Currently exploring: Python · AI / LLMs
             </p>
             <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
               <Button
