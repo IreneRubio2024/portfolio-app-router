@@ -176,12 +176,12 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
               </span>
             </h1>
             <p className="font-display mt-5 max-w-sm text-2xl font-medium leading-tight text-white sm:mt-6 sm:text-3xl">
-              I build digital experiences that make complex things feel
-              simple.
+              I build thoughtful digital products that make complex things
+              feel simple.
             </p>
             <p className="mt-5 max-w-sm text-lg leading-9 text-white/68 sm:mt-6 sm:text-xl sm:leading-9">
               I&apos;m a frontend developer with a background in creative
-              production, UX and accessibility, combining technical thinking
+              production, UX and accessibility. I combine technical thinking
               with a strong understanding of people and how they use digital
               products.
             </p>
@@ -189,7 +189,7 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
               React · TypeScript · Angular · Next.js · JavaScript
             </p>
             <p className="mt-2 text-xs tracking-[0.06em] text-white/50 sm:text-sm">
-              Currently exploring: Python · AI / LLMs
+              Currently exploring: Python · AI / LLMs · C#
             </p>
             <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
               <Button
