@@ -29,6 +29,9 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
       {/* Bright veil for a lightly burned, high-key cinematic look */}
       <div className="absolute inset-0 bg-black/20" />
 
+      {/* Scrim behind the text block so it stays readable over any part of the photo */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[75%] bg-gradient-to-t from-black/85 via-black/50 to-transparent" />
+
       {/* All content on top */}
       <div className="relative flex min-h-screen flex-col">
         {/* Nav — top right */}
@@ -167,7 +170,7 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
         {/* Text — bottom left */}
         <div className="flex flex-1 items-end px-4 pb-10 sm:px-8 sm:pb-16 lg:px-14 lg:pb-20">
           <div className="max-w-lg">
-            <p className="font-body text-xs font-semibold uppercase tracking-[0.22em] text-white/60 sm:text-sm">
+            <p className="font-body text-sm font-semibold uppercase tracking-[0.18em] text-white/90 sm:text-base">
               Frontend Developer · UX · Accessibility
             </p>
             <h1 className="mt-2">
@@ -179,16 +182,16 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
               I build thoughtful digital products that make complex things
               feel simple.
             </p>
-            <p className="mt-5 max-w-sm text-lg leading-9 text-white/68 sm:mt-6 sm:text-xl sm:leading-9">
+            <p className="mt-5 max-w-sm text-lg leading-9 text-white/88 sm:mt-6 sm:text-xl sm:leading-9">
               I&apos;m a frontend developer with a background in creative
               production, UX and accessibility. I combine technical thinking
               with a strong understanding of people and how they use digital
               products.
             </p>
-            <p className="mt-6 text-sm font-medium tracking-[0.08em] text-white/70 sm:text-base">
+            <p className="mt-6 text-sm font-medium tracking-[0.08em] text-white/88 sm:text-base">
               React · TypeScript · Angular · Next.js · JavaScript
             </p>
-            <p className="mt-2 text-xs tracking-[0.06em] text-white/50 sm:text-sm">
+            <p className="mt-2 text-sm tracking-[0.04em] text-white/75 sm:text-base">
               Currently exploring: Python · AI / LLMs · C#
             </p>
             <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">

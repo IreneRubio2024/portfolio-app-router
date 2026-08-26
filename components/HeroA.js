@@ -174,7 +174,7 @@ export default function HeroA({
           </nav>
           <div className="flex flex-1 items-center justify-end">
             <div className="w-full max-w-[30rem] rounded-2xl border border-white/45 bg-[#fffaf2]/42 p-4 shadow-[0_8px_20px_rgba(20,27,38,0.1)] backdrop-blur-[2.5px] lg:border-none lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-0">
-              <p className="font-body text-xs font-semibold uppercase tracking-[0.22em] text-[#263247]/60 sm:text-sm">
+              <p className="font-body text-sm font-semibold uppercase tracking-[0.18em] text-[#263247]/80 sm:text-base">
                 Frontend Developer · UX · Accessibility
               </p>
               <h1 className="mt-2 text-4xl leading-[0.98] sm:text-6xl lg:text-7xl">
@@ -192,10 +192,10 @@ export default function HeroA({
                 with a strong understanding of people and how they use digital
                 products.
               </p>
-              <p className="mt-6 text-sm font-medium tracking-[0.08em] text-[#263247]/70 sm:text-base">
+              <p className="mt-6 text-sm font-medium tracking-[0.08em] text-[#263247]/80 sm:text-base">
                 React · TypeScript · Angular · Next.js · JavaScript
               </p>
-              <p className="mt-2 text-xs tracking-[0.06em] text-[#263247]/55 sm:text-sm">
+              <p className="mt-2 text-sm tracking-[0.04em] text-[#263247]/75 sm:text-base">
                 Currently exploring: Python · AI / LLMs · C#
               </p>
               <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
