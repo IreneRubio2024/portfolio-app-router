@@ -55,7 +55,7 @@ export const PortfolioProvider = ({ children }) => {
     },
     {
       id: 6,
-      name: "Take M Home",
+      name: "Take Me Home",
       description:
         "Mobile marketplace for circular consumption — users offer items they no longer need, others browse, reserve, and arrange in-person pickup.",
       image: "/images/take.png",
