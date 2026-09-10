@@ -8,7 +8,7 @@ import CVModal from "@/components/CVModal";
 export default function HeroA({
   heroVersion = "A",
   onToggleVersion,
-  photoSrc = "/actriz 4.png",
+  photoSrc = "/images/actriz 4.png",
 }) {
   const isCinematic = heroVersion === "B";
   const [isMenuOpen, setIsMenuOpen] = useState(false);

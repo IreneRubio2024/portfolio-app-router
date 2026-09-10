@@ -10,7 +10,7 @@ import ProjectsCarousel from "@/components/ProjectsCarousel";
 import TechStackAccordion from "@/components/TechStackAccordion";
 import AboutSection from "@/components/AboutSection";
 
-const HERO_A_PHOTO_SRC = "/actriz.jpg";
+const HERO_A_PHOTO_SRC = "/images/actriz.jpg";
 
 export default function Home() {
   const context = useContext(PortfolioContext);

@@ -13,7 +13,7 @@ export const PortfolioProvider = ({ children }) => {
       name: "Mera",
       description:
         "Staff scheduling platform for small businesses — managers can build teams, assign shifts, and manage weekly employee schedules in one place.",
-      image: "mera.png",
+      image: "/images/mera.png",
       url: "https://mera-5q2i.vercel.app/",
       stack: ["Next.js", "React", "Tailwind", "Docker", "AWS"],
     },
@@ -22,7 +22,7 @@ export const PortfolioProvider = ({ children }) => {
       name: "E-commerce monorepo",
       description:
         "Full-stack e-commerce platform covering product catalogue, content management, and end-to-end shopping flows across a shared codebase.",
-      image: "e.comerce.png",
+      image: "/images/e.comerce.png",
       url: "https://e-commerce-monorepo-web.vercel.app/",
       stack: ["React", "Strapi", "Monorepo", "REST API"],
     },
@@ -31,7 +31,7 @@ export const PortfolioProvider = ({ children }) => {
       name: "Media DB",
       description:
         "Movie and TV discovery app with searchable listings, detail pages, and a clean browsing experience.",
-      image: "mediaDB.png",
+      image: "/images/mediaDB.png",
       url: "https://chas-amazon-news-site-main-5.vercel.app/movie",
       stack: ["React", "Routing", "REST API", "Responsive UI"],
     },
@@ -40,7 +40,7 @@ export const PortfolioProvider = ({ children }) => {
       name: "Oscar's 2025 Quiz",
       description:
         "Interactive quiz about the 2025 Oscar nominations — progressive questions, instant feedback, and score tracking.",
-      image: "Oscars.webp",
+      image: "/images/Oscars.webp",
       url: "https://quiz-seven-omega-89.vercel.app/",
       stack: ["React", "State Management", "UI Logic", "Responsive Design"],
     },
@@ -49,7 +49,7 @@ export const PortfolioProvider = ({ children }) => {
       name: "Gemini AI app",
       description:
         "AI-powered recipe generator — describe what you have and get tailored meal suggestions in seconds.",
-      image: "Foody-Goody.png",
+      image: "/images/Foody-Goody.png",
       url: "https://workshop-ai-website-theta.vercel.app/",
       stack: ["React", "AI API", "Async Flows", "UX States"],
     },
@@ -58,7 +58,7 @@ export const PortfolioProvider = ({ children }) => {
       name: "Take M Home",
       description:
         "Mobile marketplace for circular consumption — users offer items they no longer need, others browse, reserve, and arrange in-person pickup.",
-      image: "take.png",
+      image: "/images/take.png",
       imagePosition: "top",
       url: "https://take-m-home.vercel.app",
       stack: ["React Native", "Mobile-first", "P2P"],
@@ -67,27 +67,27 @@ export const PortfolioProvider = ({ children }) => {
   ]);
 
   const [techSkills, setTechSkills] = useState([
-    { name: "Html 5", src: "/html.png" },
-    { name: "JS", src: "/javascript.png" },
-    { name: "React", src: "/react.png" },
-    { name: "Node.js", src: "/nodejs.png" },
-    { name: "CSS", src: "/css.png" },
-    { name: "Git Hub", src: "/github.png" },
-    { name: "Linux", src: "/image.png" },
-    { name: "Express", src: "/express-logo.png" },
-    { name: "TS", src: "/typesc.webp" },
-    { name: "Next.js", src: "/Next.js.svg" },
-    { name: "Docker", src: "/docker-mark-blue.png" },
-    { name: "MySQL", src: "/Mysql-png.png" },
-    { name: "Strapi", src: "/strapi.svg" },
-    { name: "Tanstack", src: "/tanstack.png" },
-    { name: "Angular", src: "/angular.svg" },
-    { name: "Playwright", src: "/play.png" },
-    { name: "Claude", src: "/claude.svg" },
-    { name: "Codex", src: "/codex.svg" },
-    { name: "Bitbucket", src: "/bitbucket.jpeg" },
-    { name: "Jira", src: "/jira2.jpeg" },
-    { name: "React Native", src: "/reactNative.png" },
+    { name: "Html 5", src: "/images/stack/html.png" },
+    { name: "JS", src: "/images/stack/javascript.png" },
+    { name: "React", src: "/images/stack/react.png" },
+    { name: "Node.js", src: "/images/stack/nodejs.png" },
+    { name: "CSS", src: "/images/stack/css.png" },
+    { name: "Git Hub", src: "/images/stack/github.png" },
+    { name: "Linux", src: "/images/stack/image.png" },
+    { name: "Express", src: "/images/stack/express-logo.png" },
+    { name: "TS", src: "/images/stack/typesc.webp" },
+    { name: "Next.js", src: "/images/stack/Next.js.svg" },
+    { name: "Docker", src: "/images/stack/docker-mark-blue.png" },
+    { name: "MySQL", src: "/images/stack/Mysql-png.png" },
+    { name: "Strapi", src: "/images/stack/strapi.svg" },
+    { name: "Tanstack", src: "/images/stack/tanstack.png" },
+    { name: "Angular", src: "/images/stack/angular.svg" },
+    { name: "Playwright", src: "/images/stack/play.png" },
+    { name: "Claude", src: "/images/stack/claude.svg" },
+    { name: "Codex", src: "/images/stack/codex.svg" },
+    { name: "Bitbucket", src: "/images/stack/bitbucket.jpeg" },
+    { name: "Jira", src: "/images/stack/jira2.jpeg" },
+    { name: "React Native", src: "/images/stack/reactNative.png" },
   ]);
 
   // const [newProject, setNewProject] = useState({
@@ -108,12 +108,12 @@ export const PortfolioProvider = ({ children }) => {
   //     setTechSkills(JSON.parse(storedTechSkills));
   //   } else {
   //     setTechSkills([
-  //       { name: "Html 5", src: "/html.png" },
-  //       { name: "JS", src: "/javascript.png" },
-  //       { name: "React", src: "/react.png" },
-  //       { name: "Node.js", src: "/nodejs.png" },
-  //       { name: "CSS", src: "/css.png" },
-  //       { name: "Git Hub", src: "/github.png" },
+  //       { name: "Html 5", src: "/images/stack/html.png" },
+  //       { name: "JS", src: "/images/stack/javascript.png" },
+  //       { name: "React", src: "/images/stack/react.png" },
+  //       { name: "Node.js", src: "/images/stack/nodejs.png" },
+  //       { name: "CSS", src: "/images/stack/css.png" },
+  //       { name: "Git Hub", src: "/images/stack/github.png" },
   //     ]);
   //   }
   // }, []);

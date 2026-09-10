@@ -49,7 +49,7 @@ const ProjectsCarousel = ({ dark = false }) => {
           >
             <div>
               <img
-                src="/ArbetsLogo.png"
+                src="/images/ArbetsLogo.png"
                 alt="Arbetsformedlingen"
                 className="h-auto w-full max-w-[22rem]"
               />

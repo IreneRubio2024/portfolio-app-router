@@ -115,7 +115,7 @@ export default function AboutSection({ dark = false }) {
               {/* Image 1 */}
               <div className="photo-item top-item top-item-1">
                 <img
-                  src="/actriz 4.png"
+                  src="/images/actriz 4.png"
                   alt="Irene Rubio"
                   style={{ objectPosition: "center top" }}
                 />
@@ -124,7 +124,7 @@ export default function AboutSection({ dark = false }) {
               {/* Image 2 */}
               <div className="photo-item top-item top-item-2">
                 <img
-                  src="/cordelia9.jpg"
+                  src="/images/cordelia9.jpg"
                   alt="Theatre production"
                   style={{ objectPosition: "center center" }}
                 />
@@ -133,7 +133,7 @@ export default function AboutSection({ dark = false }) {
               {/* Image 3 */}
               <div className="photo-item top-item top-item-3">
                 <img
-                  src="/modelo.png"
+                  src="/images/modelo.png"
                   alt="Cordelia Vintage"
                   style={{ objectPosition: "center top" }}
                 />
@@ -141,13 +141,13 @@ export default function AboutSection({ dark = false }) {
 
               {/* Image 4 */}
               <div className="photo-item top-item top-item-4">
-                <img src="/cordelia 5.jpg" alt="Cordelia Vintage" />
+                <img src="/images/cordelia 5.jpg" alt="Cordelia Vintage" />
               </div>
 
               {/* Image 5 */}
               <div className="photo-item top-item top-item-5">
                 <img
-                  src="/Ana.png"
+                  src="/images/Ana.png"
                   alt="Costume design"
                   style={{ objectPosition: "center top" }}
                 />
@@ -219,21 +219,21 @@ export default function AboutSection({ dark = false }) {
           <div className="about-bottom-collage mt-10 overflow-hidden rounded-[28px]">
             <div className="photo-item bottom-item-1">
               <img
-                src="/maggieyyo2.png"
+                src="/images/maggieyyo2.png"
                 alt="Cordelia Vintage"
                 style={{ objectPosition: "center top" }}
               />
             </div>
             <div className="photo-item bottom-item-2">
               <img
-                src="/cordelia 8.jpg"
+                src="/images/cordelia 8.jpg"
                 alt="Cordelia Vintage"
                 style={{ objectPosition: "center top" }}
               />
             </div>
             <div className="photo-item bottom-item-3">
               <img
-                src="/Ireneyyo.png"
+                src="/images/Ireneyyo.png"
                 alt="Irene Rubio"
                 style={{ objectPosition: "center top" }}
               />
