@@ -38,7 +38,7 @@ export default function HeroA({
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#e8edf6]/78 via-[#e8edf6]/38 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-[#e8edf6]/80" />
-        <div className="absolute inset-y-0 right-0 hidden w-[46%] bg-white/50 backdrop-blur-[2px] lg:block" />
+        <div className="absolute inset-y-0 right-0 hidden w-[45%] bg-gradient-to-r from-transparent to-white/55 lg:block" />
 
         <div className="relative flex min-h-screen flex-col px-4 pb-10 pt-5 sm:px-8 sm:pb-14 sm:pt-8 lg:px-14 xl:px-20">
           <nav className="relative z-20 flex items-center justify-end">
@@ -186,7 +186,7 @@ export default function HeroA({
                 I build thoughtful digital products that make complex things
                 feel simple.
               </p>
-              <p className="mt-5 max-w-md text-lg leading-9 text-[#263247]/84 sm:mt-6 sm:text-xl sm:leading-10">
+              <p className="mt-5 max-w-md text-xl leading-9 text-[#263247]/84 sm:mt-6 sm:text-xl sm:leading-10">
                 I'm a frontend developer with a background in creative
                 production, UX and accessibility. I combine technical thinking
                 with a strong understanding of people and how they use digital

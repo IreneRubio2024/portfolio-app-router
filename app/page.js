@@ -53,7 +53,7 @@ export default function Home() {
 
   return (
     <main
-      className={`mode-transition min-h-screen ${darkHero ? "bg-[#1e1e1e]" : "bg-[#F5FBF9]"} text-[#171717] font-body ${isSwitching ? "mode-switching" : ""}`}
+      className={`mode-transition min-h-screen ${darkHero ? "bg-[#1e1e1e]" : "bg-[#f2eee8]"} text-[#171717] font-body ${isSwitching ? "mode-switching" : ""}`}
     >
       <p className="sr-only" aria-live="polite" aria-atomic="true">
         {liveAnnouncement}
@@ -75,7 +75,7 @@ export default function Home() {
       <AboutSection dark={darkHero} />
       <section
         id="contact"
-        className={`px-4 py-24 sm:px-6 lg:px-8 ${darkHero ? "bg-[#1e1e1e] text-[#F5F7FC]" : "bg-[#e8ecf4] text-[#171717]"}`}
+        className={`px-4 py-24 sm:px-6 lg:px-8 ${darkHero ? "bg-[#1e1e1e] text-[#F5F7FC]" : "bg-[#f2eee8] text-[#171717]"}`}
       >
         <div className={`mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-3xl border p-6 shadow-sm md:flex-row md:items-end md:p-8 md:gap-0 ${darkHero ? "border-[#263247]/12 bg-[#fffef6] text-[#263247]" : "border-black/8 bg-[#fffef6] text-[#263247]"}`}>
           <div>
