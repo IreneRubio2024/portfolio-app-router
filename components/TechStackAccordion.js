@@ -1,7 +1,6 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
-import PortfolioContext from "@/app/Context/PortfolioContext";
+import { useEffect, useState } from "react";
 
 function MarqueeRow({ skills, reverse = false, dark = false, paused = false }) {
   const items = [...skills, ...skills];
@@ -52,8 +51,7 @@ function SkillItem({ skill, dark }) {
   );
 }
 
-export default function TechStackAccordion({ dark = false }) {
-  const { techSkills } = useContext(PortfolioContext);
+export default function TechStackAccordion({ dark = false, techSkills = [] }) {
   const [reducedMotion, setReducedMotion] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -145,5 +143,3 @@ export default function TechStackAccordion({ dark = false }) {
     </section>
   );
 }
-
-

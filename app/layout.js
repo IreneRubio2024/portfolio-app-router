@@ -1,4 +1,3 @@
-import Providers from "./providers";
 import "./globals.css";
 
 export const viewport = {
@@ -9,9 +8,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-sans">
-        <Providers>{children}</Providers>
-      </body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

@@ -1,32 +1,10 @@
-"use client";
-
-import { useContext } from "react";
-
 import { Button } from "@/components/ui/button";
-import PortfolioContext from "@/app/Context/PortfolioContext";
 
-const ProjectsCarousel = ({ dark = false }) => {
-  const { projects } = useContext(PortfolioContext);
-  const exjobbPreview = {
-    label: "Exjobb / Degree Project",
-    title: "Kompetensprofilen",
-    summary:
-      "Quality assurance and UX validation project completed during LIA at Arbetsformedlingen for Min kompetensprofil, a new Angular service for job seekers.",
-    sections: [
-      {
-        title: "Problem",
-        body: "The team needed reliable QA coverage for a critical transition from the legacy profile flow to Min kompetensprofil, with focus on real user journeys and release quality.",
-      },
-      {
-        title: "What I delivered",
-        body: "I designed and executed 100+ test cases, documented bugs and UX inconsistencies in Jira/Xray with clear reproduction steps, and implemented an initial Playwright E2E validation flow.",
-      },
-      {
-        title: "Outcome",
-        body: "I surfaced and communicated high-priority cases (PRPO-345, PRPO-263, PRPO-313, PRPO-268), enabling clearer prioritization and improving release confidence from a user perspective.",
-      },
-    ],
-  };
+const ProjectsCarousel = ({ dark = false, projects = [] }) => {
+  const caseStudy = projects.find((project) => project.type === "caseStudy");
+  const interactiveProjects = projects.filter(
+    (project) => project.type === "project",
+  );
 
   return (
     <section
@@ -41,81 +19,78 @@ const ProjectsCarousel = ({ dark = false }) => {
             Projects
           </h2>
         </div>
-        <article
-          className={`mb-6 overflow-hidden border shadow-sm ${dark ? "border-white/10 bg-[#2e2e2e]" : "border-black/8 bg-[#fffdfa]"}`}
-        >
-          <div
-            className={`grid gap-8 p-8 lg:grid-cols-[1.15fr_0.85fr] lg:p-10 ${dark ? "text-[#F5F7FC]" : "text-[#171717]"}`}
+        {caseStudy && (
+          <article
+            className={`mb-6 overflow-hidden border shadow-sm ${dark ? "border-white/10 bg-[#2e2e2e]" : "border-black/8 bg-[#fffdfa]"}`}
           >
-            <div>
-              <img
-                src="/images/ArbetsLogo.png"
-                alt="Arbetsformedlingen"
-                className="h-auto w-full max-w-[22rem]"
-              />
-              <p
-                className={`font-body mt-5 text-xs uppercase tracking-[0.2em] ${dark ? "text-white/55" : "text-[#171717]/55"}`}
-              >
-                {exjobbPreview.label}
-              </p>
-              <h3 className="font-display mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
-                {exjobbPreview.title}
-              </h3>
-              <p
-                className={`font-body mt-2 text-sm uppercase tracking-[0.16em] ${dark ? "text-white/55" : "text-[#171717]/58"}`}
-              >
-                Testing and evaluating the app experience
-              </p>
-              <p
-                className={`font-body mt-5 max-w-2xl text-lg leading-9 ${dark ? "text-white/72" : "text-[#171717]/72"}`}
-              >
-                {exjobbPreview.summary}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {[
-                  "Public service QA",
-                  "Angular frontend",
-                  "Playwright E2E",
-                  "Jira / Xray",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className={`font-body border px-3 py-1 text-xs uppercase tracking-[0.16em] ${dark ? "border-white/12 text-white/65" : "border-black/10 text-[#171717]/68"}`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
             <div
-              className={`border p-6 ${dark ? "border-white/10 bg-[#242424]" : "border-black/8 bg-white"}`}
+              className={`grid gap-8 p-8 lg:grid-cols-[1.15fr_0.85fr] lg:p-10 ${dark ? "text-[#F5F7FC]" : "text-[#171717]"}`}
             >
-              <p
-                className={`font-display text-sm uppercase tracking-[0.18em] ${dark ? "text-white/55" : "text-[#171717]/55"}`}
+              <div>
+                <img
+                  src={caseStudy.logo}
+                  alt="Arbetsformedlingen"
+                  className="h-auto w-full max-w-[22rem]"
+                />
+                <p
+                  className={`font-body mt-5 text-xs uppercase tracking-[0.2em] ${dark ? "text-white/55" : "text-[#171717]/55"}`}
+                >
+                  {caseStudy.label}
+                </p>
+                <h3 className="font-display mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
+                  {caseStudy.name}
+                </h3>
+                <p
+                  className={`font-body mt-2 text-sm uppercase tracking-[0.16em] ${dark ? "text-white/55" : "text-[#171717]/58"}`}
+                >
+                  {caseStudy.tagline}
+                </p>
+                <p
+                  className={`font-body mt-5 max-w-2xl text-lg leading-9 ${dark ? "text-white/72" : "text-[#171717]/72"}`}
+                >
+                  {caseStudy.summary}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {caseStudy.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className={`font-body border px-3 py-1 text-xs uppercase tracking-[0.16em] ${dark ? "border-white/12 text-white/65" : "border-black/10 text-[#171717]/68"}`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div
+                className={`border p-6 ${dark ? "border-white/10 bg-[#242424]" : "border-black/8 bg-white"}`}
               >
-                Case study snapshot
-              </p>
-              <div className="mt-5 space-y-5">
-                {exjobbPreview.sections.map((item) => (
-                  <div key={item.title}>
-                    <p
-                      className={`font-display text-sm uppercase tracking-[0.14em] ${dark ? "text-white/65" : "text-[#171717]/62"}`}
-                    >
-                      {item.title}
-                    </p>
-                    <p
-                      className={`font-body mt-2 text-base leading-8 ${dark ? "text-white/72" : "text-[#171717]/72"}`}
-                    >
-                      {item.body}
-                    </p>
-                  </div>
-                ))}
+                <p
+                  className={`font-display text-sm uppercase tracking-[0.18em] ${dark ? "text-white/55" : "text-[#171717]/55"}`}
+                >
+                  Case study snapshot
+                </p>
+                <div className="mt-5 space-y-5">
+                  {caseStudy.sections.map((item) => (
+                    <div key={item.title}>
+                      <p
+                        className={`font-display text-sm uppercase tracking-[0.14em] ${dark ? "text-white/65" : "text-[#171717]/62"}`}
+                      >
+                        {item.title}
+                      </p>
+                      <p
+                        className={`font-body mt-2 text-base leading-8 ${dark ? "text-white/72" : "text-[#171717]/72"}`}
+                      >
+                        {item.body}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+        )}
         <div className="grid gap-4 md:grid-cols-2">
-          {projects.map((project) => (
+          {interactiveProjects.map((project) => (
             <article
               key={project.id}
               className={`group overflow-hidden border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${dark ? "bg-[#2e2e2e] border-white/10 hover:border-white/22" : "bg-white border-black/8 hover:bg-[#f5f5f0] hover:border-black/18"}`}
@@ -167,14 +142,15 @@ const ProjectsCarousel = ({ dark = false }) => {
                         <p className={`font-body text-xs uppercase tracking-[0.16em] ${dark ? "text-white/55" : "text-[#171717]/60"}`}>
                           Scan to view on mobile
                         </p>
-                        <button
-                          type="button"
-                          onClick={() => window.open(project.url, "_blank", "noopener,noreferrer")}
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noreferrer"
                           aria-label={`Open ${project.name} in a new tab`}
-                          className={`font-body mt-2 text-xs uppercase tracking-[0.12em] underline underline-offset-2 ${dark ? "text-white/38" : "text-[#171717]/40"}`}
+                          className={`font-body mt-2 inline-block text-xs uppercase tracking-[0.12em] underline underline-offset-2 ${dark ? "text-white/38" : "text-[#171717]/40"}`}
                         >
                           Open anyway
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -193,14 +169,19 @@ const ProjectsCarousel = ({ dark = false }) => {
                       </div>
                     )}
                     <Button
-                      type="button"
+                      asChild
                       variant="outline"
                       size="default"
                       className={`font-body bg-transparent gap-2 transition-colors ${dark ? "border-white/25 text-white/80 hover:bg-white hover:text-[#191b1e] hover:border-white" : "border-black/20 text-[#171717]/80 hover:bg-[#171717] hover:text-white hover:border-[#171717]"}`}
-                      onClick={() => window.open(project.url, "_blank", "noopener,noreferrer")}
-                      aria-label={`Open ${project.name} in a new tab`}
                     >
-                      Open project
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Open ${project.name} in a new tab`}
+                      >
+                        Open project
+                      </a>
                     </Button>
                   </div>
                 )}
