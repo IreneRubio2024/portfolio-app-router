@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const ProjectsCarousel = ({ dark = false, projects = [] }) => {
@@ -27,9 +28,11 @@ const ProjectsCarousel = ({ dark = false, projects = [] }) => {
               className={`grid gap-8 p-8 lg:grid-cols-[1.15fr_0.85fr] lg:p-10 ${dark ? "text-[#F5F7FC]" : "text-[#171717]"}`}
             >
               <div>
-                <img
+                <Image
                   src={caseStudy.logo}
                   alt="Arbetsformedlingen"
+                  width={668}
+                  height={134}
                   className="h-auto w-full max-w-[22rem]"
                 />
                 <p
@@ -96,10 +99,12 @@ const ProjectsCarousel = ({ dark = false, projects = [] }) => {
               className={`group overflow-hidden border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${dark ? "bg-[#2e2e2e] border-white/10 hover:border-white/22" : "bg-white border-black/8 hover:bg-[#f5f5f0] hover:border-black/18"}`}
             >
               <div className="relative aspect-[16/10] overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.name}
-                  className={`h-full w-full object-cover grayscale transition-[filter,transform] duration-700 group-hover:grayscale-0 group-hover:scale-[1.02] ${project.imagePosition === "top" ? "object-top" : "object-center"}`}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className={`object-cover grayscale transition-[filter,transform] duration-700 group-hover:grayscale-0 group-hover:scale-[1.02] ${project.imagePosition === "top" ? "object-top" : "object-center"}`}
                 />
                 <div
                   className={`absolute inset-0 ${dark ? "bg-gradient-to-t from-black/20 to-transparent" : "bg-gradient-to-t from-black/15 to-transparent"}`}

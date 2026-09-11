@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function AboutSection({ dark = false }) {
   const [reelPlaying, setReelPlaying] = useState(false);
@@ -114,41 +115,54 @@ export default function AboutSection({ dark = false }) {
             <div className="about-top-collage overflow-hidden rounded-[28px]">
               {/* Image 1 */}
               <div className="photo-item top-item top-item-1">
-                <img
+                <Image
                   src="/images/actriz 4.png"
                   alt="Irene Rubio"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
                   style={{ objectPosition: "center top" }}
                 />
               </div>
 
               {/* Image 2 */}
               <div className="photo-item top-item top-item-2">
-                <img
+                <Image
                   src="/images/cordelia9.jpg"
                   alt="Theatre production"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
                   style={{ objectPosition: "center center" }}
                 />
               </div>
 
               {/* Image 3 */}
               <div className="photo-item top-item top-item-3">
-                <img
+                <Image
                   src="/images/modelo.png"
                   alt="Cordelia Vintage"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
                   style={{ objectPosition: "center top" }}
                 />
               </div>
 
               {/* Image 4 */}
               <div className="photo-item top-item top-item-4">
-                <img src="/images/cordelia 5.jpg" alt="Cordelia Vintage" />
+                <Image
+                  src="/images/cordelia 5.jpg"
+                  alt="Cordelia Vintage"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                />
               </div>
 
               {/* Image 5 */}
               <div className="photo-item top-item top-item-5">
-                <img
+                <Image
                   src="/images/Ana.png"
                   alt="Costume design"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
                   style={{ objectPosition: "center top" }}
                 />
               </div>
@@ -218,23 +232,29 @@ export default function AboutSection({ dark = false }) {
           {/* Bottom row */}
           <div className="about-bottom-collage mt-10 overflow-hidden rounded-[28px]">
             <div className="photo-item bottom-item-1">
-              <img
+              <Image
                 src="/images/maggieyyo2.png"
                 alt="Cordelia Vintage"
+                fill
+                sizes="(min-width: 1024px) 33vw, 33vw"
                 style={{ objectPosition: "center top" }}
               />
             </div>
             <div className="photo-item bottom-item-2">
-              <img
+              <Image
                 src="/images/cordelia 8.jpg"
                 alt="Cordelia Vintage"
+                fill
+                sizes="(min-width: 1024px) 33vw, 33vw"
                 style={{ objectPosition: "center top" }}
               />
             </div>
             <div className="photo-item bottom-item-3">
-              <img
+              <Image
                 src="/images/Ireneyyo.png"
                 alt="Irene Rubio"
+                fill
+                sizes="(min-width: 1024px) 33vw, 33vw"
                 style={{ objectPosition: "center top" }}
               />
             </div>

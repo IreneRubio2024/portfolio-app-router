@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sun, Menu, X, FileText } from "lucide-react";
 import CVModal from "@/components/CVModal";
@@ -19,10 +20,13 @@ export default function HeroB({ heroVersion = "B", onToggleVersion }) {
       className="relative min-h-screen overflow-hidden bg-black"
     >
       {/* Background photo */}
-      <img
+      <Image
         src="/images/Irene_117.jpg"
         alt="Irene Rubio"
-        className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-[center_20%] lg:object-[center_20%]"
+        fill
+        priority
+        sizes="100vw"
+        className="scale-[1.02] object-cover object-[center_20%] lg:object-[center_20%]"
         style={{ filter: "saturate(0) brightness(0.92) contrast(1.08)" }}
       />
 

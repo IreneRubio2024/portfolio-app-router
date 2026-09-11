@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Moon, Menu, X, FileText } from "lucide-react";
 import CVModal from "@/components/CVModal";
@@ -23,18 +24,13 @@ export default function HeroA({
         className="relative min-h-screen overflow-hidden bg-[#f2eee8]"
       >
         <div className="absolute inset-y-0 left-0 w-full lg:w-[55%] overflow-hidden">
-          <img
+          <Image
             src={photoSrc}
             alt="Irene Rubio"
-            style={{
-              height: "100%",
-              width: "100%",
-              objectFit: "cover",
-              objectPosition: "center top",
-              display: "block",
-              transform: "scale(1.55)",
-              transformOrigin: "top center",
-            }}
+            fill
+            priority
+            sizes="(min-width: 1024px) 55vw, 100vw"
+            className="scale-[1.55] object-cover object-[center_top] origin-top"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#e8edf6]/78 via-[#e8edf6]/38 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-[#e8edf6]/80" />

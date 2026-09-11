@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function MarqueeRow({ skills, reverse = false, dark = false, paused = false }) {
   const items = [...skills, ...skills];
@@ -26,10 +27,12 @@ function SkillItem({ skill, dark }) {
   return (
     <div className="flex items-center gap-4 py-4">
       {skill.src ? (
-        <img
+        <Image
           src={skill.src}
           alt=""
           aria-hidden="true"
+          width={36}
+          height={36}
           className="h-9 w-9 object-contain opacity-70"
         />
       ) : (
