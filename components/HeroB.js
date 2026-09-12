@@ -38,11 +38,11 @@ export default function HeroB({ onToggleVersion }) {
           dark={true}
           onToggleVersion={onToggleVersion}
           onOpenCV={() => setCvOpen(true)}
-          className="px-4 pt-5 sm:px-8 sm:pt-8 lg:px-14"
+          className="px-4 pt-5 sm:px-8 sm:pt-8 lg:px-14 xl:px-20"
         />
 
         {/* Text — bottom left */}
-        <div className="flex flex-1 items-end px-4 pb-10 sm:px-8 sm:pb-16 lg:px-14 lg:pb-20">
+        <div className="flex flex-1 items-end px-4 pb-10 sm:px-8 sm:pb-16 lg:px-14 lg:pb-20 xl:px-20">
           <div className="max-w-lg">
             <p className="font-body text-sm font-semibold uppercase tracking-[0.18em] text-white/90 sm:text-base">
               Frontend Developer · UX · Accessibility

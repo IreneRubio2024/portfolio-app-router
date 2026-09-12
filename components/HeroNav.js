@@ -42,8 +42,8 @@ export default function HeroNav({ dark = false, onToggleVersion, onOpenCV, class
 
       <div
         className={cn(
-          "hidden flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] tracking-[0.1em] lg:flex lg:gap-4 lg:text-base",
-          dark ? "text-white/80 lg:tracking-[0.18em]" : "text-[#263247]/78 lg:tracking-[0.12em]",
+          "hidden flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] tracking-[0.1em] lg:flex lg:gap-4 lg:text-base lg:tracking-[0.12em]",
+          dark ? "text-white/80" : "text-[#263247]/78",
         )}
       >
         {LINKS.map((link) => (
@@ -79,7 +79,7 @@ export default function HeroNav({ dark = false, onToggleVersion, onOpenCV, class
           variant="outline"
           size="sm"
           className={cn(
-            "group h-8 bg-transparent px-2.5 text-[11px] sm:h-9 sm:px-3 sm:text-sm",
+            "group h-8 justify-center bg-transparent px-2.5 text-[11px] sm:h-9 sm:min-w-[118px] sm:px-3 sm:text-sm",
             dark
               ? "border-white/40 text-white/88 hover:bg-white hover:text-[#191b1e]"
               : "border-[#263247]/35 text-[#263247]/85 hover:bg-[#263247] hover:text-white",
