@@ -2,101 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import styles from "./AboutSection.module.css";
 
 export default function AboutSection({ dark = false }) {
   const [reelPlaying, setReelPlaying] = useState(false);
   return (
-    <>
-      <style>{`
-        .photo-item {
-          overflow: hidden;
-          position: relative;
-        }
-        .photo-item img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          filter: grayscale(100%);
-          transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease;
-        }
-        .photo-item:hover img {
-          transform: scale(1.05);
-          filter: grayscale(0%);
-        }
-        .about-tag {
-          border: 1px solid rgba(23,23,23,0.12);
-          background: rgba(255,255,255,0.6);
-          padding: 6px 12px;
-          font-size: 11px;
-          letter-spacing: 0.15em;
-          text-transform: uppercase;
-          color: rgba(23,23,23,0.55);
-          font-family: "Roundo-Variable"
-        }
-
-        .about-top-collage {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 300px 300px 280px;
-          gap: 0;
-        }
-
-        .top-item-1 { grid-column: 1; grid-row: 1; }
-        .top-item-2 { grid-column: 2; grid-row: 1 / 3; }
-        .top-item-3 { grid-column: 1; grid-row: 2; }
-        .top-item-4 { grid-column: 1; grid-row: 3; }
-        .top-item-5 { grid-column: 2; grid-row: 3; }
-
-        .about-bottom-collage {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 0;
-          height: 500px;
-        }
-
-        @media (max-width: 1023px) {
-          .about-top-collage {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 240px 240px 220px;
-            gap: 6px;
-            overflow: hidden !important;
-          }
-
-          .about-top-collage .photo-item img {
-            object-fit: cover !important;
-          }
-
-          .about-top-collage .top-item-1 img { object-position: center 18% !important; }
-          .about-top-collage .top-item-2 img { object-position: center 24% !important; }
-          .about-top-collage .top-item-3 img { object-position: center 18% !important; }
-          .about-top-collage .top-item-4 img { object-position: center 32% !important; }
-          .about-top-collage .top-item-5 img { object-position: center 16% !important; }
-
-          .about-bottom-collage {
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 230px;
-            height: auto;
-            gap: 6px;
-            overflow: hidden !important;
-          }
-
-          .about-bottom-collage .bottom-item-1,
-          .about-bottom-collage .bottom-item-2,
-          .about-bottom-collage .bottom-item-3 {
-            grid-column: auto !important;
-            grid-row: auto !important;
-          }
-
-          .about-bottom-collage .photo-item img {
-            object-fit: cover !important;
-          }
-
-          .about-bottom-collage .bottom-item-1 img { object-position: center 16% !important; }
-          .about-bottom-collage .bottom-item-2 img { object-position: center 20% !important; }
-          .about-bottom-collage .bottom-item-3 img { object-position: center 18% !important; }
-        }
-      `}</style>
-
       <section
         id="about"
         className={`px-4 py-24 sm:px-6 lg:px-8 ${dark ? "bg-[#262626] text-[#F5F7FC]" : "bg-[#FAFAF8] text-[#171717]"}`}
@@ -109,12 +19,12 @@ export default function AboutSection({ dark = false }) {
               About
             </h2>
           </div>
-          {/* Top — photos left, text right */}
+
           <div className="mb-0 grid items-start gap-8 lg:grid-cols-[1fr_1.2fr]">
-            {/* LEFT — photo collage */}
-            <div className="about-top-collage overflow-hidden rounded-[28px]">
-              {/* Image 1 */}
-              <div className="photo-item top-item top-item-1">
+
+            <div className={`${styles.aboutTopCollage} overflow-hidden rounded-[28px]`}>
+
+              <div className={`${styles.photoItem} ${styles.topItem1}`}>
                 <Image
                   src="/images/actriz 4.png"
                   alt="Irene Rubio"
@@ -124,8 +34,8 @@ export default function AboutSection({ dark = false }) {
                 />
               </div>
 
-              {/* Image 2 */}
-              <div className="photo-item top-item top-item-2">
+
+              <div className={`${styles.photoItem} ${styles.topItem2}`}>
                 <Image
                   src="/images/cordelia9.jpg"
                   alt="Theatre production"
@@ -135,8 +45,7 @@ export default function AboutSection({ dark = false }) {
                 />
               </div>
 
-              {/* Image 3 */}
-              <div className="photo-item top-item top-item-3">
+              <div className={`${styles.photoItem} ${styles.topItem3}`}>
                 <Image
                   src="/images/modelo.png"
                   alt="Cordelia Vintage"
@@ -146,8 +55,8 @@ export default function AboutSection({ dark = false }) {
                 />
               </div>
 
-              {/* Image 4 */}
-              <div className="photo-item top-item top-item-4">
+
+              <div className={`${styles.photoItem} ${styles.topItem4}`}>
                 <Image
                   src="/images/cordelia 5.jpg"
                   alt="Cordelia Vintage"
@@ -157,7 +66,7 @@ export default function AboutSection({ dark = false }) {
               </div>
 
               {/* Image 5 */}
-              <div className="photo-item top-item top-item-5">
+              <div className={`${styles.photoItem} ${styles.topItem5}`}>
                 <Image
                   src="/images/Ana.png"
                   alt="Costume design"
@@ -168,7 +77,7 @@ export default function AboutSection({ dark = false }) {
               </div>
             </div>
 
-            {/* RIGHT — text only */}
+
             <div className="flex flex-col gap-10 lg:sticky lg:top-24">
               <div className="space-y-6">
                 <h3
@@ -210,7 +119,6 @@ export default function AboutSection({ dark = false }) {
                   something that works and something that feels right.
                 </p>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-3 pt-2">
                   {[
                     "Film & Theatre acting",
@@ -229,9 +137,9 @@ export default function AboutSection({ dark = false }) {
               </div>
             </div>
           </div>
-          {/* Bottom row */}
-          <div className="about-bottom-collage mt-10 overflow-hidden rounded-[28px]">
-            <div className="photo-item bottom-item-1">
+
+          <div className={`${styles.aboutBottomCollage} mt-10 overflow-hidden rounded-[28px]`}>
+            <div className={`${styles.photoItem} ${styles.bottomItem1}`}>
               <Image
                 src="/images/maggieyyo2.png"
                 alt="Cordelia Vintage"
@@ -240,7 +148,7 @@ export default function AboutSection({ dark = false }) {
                 style={{ objectPosition: "center top" }}
               />
             </div>
-            <div className="photo-item bottom-item-2">
+            <div className={`${styles.photoItem} ${styles.bottomItem2}`}>
               <Image
                 src="/images/cordelia 8.jpg"
                 alt="Cordelia Vintage"
@@ -249,7 +157,7 @@ export default function AboutSection({ dark = false }) {
                 style={{ objectPosition: "center top" }}
               />
             </div>
-            <div className="photo-item bottom-item-3">
+            <div className={`${styles.photoItem} ${styles.bottomItem3}`}>
               <Image
                 src="/images/Ireneyyo.png"
                 alt="Irene Rubio"
@@ -260,7 +168,7 @@ export default function AboutSection({ dark = false }) {
             </div>
           </div>
 
-          {/* Reel — full width below all photos */}
+
           <div className="mt-16 space-y-3">
             <p
               className={`font-body text-sm uppercase tracking-[0.25em] ${dark ? "text-white/55" : "text-[#171717]/65"}`}
@@ -308,6 +216,5 @@ export default function AboutSection({ dark = false }) {
           </div>
         </div>
       </section>
-    </>
   );
 }
