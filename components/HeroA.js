@@ -3,19 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Moon, Menu, X, FileText } from "lucide-react";
 import CVModal from "@/components/CVModal";
+import HeroNav from "@/components/HeroNav";
 
 export default function HeroA({
-  heroVersion = "A",
   onToggleVersion,
   photoSrc = "/images/actriz 4.png",
 }) {
-  const isCinematic = heroVersion === "B";
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [cvOpen, setCvOpen] = useState(false);
-
-  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <>
@@ -37,137 +32,11 @@ export default function HeroA({
         <div className="absolute inset-y-0 right-0 hidden w-[45%] bg-gradient-to-r from-transparent to-white/55 lg:block" />
 
         <div className="relative flex min-h-screen flex-col px-4 pb-10 pt-5 sm:px-8 sm:pb-14 sm:pt-8 lg:px-14 xl:px-20">
-          <nav className="relative z-20 flex items-center justify-end">
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              className="h-9 border-[#263247]/35 bg-[#f2eee8]/80 px-3 text-[#263247]/90 backdrop-blur-[2px] hover:bg-[#263247] hover:text-white lg:hidden"
-              onClick={() => setIsMenuOpen((current) => !current)}
-              aria-expanded={isMenuOpen}
-              aria-controls="hero-a-mobile-menu"
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            >
-              {isMenuOpen ? (
-                <X className="h-4 w-4" />
-              ) : (
-                <Menu className="h-4 w-4" />
-              )}
-            </Button>
-
-            <div className="hidden flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] tracking-[0.1em] text-[#263247]/78 lg:flex lg:gap-4 lg:text-base lg:tracking-[0.12em]">
-              <a
-                className="rounded-sm transition hover:text-[#263247] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#263247] focus-visible:ring-offset-2"
-                href="#projects"
-              >
-                Projects
-              </a>
-              <a
-                className="rounded-sm transition hover:text-[#263247] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#263247] focus-visible:ring-offset-2"
-                href="#stack"
-              >
-                Stack
-              </a>
-              <a
-                className="rounded-sm transition hover:text-[#263247] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#263247] focus-visible:ring-offset-2"
-                href="#about"
-              >
-                About
-              </a>
-              <a
-                className="rounded-sm transition hover:text-[#263247] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#263247] focus-visible:ring-offset-2"
-                href="#contact"
-              >
-                Contact
-              </a>
-              <Button
-                variant="outline"
-                size="sm"
-                className="group h-8 border-[#263247]/35 bg-transparent px-2.5 text-[11px] text-[#263247]/85 hover:bg-[#263247] hover:text-white sm:h-9 sm:px-3 sm:text-sm"
-                onClick={() => setCvOpen(true)}
-                aria-label="View CV"
-              >
-                <FileText className="h-3.5 w-3.5" />
-                CV
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="group h-8 border-[#263247]/35 bg-transparent px-2.5 text-[11px] text-[#263247]/85 hover:bg-[#263247] hover:text-white sm:h-9 sm:px-3 sm:text-sm"
-                onClick={onToggleVersion}
-                aria-pressed={isCinematic}
-                aria-label="Switch to dark mode"
-              >
-                <Moon className="h-3.5 w-3.5" />
-                Dark mode
-              </Button>
-            </div>
-
-            {isMenuOpen && (
-              <div
-                id="hero-a-mobile-menu"
-                className="absolute right-0 top-12 w-52 rounded-xl border border-[#263247]/16 bg-[#f8f4ec]/95 p-3 shadow-lg backdrop-blur-[2px] lg:hidden"
-              >
-                <div className="flex flex-col gap-1 text-sm tracking-[0.1em] text-[#263247]/85">
-                  <a
-                    className="rounded-md px-2 py-2 transition hover:bg-[#263247]/8"
-                    href="#projects"
-                    onClick={closeMenu}
-                  >
-                    Projects
-                  </a>
-                  <a
-                    className="rounded-md px-2 py-2 transition hover:bg-[#263247]/8"
-                    href="#stack"
-                    onClick={closeMenu}
-                  >
-                    Stack
-                  </a>
-                  <a
-                    className="rounded-md px-2 py-2 transition hover:bg-[#263247]/8"
-                    href="#about"
-                    onClick={closeMenu}
-                  >
-                    About
-                  </a>
-                  <a
-                    className="rounded-md px-2 py-2 transition hover:bg-[#263247]/8"
-                    href="#contact"
-                    onClick={closeMenu}
-                  >
-                    Contact
-                  </a>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="mt-2 h-9 justify-start border-[#263247]/35 bg-transparent px-2.5 text-sm text-[#263247]/90 hover:bg-[#263247] hover:text-white"
-                    onClick={() => {
-                      setCvOpen(true);
-                      closeMenu();
-                    }}
-                    aria-label="View CV"
-                  >
-                    <FileText className="h-3.5 w-3.5" />
-                    CV
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-9 justify-start border-[#263247]/35 bg-transparent px-2.5 text-sm text-[#263247]/90 hover:bg-[#263247] hover:text-white"
-                    onClick={() => {
-                      onToggleVersion?.();
-                      closeMenu();
-                    }}
-                    aria-pressed={isCinematic}
-                    aria-label="Switch to dark mode"
-                  >
-                    <Moon className="h-3.5 w-3.5" />
-                    Dark mode
-                  </Button>
-                </div>
-              </div>
-            )}
-          </nav>
+          <HeroNav
+            dark={false}
+            onToggleVersion={onToggleVersion}
+            onOpenCV={() => setCvOpen(true)}
+          />
           <div className="flex flex-1 items-center justify-end">
             <div className="w-full max-w-[30rem] rounded-2xl border border-white/45 bg-[#fffaf2]/42 p-4 shadow-[0_8px_20px_rgba(20,27,38,0.1)] backdrop-blur-[2.5px] lg:border-none lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-0">
               <p className="font-body text-sm font-semibold uppercase tracking-[0.18em] text-[#263247]/80 sm:text-base">

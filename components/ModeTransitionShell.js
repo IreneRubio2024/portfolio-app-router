@@ -56,11 +56,7 @@ export default function ModeTransitionShell({ heroVersion, darkHero, children })
           aria-hidden="true"
         />
       )}
-      <Hero
-        heroVersion={heroVersion}
-        onToggleVersion={handleToggleVersion}
-        photoSrc={HERO_A_PHOTO_SRC}
-      />
+      <Hero onToggleVersion={handleToggleVersion} photoSrc={HERO_A_PHOTO_SRC} />
 
       {children}
     </main>
